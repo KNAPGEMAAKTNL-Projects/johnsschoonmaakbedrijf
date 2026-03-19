@@ -1,0 +1,207 @@
+1. Prompt: x
+
+Together we are going to research the website of a local business, to gather information and insights to create a new website for them. Let's start with the basics.
+Please read [https://johnsschoonmaakbedrijf.nl/]. Return all links to me. Also explain to me:
+            Business Name: 
+            Current Website URL: 
+            Niche/Industry: 
+            Location (City, Region): 
+            Service Area: 
+            Primary Service/Product: 
+
+
+2. Prompt:x
+
+We continue with the next step, 10 national leaders in the niche. Search query example: "beste [service] Nederland" or "[service] [major city]" (Amsterdam, Rotterdam, Den Haag, Utrecht)
+For each competitor, please document and show me in an artifact: 
+| Site | URL | What Makes Them Stand Out | Visual Patterns | Trust Approach | Conversion Flow |
+|------|-----|---------------------------|-----------------|----------------|-----------------|
+| 1 | | | | | |
+| ... | | | | | |
+
+Patterns to identify:
+- What visual elements appear in most of successful national sites?
+- How do they display social proof/reviews?
+- Where is the primary CTA positioned?
+- What imagery approach do they use (real photos, professional shoots, video)?
+- How do they structure their homepage?
+- What's their mobile experience like?
+- Do they use motion/animation? How?
+
+
+
+3. Prompt:x
+
+I have included some data points to the artifact. [monthly visitors]:[style judgement] (style judgement is a number between 1-10, where 10 is the best - this is my personal opinion)
+
+We continue with the next step, 10 local competitors. Search query example: "[service] [city]"
+For each competitor, please document and show me in an artifact: 
+| Site | URL | What Makes Them Stand Out | Visual Patterns | Trust Approach | Conversion Flow |
+|------|-----|---------------------------|-----------------|----------------|-----------------|
+| 1 | | | | | |
+| ... | | | | | |
+
+Patterns to identify:
+- What visual elements appear in most of successful national sites?
+- How do they display social proof/reviews?
+- Where is the primary CTA positioned?
+- What imagery approach do they use (real photos, professional shoots, video)?
+- How do they structure their homepage?
+- What's their mobile experience like?
+- Do they use motion/animation? How?
+
+Weaknesses to look for compared to national leaders:
+- Template/generic look ("could be any business")
+- Stock photography instead of real imagery
+- Buried contact information
+- Walls of text, no visual hierarchy
+- Outdated design patterns (pre-2020 feel)
+- Poor mobile experience
+- Slow, clunky interactions
+- No social proof visible
+- Confusing navigation
+- Weak or missing CTAs
+
+Summary question: What is the "local baseline"? What separates national leaders from local competitors?
+
+
+4. Prompt:x
+
+I have included some data points to the artifact. [monthly visitors]:[style judgement] (style judgement is a number between 1-10, where 10 is the best - this is my personal opinion)
+
+We continue with the next step, 10 design award winning leaders in the niche. Can be both national and international.
+For each competitor, please document and show me in an artifact: 
+| Site | URL | What Makes Them Stand Out | Visual Patterns | Trust Approach | Conversion Flow |
+|------|-----|---------------------------|-----------------|----------------|-----------------|
+| 1 | | | | | |
+| ... | | | | | |
+
+Summary question: What do design leaders do that NO local competitor does?
+
+
+5. Prompt:x
+
+I have included some data points to the artifact. [monthly visitors]:[style judgement] (style judgement is a number between 1-10, where 10 is the best - this is my personal opinion)
+
+Based on our research, take into account my comment ratios. The businesses with the highest comment ratios are the ones we will focus on generally, as both visitors and design are important.
+Add the following matrices to a new artifact:
+
+The Trust Pattern Matrix
+| Trust Element | Local Competitors | National Leaders | International Leaders | Opportunity |
+|---------------|-------------------|------------------|----------------------|-------------|
+| Reviews/Social Proof | | | | |
+| Team/People Visibility | | | | |
+| Certifications/Credentials | | | | |
+| Case Studies/Portfolio | | | | |
+| Response Time/Availability | | | | |
+| Guarantees/Promises | | | | |
+
+The Visual Pattern Matrix
+| Visual Element | Local Competitors | National Leaders | International Leaders | Opportunity |
+|----------------|-------------------|------------------|----------------------|-------------|
+| Hero Section | | | | |
+| Photography Style | | | | |
+| Typography Feel | | | | |
+| Color Usage | | | | |
+| White Space | | | | |
+| Motion/Animation | | | | |
+| Mobile Experience | | | | |
+
+The Conversion Pattern Matrix
+| Conversion Element | Local Competitors | National Leaders | International Leaders | Opportunity |
+|--------------------|-------------------|------------------|----------------------|-------------|
+| Primary CTA Placement | | | | |
+| Phone Number Visibility | | | | |
+| Form Approach | | | | |
+| Urgency Signals | | | | |
+| Secondary CTAs | | | | |
+| Exit Intent | | | | |
+
+Gap Summary
+Write 3-5 sentences identifying the biggest gaps:
+"Local competitors in [niche] in [location] typically [describe baseline]. National leaders differentiate by [key patterns]. The opportunity is to [specific actionable gap]."
+
+
+6. Prompt:x
+
+Forget all websites that had a bad design according to my comment ratios [this is all incomparison. If all were 9, a 7 could be considered bad]. Based on your research findings and my comment ratios, ask 10 Strategic Design Questions in an artifact. Make sure to include the site links, so I can quickly navigate to the referenced website.
+
+Rules for questions:
+- ❌ NO generic questions ("What colors do you like?")
+- ❌ NO questions answerable without research ("Do you want a modern site?")
+- ✅ Comparative questions referencing actual sites found
+- ✅ Questions that position client on a spectrum between researched examples
+- ✅ Questions about business goals that inform visual direction
+
+Question format:
+> "I found that [Site A][link] uses [approach X], while [Site B][link] uses [approach Y]. Both are successful, but they attract different customers. For [Client Name], which direction aligns better with your target customer?"
+
+Areas to cover:
+1. Energy level (calm/professional vs. bold/energetic)
+2. Imagery approach (real team photos vs. aspirational lifestyle)
+3. Trust signaling (subtle/premium vs. loud/promotional)
+4. Information density (minimal/spacious vs. comprehensive/detailed)
+5. Interaction style (static/stable vs. dynamic/animated)
+6. Contact approach (single prominent CTA vs. multiple options)
+7. Hero strategy (statement-led vs. benefit-led vs. social-proof-led)
+8. Service presentation (overview-focused vs. deep-dive pages)
+9. Personality (faceless brand vs. founder-led vs. team-focused)
+10. Aspiration level (match market expectation vs. exceed and surprise)
+
+
+7. Answer questions through comments. Use step 8 as message including the comments.
+
+
+8. Prompt:
+I have answered the questions.
+Goal: Build a market-dominating website by absorbing the visual excellence from researched references and translating that into code.
+
+ARCHITECTURE:
+Framework:    Astro 5 (Static Site Generation)
+Styling:      Tailwind CSS 4
+Animation:    Framer Motion or GSAP (choose based on vibe)
+Images:       Astro <Image> component with Sharp
+Deployment:   Cloudflare Pages
+
+THE BUILD:
+You have total creative freedom on HOW to implement the vibe and design elements. The website should have a soul.
+
+CONVERSION ARCHITECTURE:
+CTA Implementation
+Based on the Conversion Strategy:
+- Primary CTA, if applicable, visible and compelling
+- Phone number, if applicable, clickable and prominent
+- Contact form, if applicable, accessible
+- Secondary CTAs, if applicable, support the journey without competing
+
+Trust Signal Placement
+- Reviews/testimonials, if applicable, where specified
+- Certifications/credentials, if applicable, visible
+- Social proof, if applicable, at decision points
+
+POLISH & MICRO-INTERACTIONS
+The difference between good and great is in the details.
+
+Motion Guidelines
+Choose animation library based on vibe:
+- Framer Motion: Best for React islands, scroll-triggered, gesture-based
+- GSAP: Best for complex timelines, scroll-driven animations
+
+Micro-interaction Checklist
+- [ ] Button hovers, if applicable, states feel intentional
+- [ ] Page transitions are smooth (if applicable)
+- [ ] Scroll reveals, if applicable, are consistent
+- [ ] Loading states, if applicable, provide feedback
+- [ ] Focus states, if applicable, are visible and styled
+
+
+REMEMBER:
+You are not just building "a website."
+You are building **the best website in [Client's] local market** — one that makes every competitor look outdated by comparison.
+
+
+9. Prompt:
+
+/optimize /setup [name]
+
+

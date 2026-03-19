@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ServicePageLayout from '../../components/ServicePageLayout.astro';
+
+const features = [
+  { title: 'Osmosewater', description: 'Wij werken met gezuiverd osmosewater voor een streepvrij resultaat dat langer schoon blijft.' },
+  { title: 'Alle hoogtes', description: 'Met telescopische systemen bereiken wij veilig ramen en gevels op grote hoogte, zonder steiger.' },
+  { title: 'Gevelreiniging', description: 'Naast glasbewassing verzorgen wij ook de reiniging van gevels, kozijnen en dakgoten.' },
+  { title: 'Periodiek schema', description: 'Regelmatige glasbewassing op vaste momenten, zodat uw pand er altijd verzorgd uitziet.' },
+];
+
+const process = [
+  { step: 'Inventarisatie', description: 'Wij beoordelen het type glas, de hoogte, bereikbaarheid en eventuele bijzonderheden.' },
+  { step: 'Offerte', description: 'Een heldere offerte met frequentie en prijs. Geen verrassingen achteraf.' },
+  { step: 'Uitvoering', description: 'Professioneel en efficiënt, met minimale verstoring van uw bedrijfsvoering.' },
+];
+---
+
+<Layout
+  title="Glas- en gevelreiniging"
+  description="Professionele glas- en gevelreiniging in de Betuwe. Streepvrij resultaat met osmosewater. Tiel, Culemborg, Geldermalsen en omstreken."
+>
+  <ServicePageLayout
+    title="Glas- en gevelreiniging"
+    subtitle="Streepvrije ramen en een schone gevel maken het verschil. Met professionele apparatuur voor een vlekkeloos resultaat."
+    intro="Schone ramen en een verzorgde gevel zijn het visitekaartje van uw bedrijf. Bij John's Schoonmaakbedrijf beschikken wij over professionele apparatuur  - waaronder telescopische systemen met osmosewater  - voor een streepvrij resultaat op elke hoogte. Of het nu gaat om een kantoorpand in Tiel of een bedrijfshal in Culemborg, wij zorgen ervoor dat uw pand er representatief uitziet."
+    features={features}
+    process={process}
+  />
+</Layout>

@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ServicePageLayout from '../../components/ServicePageLayout.astro';
+
+const features = [
+  { title: 'Dagelijks onderhoud', description: 'Bureaus, vloeren, sanitair en keuken  - dagelijks schoon voor een prettige werkomgeving.' },
+  { title: 'Hygiëne voorop', description: 'Extra aandacht voor contactpunten: deurklinken, lichtschakelaars, toetsenborden en telefoons.' },
+  { title: 'Eigen materialen', description: 'Wij werken met professionele, milieuvriendelijke schoonmaakmiddelen en eigen apparatuur.' },
+  { title: 'Flexibel inzetbaar', description: 'Voor of na werktijd, of juist overdag. Wij passen ons aan aan het ritme van uw kantoor.' },
+];
+---
+
+<Layout
+  title="Kantoorschoonmaak"
+  description="Professionele kantoorschoonmaak in de Betuwe. Dagelijks of periodiek onderhoud voor een frisse, hygiënische werkplek. Offerte aanvragen."
+>
+  <ServicePageLayout
+    title="Kantoorschoonmaak"
+    subtitle="Een opgeruimd en hygiënisch kantoor verhoogt de productiviteit. Wij zorgen voor een frisse werkomgeving, dag na dag."
+    intro="Een schoon kantoor is geen luxe  - het is een basisvoorwaarde voor geconcentreerd en prettig werken. Bij John's Schoonmaakbedrijf begrijpen wij dat elk kantoor anders is. Of het nu een klein kantoor is met vijf werkplekken of een kantoorgebouw met meerdere verdiepingen: wij stemmen onze dienstverlening af op uw specifieke situatie en wensen."
+    features={features}
+  />
+</Layout>

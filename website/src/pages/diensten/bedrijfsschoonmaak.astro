@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ServicePageLayout from '../../components/ServicePageLayout.astro';
+
+const features = [
+  { title: 'Op maat gemaakt', description: 'Elk bedrijf is anders. Wij stellen een schoonmaakplan op dat past bij uw situatie, ruimtes en budget.' },
+  { title: 'Vast team', description: 'Uw pand wordt altijd door hetzelfde team schoongemaakt. Zij kennen de ruimtes en uw verwachtingen.' },
+  { title: 'Flexibele tijden', description: 'Schoonmaak voor, tijdens of na werktijd  - wij passen ons aan aan uw bedrijfsvoering.' },
+  { title: 'Alle ruimtes', description: 'Van entree tot sanitair, van kantine tot vergaderruimte. Wij zorgen voor een compleet schoon pand.' },
+];
+
+const process = [
+  { step: 'Kennismaking', description: 'Wij komen langs om uw pand te bekijken en uw wensen te bespreken. Vrijblijvend en persoonlijk.' },
+  { step: 'Offerte op maat', description: 'Op basis van de rondleiding maken wij een duidelijke offerte met transparante prijzen.' },
+  { step: 'Vaste planning', description: 'Na akkoord starten wij met een vast team en een duidelijk schoonmaakschema.' },
+  { step: 'Kwaliteitscontrole', description: 'Wij houden de kwaliteit in de gaten en staan open voor feedback. Altijd bereikbaar voor bijsturing.' },
+];
+---
+
+<Layout
+  title="Bedrijfsschoonmaak"
+  description="Professionele bedrijfsschoonmaak in de Betuwe. Dagelijks of periodiek onderhoud van uw bedrijfspand. VCA-gecertificeerd. Vraag een vrijblijvende offerte aan."
+>
+  <ServicePageLayout
+    title="Bedrijfsschoonmaak"
+    subtitle="Dagelijks of periodiek onderhoud van uw bedrijfspand. Een schone werkplek voor tevreden medewerkers en een professionele uitstraling."
+    intro="Een schoon bedrijfspand is meer dan alleen hygiëne  - het is de eerste indruk die u maakt op klanten, bezoekers en medewerkers. Bij John's Schoonmaakbedrijf verzorgen wij het complete schoonmaakonderhoud van uw bedrijfsruimte. Wij werken met een vast team dat uw pand door en door kent, zodat de kwaliteit consistent is en u zich nergens zorgen over hoeft te maken."
+    features={features}
+    process={process}
+  />
+</Layout>

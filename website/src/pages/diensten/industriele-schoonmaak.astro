@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ServicePageLayout from '../../components/ServicePageLayout.astro';
+
+const features = [
+  { title: 'Zware reiniging', description: 'Machines, productievloeren, werkplaatsen  - wij hebben de apparatuur en ervaring voor intensief werk.' },
+  { title: 'VCA-gecertificeerd', description: 'Veiligheid staat voorop bij industriële schoonmaak. Onze VCA-certificering garandeert veilig werken.' },
+  { title: 'Maatwerk planning', description: 'Schoonmaak buiten productietijden om, zodat uw bedrijfsproces niet verstoord wordt.' },
+  { title: 'Specialistisch', description: 'Van hogedrukreiniging tot ontvetting  - wij beschikken over de juiste technieken en middelen.' },
+];
+---
+
+<Layout
+  title="Industriële schoonmaak"
+  description="Industriële schoonmaak in de Betuwe. Productieruimtes, werkplaatsen en magazijnen. VCA-gecertificeerd. Professioneel en veilig."
+>
+  <ServicePageLayout
+    title="Industriële schoonmaak"
+    subtitle="Productieruimtes, werkplaatsen en magazijnen. Wij hebben de ervaring en apparatuur voor intensieve reiniging."
+    intro="Industriële omgevingen stellen andere eisen aan schoonmaak dan een kantoor of school. Zware vervuiling, olie, productieresten en stof vragen om specialistische kennis en apparatuur. Bij John's Schoonmaakbedrijf zijn wij VCA-gecertificeerd en ervaren in het schoonmaken van productieruimtes, werkplaatsen, magazijnen en andere industriële omgevingen in de Betuwe."
+    features={features}
+  />
+</Layout>

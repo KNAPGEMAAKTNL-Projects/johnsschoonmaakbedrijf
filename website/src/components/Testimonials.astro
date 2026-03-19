@@ -1,0 +1,68 @@
+---
+/**
+ * Testimonials  - clean confidence (EW-style, not TopCleaners-loud)
+ * Named testimonials with context, no star ratings screaming
+ * Placeholder content to be replaced with real testimonials
+ */
+const testimonials = [
+  {
+    quote: 'John en zijn team werken al jaren voor ons. Betrouwbaar, grondig en altijd bereid om even extra te kijken als dat nodig is. Precies wat je wilt van een schoonmaakpartner.',
+    name: 'Naam klant',
+    company: 'Bedrijfsnaam',
+    location: 'Culemborg',
+  },
+  {
+    quote: 'Het feit dat we altijd hetzelfde team over de vloer krijgen, maakt een enorm verschil. Ze kennen ons pand en onze wensen  - dat scheelt in communicatie en resultaat.',
+    name: 'Naam klant',
+    company: 'Bedrijfsnaam',
+    location: 'Tiel',
+  },
+  {
+    quote: 'Wij waren op zoek naar een schoonmaakbedrijf met persoonlijke aandacht. Geen grote organisatie maar iemand die meedenkt. Bij John\'s hebben we dat gevonden.',
+    name: 'Naam klant',
+    company: 'Bedrijfsnaam',
+    location: 'Geldermalsen',
+  },
+];
+---
+
+<section class="py-20 md:py-24 bg-white">
+  <div class="container-site">
+    <div class="text-center mb-14">
+      <span class="section-label">Wat klanten zeggen</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold mt-3 mb-4">
+        Tevreden klanten in de Betuwe
+      </h2>
+      <p class="text-text-secondary text-lg max-w-2xl mx-auto">
+        Al meer dan 17 jaar werken wij voor bedrijven in de regio. Dit is wat zij over ons zeggen.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      {testimonials.map((testimonial) => (
+        <div class="bg-surface rounded-xl p-7 border border-border">
+          <!-- Quote mark -->
+          <svg class="w-8 h-8 text-primary-200 mb-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z" />
+          </svg>
+
+          <blockquote class="text-text-secondary text-sm leading-relaxed mb-6">
+            "{testimonial.quote}"
+          </blockquote>
+
+          <div class="flex items-center gap-3 pt-4 border-t border-border">
+            <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
+              <span class="font-heading font-bold text-primary-700 text-sm">
+                {testimonial.name.split(' ').map(n => n[0]).join('')}
+              </span>
+            </div>
+            <div>
+              <p class="font-heading font-semibold text-primary-900 text-sm">{testimonial.name}</p>
+              <p class="text-text-muted text-xs">{testimonial.company}  - {testimonial.location}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

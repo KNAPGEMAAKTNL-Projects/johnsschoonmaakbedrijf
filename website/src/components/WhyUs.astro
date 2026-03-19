@@ -1,0 +1,56 @@
+---
+/**
+ * Why John's  - value pillars (EW-style clean confidence)
+ * Experience communicated in text, not counters
+ */
+const pillars = [
+  {
+    title: 'Persoonlijk contact',
+    description: 'Bij ons belt u niet met een callcenter. U spreekt direct met John of een van onze vaste medewerkers. Korte lijnen, snel schakelen.',
+    icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />',
+  },
+  {
+    title: 'Vast team, vaste kwaliteit',
+    description: 'Uw pand wordt altijd schoongemaakt door hetzelfde team. Zij kennen uw wensen, uw ruimtes en uw verwachtingen. Geen verrassingen.',
+    icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />',
+  },
+  {
+    title: 'Ruim 17 jaar ervaring',
+    description: 'Sinds 2007 verzorgen wij de schoonmaak voor bedrijven in de Betuwe. Die ervaring vertaalt zich in efficiëntie, betrouwbaarheid en vakmanschap.',
+    icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />',
+  },
+  {
+    title: 'VCA-gecertificeerd',
+    description: 'Veiligheid staat bij ons voorop. Onze VCA-certificering garandeert dat wij werken volgens de hoogste veiligheids- en kwaliteitsnormen.',
+    icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />',
+  },
+];
+---
+
+<section class="py-20 md:py-24 bg-white">
+  <div class="container-site">
+    <div class="text-center mb-14">
+      <span class="section-label">Waarom John's</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold mt-3 mb-4">
+        Wat ons anders maakt
+      </h2>
+      <p class="text-text-secondary text-lg max-w-2xl mx-auto">
+        Als kleinschalig bedrijf bieden wij iets wat grote schoonmaakbedrijven niet kunnen: een persoonlijke aanpak met directe betrokkenheid.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      {pillars.map((pillar) => (
+        <div class="flex gap-5">
+          <div class="flex-shrink-0 w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center">
+            <svg class="w-6 h-6 text-primary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={pillar.icon} />
+          </div>
+          <div>
+            <h3 class="font-heading font-bold text-lg text-primary-900 mb-2">{pillar.title}</h3>
+            <p class="text-text-secondary text-sm leading-relaxed">{pillar.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

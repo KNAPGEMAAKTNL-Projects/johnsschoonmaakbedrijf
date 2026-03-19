@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Services from '../../components/Services.astro';
+import CTA from '../../components/CTA.astro';
+---
+
+<Layout
+  title="Onze diensten"
+  description="Bekijk het complete overzicht van schoonmaakdiensten van John's Schoonmaakbedrijf. Bedrijfsschoonmaak, glasbewassing, kantoorschoonmaak en meer in de Betuwe."
+>
+  <section class="bg-primary-900 py-16 md:py-20">
+    <div class="container-site">
+      <span class="section-label text-primary-300">Onze diensten</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mt-3 mb-6 max-w-3xl">
+        Professionele schoonmaak voor elk type bedrijf
+      </h1>
+      <p class="text-primary-200 text-lg max-w-2xl leading-relaxed">
+        Van dagelijks onderhoud tot specialistische reiniging  - wij bieden een compleet pakket schoonmaakdiensten voor de zakelijke markt in de Betuwe.
+      </p>
+    </div>
+  </section>
+
+  <Services />
+  <CTA />
+</Layout>

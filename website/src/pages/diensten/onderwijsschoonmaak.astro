@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ServicePageLayout from '../../components/ServicePageLayout.astro';
+
+const features = [
+  { title: 'RIVM-richtlijnen', description: 'Wij werken volgens de geldende hygiënerichtlijnen voor onderwijsinstellingen en kinderopvang.' },
+  { title: 'Veilige middelen', description: 'Gebruik van kindvriendelijke, milieubewuste schoonmaakmiddelen die veilig zijn voor dagelijks gebruik.' },
+  { title: 'Vakantieschoonmaak', description: 'Grondige reiniging tijdens schoolvakanties: vloeren, ramen, meubilair en sanitair.' },
+  { title: 'Betrouwbaar team', description: 'Een vast team dat de school kent en weet waar extra aandacht nodig is.' },
+];
+---
+
+<Layout
+  title="Onderwijsschoonmaak"
+  description="Schoonmaak voor scholen en kinderopvang in de Betuwe. Hygiënisch, veilig en volgens de richtlijnen. VCA-gecertificeerd."
+>
+  <ServicePageLayout
+    title="Onderwijsschoonmaak"
+    subtitle="Scholen en kinderopvang vragen om extra aandacht voor hygiëne. Wij werken volgens de richtlijnen en met de juiste middelen."
+    intro="In een onderwijsomgeving is hygiëne van het grootste belang. Kinderen, leerlingen en medewerkers verdienen een schone, veilige en gezonde leeromgeving. John's Schoonmaakbedrijf heeft ervaring met de schoonmaak van basisscholen, middelbare scholen en kinderopvanglocaties in de Betuwe. Wij werken met middelen die veilig zijn voor kinderen en voldoen aan de geldende hygiënerichtlijnen."
+    features={features}
+  />
+</Layout>

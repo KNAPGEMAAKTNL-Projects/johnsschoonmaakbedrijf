@@ -1,0 +1,58 @@
+---
+/**
+ * Service Area  - showcases regional presence in the Betuwe
+ */
+const mainCities = [
+  'Tiel', 'Culemborg', 'Geldermalsen', 'Leerdam', 'Buren',
+  'Vianen', 'Waardenburg', 'Asperen', 'Beesd', 'Haaften',
+];
+const moreCities = [
+  'Acquoy', 'Asch', 'Beusichem', 'Buurmalsen', 'Deil',
+  'Enspijk', 'Erichem', 'Est', 'Everdingen', 'Gameren',
+  'Gellicum', 'Hagestein', 'Hellouw', 'Herwijnen', 'Heukelum',
+  'Kapel-Avezaath', 'Kerk-Avezaath', 'Meteren', 'Neerijnen',
+  'Nieuwaal', 'Opijnen', 'Ravenswaaij', 'Rhenoy', 'Rumpt',
+  'Tricht', 'Tuil', 'Varik', 'Vuren', 'Wadenoyen',
+  'Zoelen', 'Zoelmond', 'Zuilichem',
+];
+---
+
+<section class="py-20 md:py-24 bg-primary-50/50">
+  <div class="container-site">
+    <div class="text-center mb-14">
+      <span class="section-label">Werkgebied</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold mt-3 mb-4">
+        Actief in heel de Betuwe
+      </h2>
+      <p class="text-text-secondary text-lg max-w-2xl mx-auto">
+        Vanuit het hart van de Betuwe bedienen wij bedrijven in meer dan 40 plaatsen in de regio.
+      </p>
+    </div>
+
+    <!-- Main cities -->
+    <div class="flex flex-wrap justify-center gap-3 mb-6">
+      {mainCities.map((city) => (
+        <span class="bg-white px-4 py-2 rounded-lg border border-border font-heading font-semibold text-primary-900 text-sm shadow-sm">
+          {city}
+        </span>
+      ))}
+    </div>
+
+    <!-- More cities (collapsed) -->
+    <details class="max-w-3xl mx-auto text-center">
+      <summary class="inline-flex items-center gap-1.5 text-primary-700 text-sm font-heading font-semibold cursor-pointer hover:text-primary-800 transition-colors py-2">
+        En nog {moreCities.length} plaatsen meer
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </summary>
+      <div class="flex flex-wrap justify-center gap-2 mt-4">
+        {moreCities.map((city) => (
+          <span class="bg-white/80 px-3 py-1.5 rounded text-text-secondary text-sm border border-border/50">
+            {city}
+          </span>
+        ))}
+      </div>
+    </details>
+  </div>
+</section>

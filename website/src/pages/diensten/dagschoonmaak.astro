@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ServicePageLayout from '../../components/ServicePageLayout.astro';
+
+const features = [
+  { title: 'Zichtbare schoonmaak', description: 'Uw medewerkers en bezoekers zien dat er aandacht is voor een schone omgeving.' },
+  { title: 'Direct reageren', description: 'Morsen in de kantine, een volle prullenbak of een vlek op het tapijt? Wij zijn er direct bij.' },
+  { title: 'Representatief pand', description: 'Vooral in drukbezochte omgevingen houdt dagschoonmaak uw pand de hele dag schoon.' },
+  { title: 'Aanspreekbaar', description: 'Onze medewerker is overdag aanwezig en aanspreekbaar voor uw team en bezoekers.' },
+];
+---
+
+<Layout
+  title="Dagschoonmaak"
+  description="Dagschoonmaak voor bedrijven in de Betuwe. Zichtbare schoonmaak overdag voor een representatief pand. Offerte aanvragen."
+>
+  <ServicePageLayout
+    title="Dagschoonmaak"
+    subtitle="Schoonmaak overdag, zichtbaar voor uw medewerkers en bezoekers. Directe aandacht voor wat nodig is, wanneer het nodig is."
+    intro="Dagschoonmaak betekent dat er overdag een schoonmaakmedewerker aanwezig is in uw pand. Dit is ideaal voor drukbezochte omgevingen waar continu aandacht nodig is: recepties, kantines, sanitaire ruimtes en entrees. Uw bezoekers en medewerkers ervaren direct dat er zorg wordt besteed aan de werkomgeving  - en dat maakt een verschil."
+    features={features}
+  />
+</Layout>

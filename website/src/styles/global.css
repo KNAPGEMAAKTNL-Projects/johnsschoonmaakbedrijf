@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+/*
+ * John's Schoonmaakbedrijf  - Design Tokens
+ *
+ * Palette rationale:
+ *   - Deep teal primary: trust, professionalism, cleanliness
+ *   - Warm amber accent: approachability, Betuwe earth tones
+ *   - Warm whites: inviting, not clinical
+ *   - Avoids the generic #2EA3F2 blue used by 70% of local competitors
+ */
+
+@theme {
+  /* Primary palette */
+  --color-primary-900: #0A2F38;
+  --color-primary-800: #0F3F4C;
+  --color-primary-700: #145161;
+  --color-primary-600: #1A6A7E;
+  --color-primary-500: #1B7A8A;
+  --color-primary: #1B7A8A;
+  --color-primary-400: #2A9AAD;
+  --color-primary-300: #4FB8C9;
+  --color-primary-200: #8DD4E0;
+  --color-primary-100: #CBE9EF;
+  --color-primary-50: #EDF6F8;
+
+  /* Accent  - warm amber */
+  --color-accent-700: #9A6B1E;
+  --color-accent-600: #B8812A;
+  --color-accent: #D4943A;
+  --color-accent-400: #E0AD5E;
+  --color-accent-300: #EBC888;
+  --color-accent-200: #F3DFB5;
+  --color-accent-100: #F9EDD5;
+  --color-accent-50: #FDF8F0;
+
+  /* Neutrals  - warm undertone */
+  --color-surface: #FAFAF8;
+  --color-surface-alt: #F0EFEB;
+  --color-border: #E2E0DB;
+  --color-text: #1C1C1C;
+  --color-text-secondary: #4A5568;
+  --color-text-muted: #718096;
+
+  /* Typography */
+  --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Spacing scale */
+  --spacing-section: 6rem;
+  --spacing-section-sm: 4rem;
+}
+
+/* Base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-surface);
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-primary-900);
+  }
+
+  /* Smooth, intentional focus states */
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+/* Utility components */
+@layer components {
+  .container-site {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    background-color: var(--color-primary-700);
+    color: white;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-primary:hover {
+    background-color: var(--color-primary-800);
+    transform: translateY(-1px);
+  }
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    background-color: transparent;
+    color: var(--color-primary-700);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--color-primary-700);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .btn-secondary:hover {
+    background-color: var(--color-primary-700);
+    color: white;
+  }
+
+  .section-label {
+    font-family: var(--font-heading);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+  }
+}

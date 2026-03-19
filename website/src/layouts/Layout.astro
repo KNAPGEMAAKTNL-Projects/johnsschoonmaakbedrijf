@@ -1,0 +1,69 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'John\'s Schoonmaakbedrijf  - Al sinds 2007 de betrouwbare schoonmaakpartner voor bedrijven in de Betuwe. VCA-gecertificeerd. Offerte aanvragen.',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>{title} | John's Schoonmaakbedrijf</title>
+
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "John's Schoonmaakbedrijf",
+      "description": "Professioneel schoonmaakbedrijf in de Betuwe. VCA-gecertificeerd. Bedrijfsschoonmaak, glasbewassing, kantoorschoonmaak en meer.",
+      "url": "https://johnsschoonmaakbedrijf.nl",
+      "telephone": "+31623545276",
+      "email": "info@JohnsGlazenwassersbedrijf.nl",
+      "foundingDate": "2007-11",
+      "areaServed": {
+        "@type": "Place",
+        "name": "De Betuwe, Gelderland, Nederland"
+      },
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "VCA"
+      },
+      "sameAs": []
+    })} />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <Header />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
