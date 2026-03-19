@@ -1,0 +1,78 @@
+---
+/**
+ * FAQ section with Schema.org FAQPage markup for SEO
+ */
+const faqs = [
+  {
+    question: 'In welk gebied is John\'s Schoonmaakbedrijf actief?',
+    answer: 'Wij zijn actief in de hele Betuwe en omstreken, waaronder Tiel, Culemborg, Geldermalsen, Leerdam, Buren, Vianen, Waardenburg en ruim 40 andere plaatsen in de regio.',
+  },
+  {
+    question: 'Is John\'s Schoonmaakbedrijf gecertificeerd?',
+    answer: 'Ja, wij zijn VCA-gecertificeerd. Dit betekent dat wij werken volgens strenge veiligheids- en kwaliteitsnormen. Onze medewerkers zijn getraind in veilig werken.',
+  },
+  {
+    question: 'Hoe werkt het aanvragen van een offerte?',
+    answer: 'Neem contact met ons op via telefoon, WhatsApp, e-mail of het contactformulier. Wij komen vrijblijvend langs om uw wensen te bespreken en maken vervolgens een offerte op maat.',
+  },
+  {
+    question: 'Komt er altijd hetzelfde team schoonmaken?',
+    answer: 'Ja, wij werken met vaste teams per klant. Uw pand wordt altijd door dezelfde medewerkers schoongemaakt, zodat zij uw ruimtes en wensen goed kennen.',
+  },
+  {
+    question: 'Kan de schoonmaak ook buiten werktijden plaatsvinden?',
+    answer: 'Zeker. Wij bieden schoonmaak voor, tijdens en na werktijd. In overleg bepalen we het moment dat het beste past bij uw bedrijfsvoering.',
+  },
+  {
+    question: 'Wat als ik niet tevreden ben met het resultaat?',
+    answer: 'Dan komen wij gratis terug om het op te lossen. Wij staan achter de kwaliteit van ons werk en vinden het belangrijk dat u volledig tevreden bent.',
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer,
+    },
+  })),
+};
+---
+
+<section class="py-20 md:py-24 bg-white">
+  <div class="container-site">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-14">
+        <span class="section-label">Veelgestelde vragen</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold mt-3 mb-4">
+          Heeft u een vraag?
+        </h2>
+        <p class="text-text-secondary text-lg">
+          Hieronder vindt u antwoorden op veelgestelde vragen. Staat uw vraag er niet bij? Neem gerust contact met ons op.
+        </p>
+      </div>
+
+      <div class="space-y-3">
+        {faqs.map((faq, i) => (
+          <details class="group bg-surface rounded-xl border border-border overflow-hidden" open={i === 0}>
+            <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none font-heading font-semibold text-primary-900 hover:text-primary-700 transition-colors">
+              <span class="text-sm md:text-base">{faq.question}</span>
+              <svg class="w-5 h-5 text-text-muted flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-5 text-text-secondary text-sm leading-relaxed">
+              {faq.answer}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+</section>
