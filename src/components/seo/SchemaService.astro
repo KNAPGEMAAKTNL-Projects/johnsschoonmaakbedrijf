@@ -1,0 +1,59 @@
+---
+/**
+ * SchemaService.astro
+ * Generates Service JSON-LD for individual service pages.
+ * References the LocalBusiness @id as provider.
+ */
+
+interface Props {
+  name: string;
+  description: string;
+  url: string;
+  areaServed?: string[];
+}
+
+const SITE_URL = "https://www.johnsschoonmaakbedrijf.nl";
+
+const {
+  name,
+  description,
+  url,
+  areaServed = [
+    "Buren", "Tiel", "Culemborg", "Geldermalsen", "Elst",
+    "Huissen", "Bemmel", "Maurik", "West Betuwe", "Druten",
+  ],
+} = Astro.props;
+
+const serviceUrl = url.startsWith("http") ? url : `${SITE_URL}${url}`;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": name,
+  "description": description,
+  "url": serviceUrl,
+  "provider": {
+    "@id": `${SITE_URL}/#organization`,
+  },
+  "areaServed": areaServed.map((city) => ({
+    "@type": "City",
+    "name": city,
+  })),
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "0",
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "priceCurrency": "EUR",
+      "unitText": "Offerte op maat",
+    },
+    "availability": "https://schema.org/InStock",
+  },
+};
+---
+
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify(schema, null, 0)}
+/>

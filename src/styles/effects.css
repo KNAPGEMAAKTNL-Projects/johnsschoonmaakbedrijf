@@ -1,0 +1,209 @@
+/*
+ * Scroll animation effects — CSS-only path (0 KB JS budget)
+ * Uses scroll-driven animations with IntersectionObserver fallback for Firefox.
+ *
+ * Default state: always visible (opacity: 1). Animations only apply when
+ * the user hasn't requested reduced motion. This prevents the LCP trap
+ * (opacity:0 on hero elements) and ensures zero CLS.
+ */
+
+/* ── Scroll fade-up ── */
+.scroll-fade-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .scroll-fade-up {
+      animation: fade-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 100%;
+    }
+  }
+
+  /* IO fallback for Firefox (applied via tiny JS snippet in Layout) */
+  .scroll-fade-up.js-scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+      opacity 0.6s var(--ease-reveal),
+      transform 0.6s var(--ease-reveal);
+  }
+
+  .scroll-fade-up.js-scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Scroll scale-reveal ── */
+.scroll-scale-reveal {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .scroll-scale-reveal {
+      animation: scale-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 100%;
+    }
+  }
+
+  .scroll-scale-reveal.js-scroll-reveal {
+    opacity: 0;
+    transform: scale(0.95);
+    transition:
+      opacity 0.6s var(--ease-reveal),
+      transform 0.6s var(--ease-reveal);
+  }
+
+  .scroll-scale-reveal.js-scroll-reveal.is-visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ── Stagger reveal (children appear one-by-one) ── */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .stagger-container > * {
+      animation: fade-up linear both;
+      animation-timeline: view();
+    }
+
+    .stagger-container > *:nth-child(1) {
+      animation-range: entry 0% entry 80%;
+    }
+    .stagger-container > *:nth-child(2) {
+      animation-range: entry 5% entry 85%;
+    }
+    .stagger-container > *:nth-child(3) {
+      animation-range: entry 10% entry 90%;
+    }
+    .stagger-container > *:nth-child(4) {
+      animation-range: entry 15% entry 95%;
+    }
+  }
+}
+
+/* ── Card lift hover ── */
+.card-lift {
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+@media (hover: hover) {
+  .card-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lift);
+  }
+}
+
+/* ── Page-load cascade (hero elements) ── */
+@media (prefers-reduced-motion: no-preference) {
+  .load-cascade {
+    animation: fade-up 0.6s var(--ease-reveal) both;
+  }
+
+  .load-cascade-1 {
+    animation-delay: 100ms;
+  }
+  .load-cascade-2 {
+    animation-delay: 200ms;
+  }
+  .load-cascade-3 {
+    animation-delay: 300ms;
+  }
+  .load-cascade-4 {
+    animation-delay: 400ms;
+  }
+}
+
+/* ── Floating bob (hero stat card / badge) ── */
+@media (prefers-reduced-motion: no-preference) {
+  .float-bob {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+/* ── Pulsing ring (mobile phone CTA) ── */
+@media (prefers-reduced-motion: no-preference) {
+  .pulse-ring {
+    animation: pulse-ring 2s ease-out infinite;
+  }
+}
+
+/* ── Button press feedback (Emil Kowalski: "confirms the interface heard you") ── */
+a[class*="rounded-full"],
+button[type="submit"] {
+  transition: transform 0.16s ease-out;
+}
+a[class*="rounded-full"]:active,
+button[type="submit"]:active {
+  transform: scale(0.97);
+}
+
+/* ── Button hover (hover-device only, prevents sticky hover on touch) ── */
+@media (hover: hover) {
+  .btn-lift {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn-lift:hover {
+    transform: translateY(-1px);
+  }
+
+  /* Link arrow slide on hover */
+  .link-arrow {
+    transition: gap 0.2s ease;
+  }
+  .link-arrow:hover {
+    gap: 10px;
+  }
+
+  /* Review card hover (dark bg context) */
+  .review-hover {
+    transition: background 0.2s ease;
+  }
+  .review-hover:hover {
+    background: rgba(255, 255, 255, 0.11);
+  }
+}
+
+/* ── FAQ accordion animation (asymmetric: open slower, close instant) ── */
+@media (prefers-reduced-motion: no-preference) {
+  details[open] .faq-body {
+    animation: faq-open 0.25s var(--ease-reveal);
+  }
+}
+
+@keyframes faq-open {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Reduced motion: kill everything ── */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-fade-up,
+  .scroll-scale-reveal,
+  .load-cascade,
+  .float-bob,
+  .pulse-ring,
+  .btn-lift,
+  .stagger-container > *,
+  details .faq-body {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}

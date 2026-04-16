@@ -1,0 +1,66 @@
+---
+// CtaSection.astro — Reusable CTA block for between sections and subpages
+interface Props {
+  heading: string;
+  subtext?: string;
+  primaryText: string;
+  primaryHref: string;
+  secondaryText?: string;
+  secondaryHref?: string;
+  dark?: boolean;
+}
+
+const {
+  heading,
+  subtext,
+  primaryText,
+  primaryHref,
+  secondaryText,
+  secondaryHref,
+  dark = false,
+} = Astro.props;
+---
+
+<section class:list={["scroll-fade-up", dark ? "bg-navy" : "bg-surface-blue"]}
+  style={dark ? "padding: 80px 0;" : "padding: 64px 0;"}>
+  <div class="max-w-[1360px] mx-auto px-5 md:px-10 text-center">
+    <h2 class:list={["mb-4", dark && "text-white"]}>{heading}</h2>
+    {subtext && (
+      <p class:list={[
+        "max-w-xl mx-auto mb-8 text-[17px]",
+        dark ? "text-white/70" : "text-text-muted"
+      ]}>
+        <Fragment set:html={subtext} />
+      </p>
+    )}
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a
+        href={primaryHref}
+        class:list={[
+          "font-head text-[15px] font-semibold px-7 py-3.5 rounded-full min-w-[200px] text-center transition-all duration-200 inline-flex items-center justify-center gap-2",
+          dark
+            ? "bg-accent text-navy font-bold hover:bg-accent-dark hover:-translate-y-0.5"
+            : "bg-primary text-white hover:bg-navy hover:shadow-btn hover:-translate-y-px"
+        ]}
+      >
+        {primaryText}
+        <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
+      {secondaryText && secondaryHref && (
+        <a
+          href={secondaryHref}
+          class:list={[
+            "font-head text-[15px] font-semibold px-7 py-3.5 rounded-full min-w-[200px] text-center border-2 transition-all duration-200 inline-block",
+            dark
+              ? "border-white/35 text-white/90 hover:border-white/70 hover:text-white"
+              : "border-primary text-primary hover:bg-primary hover:text-white"
+          ]}
+        >
+          {secondaryText}
+        </a>
+      )}
+    </div>
+  </div>
+</section>

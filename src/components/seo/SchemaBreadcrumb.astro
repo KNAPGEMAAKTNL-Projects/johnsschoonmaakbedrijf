@@ -1,0 +1,68 @@
+---
+/**
+ * SchemaBreadcrumb.astro
+ * Auto-generates BreadcrumbList JSON-LD from Astro.url.pathname.
+ * Pattern: Home > Section > Current Page
+ */
+
+const SITE_URL =
+  Astro.site?.href?.replace(/\/$/, "") ||
+  "https://www.johnsschoonmaakbedrijf.nl";
+
+const pathname = Astro.url.pathname; // e.g. /diensten/kantoorschoonmaak/
+
+// Human-readable labels for known path segments
+const labels: Record<string, string> = {
+  diensten: "Diensten",
+  kantoorschoonmaak: "Kantoorschoonmaak",
+  glazenwassen: "Glazenwassen",
+  "bouw-oplevering": "Opleveringsschoonmaak",
+  zonnepanelen: "Zonnepanelen reinigen",
+  dakgoten: "Dakgoten leegmaken",
+  gevelreiniging: "Gevelreiniging",
+  "over-ons": "Over ons",
+  contact: "Contact",
+  faq: "Veelgestelde vragen",
+  privacybeleid: "Privacybeleid",
+  "algemene-voorwaarden": "Algemene voorwaarden",
+};
+
+// Build breadcrumb items from pathname segments
+const segments = pathname.split("/").filter(Boolean);
+
+// Homepage is always position 1
+const items: Array<{ name: string; url: string }> = [
+  { name: "Home", url: `${SITE_URL}/` },
+];
+
+// Add each segment as a breadcrumb level
+let cumulativePath = "";
+for (const segment of segments) {
+  cumulativePath += `/${segment}`;
+  items.push({
+    name: labels[segment] || segment.charAt(0).toUpperCase() + segment.slice(1),
+    url: `${SITE_URL}${cumulativePath}/`,
+  });
+}
+
+// Don't render breadcrumb schema for homepage (only 1 item)
+const shouldRender = items.length > 1;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": items.map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": item.name,
+    "item": item.url,
+  })),
+};
+---
+
+{shouldRender && (
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(schema, null, 0)}
+  />
+)}

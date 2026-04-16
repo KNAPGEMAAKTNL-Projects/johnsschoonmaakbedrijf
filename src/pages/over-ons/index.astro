@@ -1,0 +1,107 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import CtaSection from "../../components/CtaSection.astro";
+---
+
+<Layout title="Over ons · Buren | John's Schoonmaakbedrijf" description="Sinds 2009 verzorgt John Hak kantoorschoonmaak vanuit Buren, in de Betuwe. Vaste teams, VCA-gecertificeerd, persoonlijk contact. Leer ons kennen.">
+  <Header />
+  <main>
+    <!-- Hero: personal, warm -->
+    <section class="bg-bg relative overflow-hidden" style="padding-top: 64px; padding-bottom: 56px;">
+      <div class="absolute pointer-events-none" style="top: -40px; left: -40px; width: 300px; height: 300px; border-radius: 50%; background: var(--color-primary); opacity: 0.04; filter: blur(50px);" aria-hidden="true"></div>
+      <div class="max-w-[1360px] mx-auto px-5 md:px-10 relative z-10">
+        <nav class="text-[13px] text-text-muted mb-6" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-primary transition-colors">Home</a><span class="mx-2">/</span>
+          <span class="text-text">Over ons</span>
+        </nav>
+        <div class="max-w-2xl">
+          <h1 class="mb-5">Even voorstellen</h1>
+          <p class="text-text-muted text-[17px]" style="line-height: 1.7;">Ik ben John Hak, eigenaar van John's Schoonmaakbedrijf. Vanuit Buren, midden in de Betuwe, verzorgen wij kantoorschoonmaak voor bedrijven in de regio. Sinds 2009. We doen ook glazenwassen en opleveringsschoonmaak, maar kantoorschoonmaak is waar ons hart ligt. Een vast team voor je kantoor, iemand die je kunt bellen als het nodig is, gewoon goed geregeld.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story: editorial layout (6fr 4fr on desktop — different from homepage's 7/5) -->
+    <section class="bg-surface" style="padding-top: 72px; padding-bottom: 80px;">
+      <div class="max-w-[1360px] mx-auto px-5 md:px-10">
+        <div class="grid grid-cols-1 lg:grid-cols-[6fr_4fr] gap-12 lg:gap-20 items-start">
+          <div class="scroll-fade-up">
+            <h2 class="mb-6">Hoe het begon</h2>
+            <div class="text-[16px] text-text-muted space-y-5" style="line-height: 1.75;">
+              <p>In 2009 begon ik als glazenwasser. Een busje, een ladder en een emmer sop. Meer was het niet. Ik reed langs bedrijven in Buren, Tiel, Culemborg. Ramen wassen, kozijnen erbij, door naar de volgende.</p>
+              <p>Na een paar maanden vroegen klanten of ik ook de rest kon doen. Vloeren, sanitair, kantoorruimtes. "Kan je niet gewoon alles schoonmaken?" Dat hoorde ik steeds vaker.</p>
+              <p>Dus dat ging ik doen.</p>
+              <p>Eerst alleen, later met een paar mensen erbij. Nu hebben we meerdere vaste teams die dagelijks kantoren schoonmaken in de regio. Maar de werkwijze is niet veranderd. Kort contact, eerlijk werk. Als er iets niet klopt, wil ik het horen. Liever vandaag dan morgen.</p>
+            </div>
+          </div>
+
+          <!-- Team sidebar -->
+          <div class="scroll-scale-reveal space-y-6">
+            <!-- John profile -->
+            <div class="bg-bg rounded-lg border border-border p-6" style="border-radius: var(--radius-lg);">
+              <img src="/fotos/John Hak.JPG" alt="John Hak, eigenaar" class="w-16 h-16 rounded-full object-cover mx-auto mb-4" loading="lazy" />
+              <p class="font-head text-[17px] font-bold text-text text-center">John Hak</p>
+              <p class="text-[13px] text-text-muted text-center mb-3">Eigenaar</p>
+              <p class="text-[14px] text-text-muted leading-relaxed text-center">Vaak nog zelf op de werkvloer. Bereikbaar via <a href="tel:0623545276" class="text-primary hover:underline">06 23545276</a>.</p>
+              <p class="text-[14px] text-text-muted leading-relaxed text-center mt-2 italic">"Bel me gerust als er iets is. Daar ben ik voor."</p>
+            </div>
+
+            <!-- Teams -->
+            <div class="bg-bg rounded-lg border border-border p-6" style="border-radius: var(--radius-lg);">
+              <h3 class="font-head text-[16px] font-bold text-text mb-3 text-center">Ons team</h3>
+              <p class="text-[14px] text-text-muted leading-relaxed text-center">We werken met vaste schoonmakers. Dezelfde mensen op dezelfde locaties. John is altijd bereikbaar als aanspreekpunt.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="bg-bg" style="padding-top: 72px; padding-bottom: 72px;">
+      <div class="max-w-[1360px] mx-auto px-5 md:px-10">
+        <div class="scroll-fade-up max-w-3xl">
+          <h2 class="mb-3">Wat onze keurmerken voor jou betekenen</h2>
+          <p class="text-text-muted text-[16px] mb-8" style="line-height: 1.75;">Certificeringen zijn niet om mee te pronken op de muur. Ze betekenen iets concreets voor jou als klant.</p>
+
+          <div class="space-y-5">
+            <div class="flex gap-4 items-start p-5 bg-surface rounded-lg border border-border" style="border-radius: var(--radius-lg);">
+              <span class="shrink-0 inline-block text-[11px] font-bold uppercase tracking-[1.5px] text-accent bg-navy px-3 py-1.5 rounded-full">VCA</span>
+              <p class="text-[14px] text-text-muted leading-relaxed">Onze medewerkers zijn opgeleid om veilig te werken in jouw kantoor. Ze weten hoe ze omgaan met schoonmaakmiddelen, machines en werkplekken waar jouw personeel dagelijks zit. VCA staat voor Veiligheid, Gezondheid en Milieu Checklist Aannemers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values: 2x2 grid (different from homepage or service pages) -->
+    <section class="bg-surface" style="padding-top: 72px; padding-bottom: 80px;">
+      <div class="max-w-[1360px] mx-auto px-5 md:px-10">
+        <h2 class="scroll-fade-up mb-8">Waar wij voor staan</h2>
+        <div class="stagger-container grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="scroll-fade-up bg-bg rounded-lg border border-border p-7" style="border-radius: var(--radius-lg);">
+            <h3 class="text-[18px] font-bold text-text mb-3">Vaste gezichten, geen personeelscarrousel</h3>
+            <p class="text-[15px] text-text-muted leading-relaxed">Bij ons komt niet elke week iemand anders langs. Dezelfde mensen, elke keer. Ze kennen je kantoor, weten waar de dingen staan en hoe laat de vergaderzaal bezet is. Dat is geen luxe. Dat is hoe het hoort.</p>
+          </div>
+          <div class="scroll-fade-up bg-bg rounded-lg border border-border p-7" style="border-radius: var(--radius-lg);">
+            <h3 class="text-[18px] font-bold text-text mb-3">Kort lijntje</h3>
+            <p class="text-[15px] text-text-muted leading-relaxed">Je belt met mij of met je vaste contactpersoon. Geen callcenter, geen ticketsysteem, geen wachtrij. Gewoon even bellen en het is geregeld.</p>
+          </div>
+          <div class="scroll-fade-up bg-bg rounded-lg border border-border p-7" style="border-radius: var(--radius-lg);">
+            <h3 class="text-[18px] font-bold text-text mb-3">Eerlijk als het misgaat</h3>
+            <p class="text-[15px] text-text-muted leading-relaxed">Soms wordt een hoek overgeslagen of een prullenbak vergeten. Kan gebeuren. Maar dan wil ik het horen, en dan lossen we het op. Geen excuses, gewoon fixen.</p>
+          </div>
+          <div class="scroll-fade-up bg-bg rounded-lg border border-border p-7" style="border-radius: var(--radius-lg);">
+            <h3 class="text-[18px] font-bold text-text mb-3">Veilige producten</h3>
+            <p class="text-[15px] text-text-muted leading-relaxed">We werken met milieuvriendelijke producten. Niet omdat het hip is, maar omdat het gewoon de betere keuze is. Beter voor je werkplek, beter voor het milieu. Klaar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <CtaSection heading="Benieuwd wat we voor je bedrijf kunnen betekenen?" subtext="Neem gerust even contact op voor een vrijblijvende offerte. We komen langs, bekijken de situatie en je weet binnen 24 uur waar je aan toe bent." primaryText="Offerte aanvragen" primaryHref="/contact/" />
+  </main>
+  <Footer />
+</Layout>

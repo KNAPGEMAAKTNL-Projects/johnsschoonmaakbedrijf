@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Typografie — John's Schoonmaakbedrijf</title>
+
+<!-- Option 1: Outfit + Inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ─── Reset & Base ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  background: #F0F0F0;
+  color: #111;
+  line-height: 1.6;
+  padding: 40px 24px 80px;
+}
+
+/* ─── Page Header ─── */
+.page-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  font-family: Inter, sans-serif;
+  margin-bottom: 8px;
+  color: #0F172A;
+}
+.page-subtitle {
+  text-align: center;
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 56px;
+}
+
+/* ─── Option Card ─── */
+.option-card {
+  max-width: 1400px;
+  margin: 0 auto 64px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.option-header {
+  padding: 32px 40px 24px;
+  border-bottom: 1px solid #E5E7EB;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.option-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.option-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 6px;
+}
+
+.option-meta {
+  font-size: 13px;
+  color: #6B7280;
+}
+
+.font-stack {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.font-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid #E5E7EB;
+  color: #374151;
+}
+
+.font-pill span {
+  font-size: 10px;
+  opacity: 0.6;
+  font-weight: 400;
+}
+
+.font-category {
+  font-size: 11px;
+  color: #9CA3AF;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ─── Preview Layout ─── */
+.previews-row {
+  display: grid;
+  grid-template-columns: 1fr 375px;
+  gap: 0;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.preview-pane {
+  padding: 32px 40px;
+}
+
+.preview-pane + .preview-pane {
+  border-left: 1px solid #E5E7EB;
+  background: #FAFAFA;
+}
+
+.preview-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #9CA3AF;
+  margin-bottom: 24px;
+  font-family: Inter, sans-serif;
+}
+
+/* ─── Simulated Website UI ─── */
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid #E5E7EB;
+  margin-bottom: 40px;
+}
+
+.site-logo {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0369A1;
+}
+
+.site-nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.site-nav-links li a {
+  font-size: 14px;
+  color: #4B5563;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.site-nav-links li a.active {
+  color: #0369A1;
+  font-weight: 600;
+}
+
+.site-nav-cta {
+  padding: 9px 20px;
+  background: #0369A1;
+  color: #fff;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile nav */
+.mobile-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 16px 0;
+  border-bottom: 1px solid #E5E7EB;
+  margin-bottom: 28px;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hamburger div {
+  width: 22px;
+  height: 2px;
+  background: #374151;
+  border-radius: 2px;
+}
+
+/* ─── Hero Content ─── */
+.hero-headline {
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #0F172A;
+  margin-bottom: 16px;
+}
+
+.hero-sub {
+  color: #4B5563;
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+.hero-body {
+  color: #6B7280;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.hero-cta {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #FACC15;
+  color: #0F172A;
+  border-radius: 100px;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  letter-spacing: -0.01em;
+}
+
+.hero-cta-secondary {
+  display: inline-block;
+  padding: 14px 28px;
+  background: transparent;
+  color: #0369A1;
+  border-radius: 100px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid #0369A1;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+/* ─── Stress Test Section ─── */
+.stress-section {
+  padding: 32px 40px;
+  border-bottom: 1px solid #E5E7EB;
+  background: #F9FAFB;
+}
+
+.stress-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #9CA3AF;
+  margin-bottom: 20px;
+  font-family: Inter, sans-serif;
+}
+
+.stress-word {
+  display: block;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #0F172A;
+  margin-bottom: 8px;
+}
+
+.stress-subtext {
+  font-size: 12px;
+  font-family: Inter, sans-serif;
+  color: #9CA3AF;
+  margin-bottom: 16px;
+}
+
+/* ─── Meta Info ─── */
+.meta-section {
+  padding: 28px 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.meta-item h4 {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #9CA3AF;
+  margin-bottom: 6px;
+  font-family: Inter, sans-serif;
+}
+
+.meta-item p {
+  font-size: 14px;
+  color: #374151;
+  font-family: Inter, sans-serif;
+  line-height: 1.5;
+}
+
+.check { color: #10B981; font-weight: 600; }
+.cross { color: #EF4444; font-weight: 600; }
+
+/* ─── Confirmed badge ─── */
+.confirmed-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 5px 12px;
+  border-radius: 100px;
+  background: #DCFCE7;
+  color: #166534;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .previews-row { grid-template-columns: 1fr; }
+  .meta-section { grid-template-columns: 1fr 1fr; }
+  .option-header { flex-direction: column; }
+  .site-nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<h1 class="page-title">Typografie — John's Schoonmaakbedrijf</h1>
+<p class="page-subtitle">3 lettertype-opties voor Archetype E (Schoonmaakbedrijf) · Mixed B2B/B2C · Energie 7/10 · Formaliteit 5–6/10 · Palet: Optie D (blauw + geel + navy)</p>
+
+<!-- ╔════════════════════════════════════════╗ -->
+<!-- ║  OPTIE 1 — Outfit + Inter (BEVESTIGD)  ║ -->
+<!-- ╚════════════════════════════════════════╝ -->
+<div class="option-card" style="border: 3px solid #0369A1;">
+
+  <div class="option-header">
+    <div>
+      <div style="display: flex; gap: 8px; margin-bottom: 10px; align-items: center; flex-wrap: wrap;">
+        <div class="option-label" style="background: #DBEAFE; color: #1D4ED8;">Optie 1</div>
+        <div class="confirmed-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+          Bevestigde richting
+        </div>
+      </div>
+      <div class="option-name" style="font-family: 'Outfit', sans-serif;">Outfit — Geometrisch &amp; Energiek</div>
+      <div class="option-meta">Klassiek/veilig · Bewezen keuze uit huidig glazenwassers-ontwerp · Aanpassen voor schoonmaakbedrijf</div>
+    </div>
+    <div>
+      <div class="font-stack">
+        <div class="font-pill" style="font-family: 'Outfit', sans-serif; font-weight: 700;">
+          Outfit 700/600
+          <span>Headings</span>
+        </div>
+        <div style="color: #D1D5DB; font-size: 18px;">+</div>
+        <div class="font-pill" style="font-family: 'Inter', sans-serif;">
+          Inter 400/500
+          <span>Body</span>
+        </div>
+      </div>
+      <div class="font-category" style="margin-top: 8px;">Sans-serif + Sans-serif · Tier A + Tier A · Popularity #44 + #7</div>
+    </div>
+  </div>
+
+  <div class="previews-row" style="font-family: 'Outfit', sans-serif;">
+
+    <!-- Desktop -->
+    <div class="preview-pane">
+      <div class="preview-label">Desktop — 1440px</div>
+
+      <nav class="site-nav" style="font-family: 'Inter', sans-serif;">
+        <div class="site-logo" style="font-family: 'Outfit', sans-serif; font-weight: 700;">John's Schoonmaakbedrijf</div>
+        <ul class="site-nav-links">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Diensten</a></li>
+          <li><a href="#">Over ons</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <button class="site-nav-cta" style="font-family: 'Outfit', sans-serif;">Offerte aanvragen</button>
+      </nav>
+
+      <div class="hero-headline" style="font-family: 'Outfit', sans-serif; font-size: 56px; font-weight: 700;">De schoonste kantoren<br>in de Betuwe</div>
+      <div class="hero-sub" style="font-family: 'Inter', sans-serif; font-size: 19px;">VCA-gecertificeerde kantoorschoonmaak voor bedrijven in Buren en omgeving — vaste teams, transparante tarieven, persoonlijk contact.</div>
+      <div class="hero-body" style="font-family: 'Inter', sans-serif; font-size: 16px;">John's Schoonmaakbedrijf verzorgt al meer dan 15 jaar professionele schoonmaakdiensten voor kantoren, bedrijfshallen en particuliere woningen in de Betuwe. Ons team van vaste medewerkers werkt met hoogwaardige materialen en milieuvriendelijke reinigingsmiddelen. We plannen alle werkzaamheden in overleg met u — 's ochtends vroeg, overdag of na kantooruren. Vraag vandaag een vrijblijvende offerte aan en ontvang binnen 24 uur een reactie.</div>
+      <button class="hero-cta" style="font-family: 'Outfit', sans-serif; font-size: 16px;">Vraag gratis offerte aan</button>
+      <button class="hero-cta-secondary" style="font-family: 'Outfit', sans-serif; font-size: 15px; letter-spacing: normal;">Bel 06 23545276</button>
+    </div>
+
+    <!-- Mobile -->
+    <div class="preview-pane">
+      <div class="preview-label">Mobiel — 375px</div>
+
+      <nav class="mobile-nav" style="font-family: 'Outfit', sans-serif;">
+        <div class="site-logo" style="font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 14px;">John's Schoonmaakbedrijf</div>
+        <div class="hamburger"><div></div><div></div><div></div></div>
+      </nav>
+
+      <div class="hero-headline" style="font-family: 'Outfit', sans-serif; font-size: 32px; font-weight: 700;">De schoonste kantoren in de Betuwe</div>
+      <div class="hero-sub" style="font-family: 'Inter', sans-serif; font-size: 15px; margin-top: 12px;">VCA-gecertificeerde kantoorschoonmaak — vaste teams, transparante tarieven.</div>
+      <div class="hero-body" style="font-family: 'Inter', sans-serif; font-size: 14px; margin-bottom: 20px;">Al meer dan 15 jaar het vertrouwde schoonmaakbedrijf van de Betuwe. Persoonlijk contact, vaste teams, altijd bereikbaar.</div>
+      <button class="hero-cta" style="font-family: 'Outfit', sans-serif; font-size: 15px; display: block; text-align: center; width: 100%;">Vraag gratis offerte aan</button>
+      <button class="hero-cta-secondary" style="font-family: 'Outfit', sans-serif; font-size: 14px; display: block; text-align: center; width: 100%; margin-left: 0; margin-top: 10px;">Bel 06 23545276</button>
+    </div>
+  </div>
+
+  <!-- Stress Test -->
+  <div class="stress-section">
+    <div class="stress-label">Nederlandse samenstellingen — stresstTest op heading-grootte</div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
+      <div>
+        <div class="stress-word" style="font-family: 'Outfit', sans-serif; font-size: 40px; font-weight: 700;">schoonmaakdiensten</div>
+        <div class="stress-subtext">18 tekens — past goed</div>
+        <div class="stress-word" style="font-family: 'Outfit', sans-serif; font-size: 40px; font-weight: 700;">kantoorschoonmaak</div>
+        <div class="stress-subtext">17 tekens — uitstekend</div>
+      </div>
+      <div>
+        <div class="stress-word" style="font-family: 'Outfit', sans-serif; font-size: 40px; font-weight: 700;">tuinonderhoud</div>
+        <div class="stress-subtext">13 tekens — prima</div>
+        <div class="stress-word" style="font-family: 'Outfit', sans-serif; font-size: 40px; font-weight: 700;">verwarmingsinstallatie</div>
+        <div class="stress-subtext">22 tekens — let op afbreking bij smal scherm</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Meta -->
+  <div class="meta-section">
+    <div class="meta-item">
+      <h4>Tekens per regel (H1, desktop)</h4>
+      <p>±28–34 tekens bij 56px<br>Op contentbreedte ~900px</p>
+    </div>
+    <div class="meta-item">
+      <h4>Tekens per regel (body, desktop)</h4>
+      <p>±72–80 tekens bij 16px<br>Optimale leesbaarheid: 65–75</p>
+    </div>
+    <div class="meta-item">
+      <h4>Nederlandse glyphs</h4>
+      <p><span class="check">✓</span> ij-ligatuur<br><span class="check">✓</span> é ë è ö ü â<br><span class="check">✓</span> Latin Extended volledige ondersteuning</p>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ╔═══════════════════════════════════════╗ -->
+<!-- ║  OPTIE 2 — Plus Jakarta Sans (Bold)   ║ -->
+<!-- ╚═══════════════════════════════════════╝ -->
+<div class="option-card">
+
+  <div class="option-header">
+    <div>
+      <div class="option-label" style="background: #FEF3C7; color: #92400E;">Optie 2</div>
+      <div class="option-name" style="font-family: 'Plus Jakarta Sans', sans-serif;">Plus Jakarta Sans — Modern &amp; Onderscheidend</div>
+      <div class="option-meta">Modern/distinctive · Single-family systeem · Brede proporties, SaaS-uitstraling · Uniek in de schoonmaakbranche</div>
+    </div>
+    <div>
+      <div class="font-stack">
+        <div class="font-pill" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700;">
+          Plus Jakarta Sans 800/700
+          <span>Headings</span>
+        </div>
+        <div style="color: #D1D5DB; font-size: 18px;">+</div>
+        <div class="font-pill" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 400;">
+          Plus Jakarta Sans 400/500
+          <span>Body</span>
+        </div>
+      </div>
+      <div class="font-category" style="margin-top: 8px;">Sans-serif (single family) · Tier B · Wide · Popularity #69</div>
+    </div>
+  </div>
+
+  <div class="previews-row">
+
+    <!-- Desktop -->
+    <div class="preview-pane">
+      <div class="preview-label">Desktop — 1440px</div>
+
+      <nav class="site-nav" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+        <div class="site-logo" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; color: #0369A1;">John's Schoonmaakbedrijf</div>
+        <ul class="site-nav-links">
+          <li><a href="#" class="active" style="font-family: 'Plus Jakarta Sans', sans-serif;">Home</a></li>
+          <li><a href="#" style="font-family: 'Plus Jakarta Sans', sans-serif;">Diensten</a></li>
+          <li><a href="#" style="font-family: 'Plus Jakarta Sans', sans-serif;">Over ons</a></li>
+          <li><a href="#" style="font-family: 'Plus Jakarta Sans', sans-serif;">Portfolio</a></li>
+          <li><a href="#" style="font-family: 'Plus Jakarta Sans', sans-serif;">Contact</a></li>
+        </ul>
+        <button class="site-nav-cta" style="font-family: 'Plus Jakarta Sans', sans-serif;">Offerte aanvragen</button>
+      </nav>
+
+      <div class="hero-headline" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 56px; font-weight: 800;">De schoonste kantoren<br>in de Betuwe</div>
+      <div class="hero-sub" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 19px; font-weight: 400;">VCA-gecertificeerde kantoorschoonmaak voor bedrijven in Buren en omgeving — vaste teams, transparante tarieven, persoonlijk contact.</div>
+      <div class="hero-body" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 16px; font-weight: 400;">John's Schoonmaakbedrijf verzorgt al meer dan 15 jaar professionele schoonmaakdiensten voor kantoren, bedrijfshallen en particuliere woningen in de Betuwe. Ons team van vaste medewerkers werkt met hoogwaardige materialen en milieuvriendelijke reinigingsmiddelen. We plannen alle werkzaamheden in overleg met u — 's ochtends vroeg, overdag of na kantooruren. Vraag vandaag een vrijblijvende offerte aan en ontvang binnen 24 uur een reactie.</div>
+      <button class="hero-cta" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 16px; font-weight: 700;">Vraag gratis offerte aan</button>
+      <button class="hero-cta-secondary" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px;">Bel 06 23545276</button>
+    </div>
+
+    <!-- Mobile -->
+    <div class="preview-pane">
+      <div class="preview-label">Mobiel — 375px</div>
+
+      <nav class="mobile-nav" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+        <div class="site-logo" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 14px; color: #0369A1;">John's Schoonmaakbedrijf</div>
+        <div class="hamburger"><div></div><div></div><div></div></div>
+      </nav>
+
+      <div class="hero-headline" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 32px; font-weight: 800;">De schoonste kantoren in de Betuwe</div>
+      <div class="hero-sub" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; margin-top: 12px; font-weight: 400;">VCA-gecertificeerde kantoorschoonmaak — vaste teams, transparante tarieven.</div>
+      <div class="hero-body" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; margin-bottom: 20px; font-weight: 400;">Al meer dan 15 jaar het vertrouwde schoonmaakbedrijf van de Betuwe. Persoonlijk contact, vaste teams, altijd bereikbaar.</div>
+      <button class="hero-cta" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; font-weight: 700; display: block; text-align: center; width: 100%;">Vraag gratis offerte aan</button>
+      <button class="hero-cta-secondary" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; display: block; text-align: center; width: 100%; margin-left: 0; margin-top: 10px;">Bel 06 23545276</button>
+    </div>
+  </div>
+
+  <!-- Stress Test -->
+  <div class="stress-section">
+    <div class="stress-label">Nederlandse samenstellingen — stresstTest op heading-grootte</div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
+      <div>
+        <div class="stress-word" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 40px; font-weight: 800;">schoonmaakdiensten</div>
+        <div class="stress-subtext">18 tekens — bredere proporties, meer ruimte nodig</div>
+        <div class="stress-word" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 40px; font-weight: 800;">kantoorschoonmaak</div>
+        <div class="stress-subtext">17 tekens — let op breedte op mobiel</div>
+      </div>
+      <div>
+        <div class="stress-word" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 40px; font-weight: 800;">tuinonderhoud</div>
+        <div class="stress-subtext">13 tekens — prima</div>
+        <div class="stress-word" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 40px; font-weight: 800;">verwarmingsinstallatie</div>
+        <div class="stress-subtext">22 tekens — breekt af op vrijwel alle schermen</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Meta -->
+  <div class="meta-section">
+    <div class="meta-item">
+      <h4>Tekens per regel (H1, desktop)</h4>
+      <p>±24–30 tekens bij 56px<br>Bredere proporties → kortere regels</p>
+    </div>
+    <div class="meta-item">
+      <h4>Tekens per regel (body, desktop)</h4>
+      <p>±66–74 tekens bij 16px<br>Iets breder dan Inter</p>
+    </div>
+    <div class="meta-item">
+      <h4>Nederlandse glyphs</h4>
+      <p><span class="check">✓</span> ij-ligatuur<br><span class="check">✓</span> é ë è ö ü â<br><span class="check">✓</span> Latin Extended volledige ondersteuning</p>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ╔═════════════════════════════════════════════╗ -->
+<!-- ║  OPTIE 3 — DM Sans + Nunito (Warm+Sterk)   ║ -->
+<!-- ╚═════════════════════════════════════════════╝ -->
+<div class="option-card">
+
+  <div class="option-header">
+    <div>
+      <div class="option-label" style="background: #F3E8FF; color: #6B21A8;">Optie 3</div>
+      <div class="option-name" style="font-family: 'DM Sans', sans-serif;">DM Sans + Nunito — Sterk &amp; Warm</div>
+      <div class="option-meta">Expressief/warm · DM Sans (karakter in headings) + Nunito (vriendelijk body) · Overbrugt B2B autoriteit / B2C bereikbaarheid</div>
+    </div>
+    <div>
+      <div class="font-stack">
+        <div class="font-pill" style="font-family: 'DM Sans', sans-serif; font-weight: 700;">
+          DM Sans 700/600
+          <span>Headings</span>
+        </div>
+        <div style="color: #D1D5DB; font-size: 18px;">+</div>
+        <div class="font-pill" style="font-family: 'Nunito', sans-serif; font-weight: 400;">
+          Nunito 400/600
+          <span>Body</span>
+        </div>
+      </div>
+      <div class="font-category" style="margin-top: 8px;">Sans-serif + Rounded Sans · Tier A + Tier A · Popularity #26 + top 50</div>
+    </div>
+  </div>
+
+  <div class="previews-row">
+
+    <!-- Desktop -->
+    <div class="preview-pane">
+      <div class="preview-label">Desktop — 1440px</div>
+
+      <nav class="site-nav" style="font-family: 'Nunito', sans-serif;">
+        <div class="site-logo" style="font-family: 'DM Sans', sans-serif; font-weight: 700; color: #0369A1;">John's Schoonmaakbedrijf</div>
+        <ul class="site-nav-links">
+          <li><a href="#" class="active" style="font-family: 'Nunito', sans-serif;">Home</a></li>
+          <li><a href="#" style="font-family: 'Nunito', sans-serif;">Diensten</a></li>
+          <li><a href="#" style="font-family: 'Nunito', sans-serif;">Over ons</a></li>
+          <li><a href="#" style="font-family: 'Nunito', sans-serif;">Portfolio</a></li>
+          <li><a href="#" style="font-family: 'Nunito', sans-serif;">Contact</a></li>
+        </ul>
+        <button class="site-nav-cta" style="font-family: 'DM Sans', sans-serif; font-weight: 600;">Offerte aanvragen</button>
+      </nav>
+
+      <div class="hero-headline" style="font-family: 'DM Sans', sans-serif; font-size: 56px; font-weight: 700; letter-spacing: -0.02em;">De schoonste kantoren<br>in de Betuwe</div>
+      <div class="hero-sub" style="font-family: 'Nunito', sans-serif; font-size: 19px; font-weight: 400;">VCA-gecertificeerde kantoorschoonmaak voor bedrijven in Buren en omgeving — vaste teams, transparante tarieven, persoonlijk contact.</div>
+      <div class="hero-body" style="font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 400;">John's Schoonmaakbedrijf verzorgt al meer dan 15 jaar professionele schoonmaakdiensten voor kantoren, bedrijfshallen en particuliere woningen in de Betuwe. Ons team van vaste medewerkers werkt met hoogwaardige materialen en milieuvriendelijke reinigingsmiddelen. We plannen alle werkzaamheden in overleg met u — 's ochtends vroeg, overdag of na kantooruren. Vraag vandaag een vrijblijvende offerte aan en ontvang binnen 24 uur een reactie.</div>
+      <button class="hero-cta" style="font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 700;">Vraag gratis offerte aan</button>
+      <button class="hero-cta-secondary" style="font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600;">Bel 06 23545276</button>
+    </div>
+
+    <!-- Mobile -->
+    <div class="preview-pane">
+      <div class="preview-label">Mobiel — 375px</div>
+
+      <nav class="mobile-nav" style="font-family: 'DM Sans', sans-serif;">
+        <div class="site-logo" style="font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 14px; color: #0369A1;">John's Schoonmaakbedrijf</div>
+        <div class="hamburger"><div></div><div></div><div></div></div>
+      </nav>
+
+      <div class="hero-headline" style="font-family: 'DM Sans', sans-serif; font-size: 32px; font-weight: 700; letter-spacing: -0.02em;">De schoonste kantoren in de Betuwe</div>
+      <div class="hero-sub" style="font-family: 'Nunito', sans-serif; font-size: 15px; margin-top: 12px; font-weight: 400;">VCA-gecertificeerde kantoorschoonmaak — vaste teams, transparante tarieven.</div>
+      <div class="hero-body" style="font-family: 'Nunito', sans-serif; font-size: 14px; margin-bottom: 20px; font-weight: 400;">Al meer dan 15 jaar het vertrouwde schoonmaakbedrijf van de Betuwe. Persoonlijk contact, vaste teams, altijd bereikbaar.</div>
+      <button class="hero-cta" style="font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700; display: block; text-align: center; width: 100%;">Vraag gratis offerte aan</button>
+      <button class="hero-cta-secondary" style="font-family: 'DM Sans', sans-serif; font-size: 14px; display: block; text-align: center; width: 100%; margin-left: 0; margin-top: 10px;">Bel 06 23545276</button>
+    </div>
+  </div>
+
+  <!-- Stress Test -->
+  <div class="stress-section">
+    <div class="stress-label">Nederlandse samenstellingen — stresstTest op heading-grootte</div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
+      <div>
+        <div class="stress-word" style="font-family: 'DM Sans', sans-serif; font-size: 40px; font-weight: 700;">schoonmaakdiensten</div>
+        <div class="stress-subtext">18 tekens — compact, uitstekend</div>
+        <div class="stress-word" style="font-family: 'DM Sans', sans-serif; font-size: 40px; font-weight: 700;">kantoorschoonmaak</div>
+        <div class="stress-subtext">17 tekens — prima proportie</div>
+      </div>
+      <div>
+        <div class="stress-word" style="font-family: 'DM Sans', sans-serif; font-size: 40px; font-weight: 700;">tuinonderhoud</div>
+        <div class="stress-subtext">13 tekens — ruim</div>
+        <div class="stress-word" style="font-family: 'DM Sans', sans-serif; font-size: 40px; font-weight: 700;">verwarmingsinstallatie</div>
+        <div class="stress-subtext">22 tekens — breekt op kleine schermen, gebruik css hyphens</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Meta -->
+  <div class="meta-section">
+    <div class="meta-item">
+      <h4>Tekens per regel (H1, desktop)</h4>
+      <p>±30–36 tekens bij 56px<br>DM Sans compact → meer per regel</p>
+    </div>
+    <div class="meta-item">
+      <h4>Tekens per regel (body, desktop)</h4>
+      <p>±68–78 tekens bij 16px<br>Nunito iets ruimer door ronde vormen</p>
+    </div>
+    <div class="meta-item">
+      <h4>Nederlandse glyphs</h4>
+      <p><span class="check">✓</span> ij-ligatuur (DM Sans)<br><span class="check">✓</span> é ë è ö ü â (beide)<br><span class="check">✓</span> Latin Extended volledige ondersteuning</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- ─── Vergelijkingstabel ─── -->
+<div style="max-width: 1400px; margin: 0 auto; background: #fff; border-radius: 20px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); padding: 32px 40px;">
+  <h3 style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #9CA3AF; margin-bottom: 24px; font-family: Inter, sans-serif;">Vergelijking — drie opties</h3>
+  <table style="width: 100%; border-collapse: collapse; font-size: 14px; font-family: Inter, sans-serif;">
+    <thead>
+      <tr style="border-bottom: 2px solid #E5E7EB;">
+        <th style="text-align: left; padding: 10px 12px; color: #6B7280; font-weight: 600;">Eigenschap</th>
+        <th style="text-align: left; padding: 10px 12px; color: #1D4ED8; font-weight: 700;">Optie 1: Outfit + Inter ✓</th>
+        <th style="text-align: left; padding: 10px 12px; color: #92400E; font-weight: 600;">Optie 2: Plus Jakarta Sans</th>
+        <th style="text-align: left; padding: 10px 12px; color: #6B21A8; font-weight: 600;">Optie 3: DM Sans + Nunito</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #F3F4F6;">
+        <td style="padding: 10px 12px; color: #374151; font-weight: 500;">Karakter</td>
+        <td style="padding: 10px 12px;">Geometrisch, energiek, modern</td>
+        <td style="padding: 10px 12px;">Breed, strak, SaaS-professioneel</td>
+        <td style="padding: 10px 12px;">Technisch + warm, toegankelijk</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #F3F4F6;">
+        <td style="padding: 10px 12px; color: #374151; font-weight: 500;">B2B geschiktheid</td>
+        <td style="padding: 10px 12px;"><span class="check">Uitstekend</span></td>
+        <td style="padding: 10px 12px;"><span class="check">Uitstekend</span></td>
+        <td style="padding: 10px 12px;"><span style="color: #F59E0B;">Goed (iets warmere toon)</span></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #F3F4F6;">
+        <td style="padding: 10px 12px; color: #374151; font-weight: 500;">B2C geschiktheid</td>
+        <td style="padding: 10px 12px;"><span class="check">Goed</span></td>
+        <td style="padding: 10px 12px;"><span style="color: #F59E0B;">Redelijk (zakelijker)</span></td>
+        <td style="padding: 10px 12px;"><span class="check">Uitstekend</span></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #F3F4F6;">
+        <td style="padding: 10px 12px; color: #374151; font-weight: 500;">Lange samenstellingen</td>
+        <td style="padding: 10px 12px;"><span class="check">Goed (normaal breed)</span></td>
+        <td style="padding: 10px 12px;"><span style="color: #F59E0B;">Let op (breed lettertype)</span></td>
+        <td style="padding: 10px 12px;"><span class="check">Uitstekend (compact)</span></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #F3F4F6;">
+        <td style="padding: 10px 12px; color: #374151; font-weight: 500;">Persoonlijkheid / energie</td>
+        <td style="padding: 10px 12px;"><span class="check">Hoog — uniek karakter</span></td>
+        <td style="padding: 10px 12px;"><span style="color: #F59E0B;">Middel — zakelijk</span></td>
+        <td style="padding: 10px 12px;"><span class="check">Hoog — warm + krachtig</span></td>
+      </tr>
+      <tr>
+        <td style="padding: 10px 12px; color: #374151; font-weight: 500;">Aanbeveling</td>
+        <td style="padding: 10px 12px; background: #EFF6FF; color: #1D4ED8; font-weight: 600;">Bevestigde richting</td>
+        <td style="padding: 10px 12px;">Alternatief bij meer B2B focus</td>
+        <td style="padding: 10px 12px;">Alternatief bij warmer merk-gevoel</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

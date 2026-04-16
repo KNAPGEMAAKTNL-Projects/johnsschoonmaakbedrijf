@@ -1,0 +1,37 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  canonical?: string;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  ogImage = "/images/og-default.jpg",
+  canonical,
+  noindex = false,
+} = Astro.props;
+
+const siteURL = Astro.site?.href?.replace(/\/$/, "") || "https://www.johnsschoonmaakbedrijf.nl";
+const canonicalURL = canonical || new URL(Astro.url.pathname, siteURL).href;
+const ogImageURL = ogImage.startsWith("http") ? ogImage : new URL(ogImage, siteURL).href;
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+
+<!-- Open Graph -->
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImageURL} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="nl_NL" />
+<meta property="og:site_name" content="John's Schoonmaakbedrijf" />

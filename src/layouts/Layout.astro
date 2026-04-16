@@ -1,0 +1,81 @@
+---
+import { ClientRouter } from "astro:transitions";
+import SEOHead from "../components/SEOHead.astro";
+import SchemaLocalBusiness from "../components/seo/SchemaLocalBusiness.astro";
+import SchemaBreadcrumb from "../components/seo/SchemaBreadcrumb.astro";
+import "../styles/global.css";
+import "../styles/effects.css";
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  canonical?: string;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description = "John's Schoonmaakbedrijf. Professionele kantoorschoonmaak in Buren en omgeving. VCA-gecertificeerd, sinds 2009.",
+  ogImage,
+  canonical,
+  noindex,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="nl">
+  <head>
+    <SEOHead {title} {description} {ogImage} {canonical} {noindex} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Google Fonts: Outfit + Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <SchemaLocalBusiness />
+    <SchemaBreadcrumb />
+    <ClientRouter />
+  </head>
+  <body>
+    <slot />
+
+    <!--
+      IntersectionObserver fallback for Firefox scroll animations (~0.5 KB).
+      Uses astro:page-load to re-init after View Transitions navigation.
+    -->
+    <script>
+      function initScrollReveal() {
+        if (CSS.supports("animation-timeline: view()")) return;
+
+        const els = document.querySelectorAll(
+          ".scroll-fade-up:not(.js-scroll-reveal), .scroll-scale-reveal:not(.js-scroll-reveal)"
+        );
+        if (!els.length) return;
+
+        els.forEach((el) => el.classList.add("js-scroll-reveal"));
+
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        els.forEach((el) => io.observe(el));
+      }
+
+      // Run on initial load and after every View Transition navigation
+      document.addEventListener("astro:page-load", initScrollReveal);
+    </script>
+  </body>
+</html>

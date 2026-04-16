@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout Opties — John's Schoonmaakbedrijf</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ─── Design Tokens — Option D palette ─── */
+:root {
+  --c-primary:        #0369A1;  /* Sky-700 — brand blue */
+  --c-primary-light:  #0EA5E9;  /* Sky-500 — decoratief/iconen */
+  --c-accent:         #FACC15;  /* Yellow-400 — accent */
+  --c-accent-dark:    #EAB308;  /* Yellow-500 — hover state accent */
+  --c-navy:           #0F172A;  /* Slate-900 — donkere secties, headings */
+  --c-navy-muted:     #1E293B;  /* Slate-800 — subtiele donkere elementen */
+  --c-bg:             #FFFFFF;
+  --c-surface:        #F9FAFB;
+  --c-surface-blue:   #EFF6FF;  /* Blue-50 */
+  --c-text:           #0F172A;
+  --c-text-muted:     #4B5563;
+  --c-text-light:     #9CA3AF;
+  --c-border:         #E5E7EB;
+
+  --font-head: 'Outfit', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --radius-sm:    6px;
+  --radius-md:    12px;
+  --radius-lg:    20px;
+  --radius-full:  9999px;
+
+  --shadow-card:      0 2px 8px rgba(3,105,161,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-card-hover: 0 12px 32px rgba(3,105,161,0.16), 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-btn:       0 4px 14px rgba(3,105,161,0.35);
+}
+
+/* ─── Reset ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: #E5E7EB;
+  color: var(--c-text);
+  line-height: 1.6;
+  padding: 40px 20px 80px;
+}
+
+/* ─── Page Header ─── */
+.page-title {
+  text-align: center;
+  font-family: var(--font-head);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--c-navy);
+  margin-bottom: 6px;
+}
+.page-subtitle {
+  text-align: center;
+  font-size: 15px;
+  color: var(--c-text-muted);
+  margin-bottom: 16px;
+}
+.palette-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 48px;
+}
+.pal-swatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid rgba(0,0,0,0.1);
+}
+.pal-label {
+  font-size: 12px;
+  color: #666;
+  font-family: monospace;
+}
+
+/* ─── Option Wrapper ─── */
+.option-wrapper {
+  max-width: 1440px;
+  margin: 0 auto 64px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+}
+.option-label-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 32px;
+  background: var(--c-navy);
+  color: #fff;
+}
+.option-number {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: var(--c-accent);
+  color: var(--c-navy);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+.option-name {
+  font-family: var(--font-head);
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+.option-desc {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  margin-left: auto;
+}
+.option-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 12px 32px;
+  background: var(--c-navy-muted);
+}
+.tag {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(250,204,21,0.15);
+  color: var(--c-accent);
+  border: 1px solid rgba(250,204,21,0.25);
+}
+
+/* ─── Nav (shared) ─── */
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 72px;
+  background: var(--c-bg);
+  border-bottom: 1px solid var(--c-border);
+  position: relative;
+  z-index: 10;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--c-primary);
+}
+.nav-logo-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--c-accent);
+}
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+.nav-links a {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--c-text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--c-primary); }
+.nav-cta {
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 22px;
+  background: var(--c-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.nav-cta:hover {
+  background: var(--c-navy);
+  box-shadow: var(--shadow-btn);
+}
+
+/* ─── Shared Button Styles ─── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 28px;
+  background: var(--c-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+.btn-primary:hover {
+  background: var(--c-navy);
+  box-shadow: var(--shadow-btn);
+  transform: translateY(-1px);
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 13px 28px;
+  background: transparent;
+  color: var(--c-primary);
+  border: 2px solid var(--c-primary);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.btn-secondary:hover {
+  background: var(--c-primary);
+  color: #fff;
+}
+
+/* ─── Trust Badges (shared) ─── */
+.trust-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--c-text-muted);
+}
+.trust-badge svg { flex-shrink: 0; }
+.trust-badge strong { color: var(--c-text); }
+
+/* ─── Rating Star ─── */
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.stars { color: var(--c-accent); font-size: 14px; }
+
+/* ─── Image Placeholder ─── */
+.img-placeholder {
+  background: linear-gradient(135deg, var(--c-surface-blue) 0%, #DBEAFE 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-primary);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  gap: 8px;
+  border-radius: var(--radius-md);
+}
+.img-placeholder svg { opacity: 0.4; }
+
+
+/* ═══════════════════════════════════════════════════════
+   OPTIE 1 — "Asymmetrische Autoriteit"
+   Split hero 60/40 + wave divider + hover lift cards
+   ═══════════════════════════════════════════════════════ */
+
+/* HERO */
+.o1-hero {
+  background: var(--c-bg);
+  position: relative;
+  overflow: hidden;
+  padding: 72px 40px 80px;
+}
+
+/* Visual Craft: Ambient Blob Mesh behind hero text */
+.o1-blob-mesh {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.o1-blob-mesh::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: -60px;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: var(--c-primary);
+  opacity: 0.06;
+  filter: blur(80px);
+}
+.o1-blob-mesh::after {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: var(--c-accent);
+  opacity: 0.08;
+  filter: blur(60px);
+}
+
+.o1-hero-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+.o1-hero-left {}
+.o1-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-head);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--c-primary);
+  background: var(--c-surface-blue);
+  border: 1px solid #BFDBFE;
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 20px;
+}
+.o1-eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-primary-light);
+  display: inline-block;
+}
+.o1-h1 {
+  font-family: var(--font-head);
+  font-size: clamp(36px, 3.5vw, 56px);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--c-navy);
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+/* Visual Craft: Gradient underline on accent word */
+.o1-h1 .accent-word {
+  position: relative;
+  display: inline;
+  color: var(--c-primary);
+}
+.o1-h1 .accent-word::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--c-primary), var(--c-primary-light));
+  border-radius: 2px;
+}
+.o1-sub {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--c-text-muted);
+  margin-bottom: 32px;
+  max-width: 480px;
+}
+.o1-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+.o1-trust-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 28px;
+  border-top: 1px solid var(--c-border);
+}
+.o1-cert-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--c-text-muted);
+}
+.o1-cert-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: var(--c-surface-blue);
+  border: 1px solid #BFDBFE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-primary);
+  font-size: 14px;
+}
+.o1-divider { width: 1px; height: 24px; background: var(--c-border); }
+
+/* Hero right side */
+.o1-hero-right { position: relative; }
+.o1-hero-img {
+  width: 100%;
+  aspect-ratio: 5/4;
+  border-radius: var(--radius-lg);
+}
+/* Floating card overlay on image */
+.o1-floating-card {
+  position: absolute;
+  bottom: -20px;
+  left: -28px;
+  background: var(--c-bg);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  box-shadow: 0 8px 32px rgba(3,105,161,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 160px;
+  border: 1px solid var(--c-border);
+}
+.o1-fc-number {
+  font-family: var(--font-head);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--c-primary);
+  line-height: 1;
+}
+.o1-fc-label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--c-text-muted);
+  font-weight: 500;
+}
+/* Second floating card */
+.o1-floating-card-2 {
+  position: absolute;
+  top: 20px;
+  right: -24px;
+  background: var(--c-accent);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  box-shadow: 0 6px 20px rgba(234,179,8,0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.o1-fc2-text {
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--c-navy);
+  line-height: 1.3;
+}
+
+/* Visual Craft: Gentle Wave Divider between hero and services */
+.o1-wave {
+  background: var(--c-bg);
+  position: relative;
+  margin-bottom: -1px;
+}
+.o1-wave svg {
+  display: block;
+  width: 100%;
+}
+
+/* Services section */
+.o1-services {
+  background: var(--c-surface);
+  padding: 60px 40px 72px;
+}
+.o1-services-inner {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+.section-kicker {
+  display: inline-block;
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--c-primary);
+  margin-bottom: 10px;
+}
+.section-heading {
+  font-family: var(--font-head);
+  font-size: clamp(28px, 2.5vw, 40px);
+  font-weight: 700;
+  color: var(--c-navy);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+.section-sub {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--c-text-muted);
+  margin-bottom: 40px;
+  max-width: 520px;
+}
+/* Visual Craft: Icon in colored circle + Hover lift card */
+.o1-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.o1-card {
+  background: var(--c-bg);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  border: 1px solid var(--c-border);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.25s, transform 0.25s;
+  cursor: pointer;
+}
+.o1-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+.o1-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--c-surface-blue);
+  border: 1px solid #BFDBFE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-primary);
+  margin-bottom: 16px;
+}
+.o1-card-title {
+  font-family: var(--font-head);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--c-navy);
+  margin-bottom: 8px;
+}
+.o1-card-text {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--c-text-muted);
+  margin-bottom: 16px;
+}
+.o1-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c-primary);
+  text-decoration: none;
+}
+
+
+/* ═══════════════════════════════════════════════════════
+   OPTIE 2 — "Marineblauw Autoriteit"
+   Full-bleed navy hero + overlapping stats + scale contrast
+   ═══════════════════════════════════════════════════════ */
+
+.o2-hero {
+  background: var(--c-navy);
+  padding: 80px 40px 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Visual Craft: Grain/noise overlay on dark section */
+.o2-grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px;
+  mix-blend-mode: overlay;
+}
+
+/* Decorative large circle in background */
+.o2-bg-circle {
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: var(--c-primary);
+  opacity: 0.12;
+  pointer-events: none;
+}
+.o2-bg-circle-2 {
+  position: absolute;
+  bottom: -100px;
+  left: 40%;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: var(--c-accent);
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+/* Topographic wave strokes */
+.o2-topo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.o2-hero-inner {
+  max-width: 1360px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.o2-hero-left {}
+.o2-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--c-accent);
+  background: rgba(250,204,21,0.1);
+  border: 1px solid rgba(250,204,21,0.25);
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 24px;
+}
+.o2-h1 {
+  font-family: var(--font-head);
+  font-size: clamp(40px, 4vw, 64px);
+  font-weight: 800;
+  line-height: 1.05;
+  color: #FFFFFF;
+  letter-spacing: -0.025em;
+  margin-bottom: 24px;
+}
+/* Visual Craft: Yellow accent on key phrase */
+.o2-h1 .o2-accent {
+  color: var(--c-accent);
+}
+.o2-sub {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 36px;
+  max-width: 460px;
+}
+.o2-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+}
+.btn-primary-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px 28px;
+  background: var(--c-accent);
+  color: var(--c-navy);
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-primary-white:hover { background: var(--c-accent-dark); transform: translateY(-1px); }
+.btn-ghost-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 13px 28px;
+  background: transparent;
+  color: rgba(255,255,255,0.9);
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.btn-ghost-white:hover { border-color: rgba(255,255,255,0.7); color: #fff; }
+
+.o2-trust-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.o2-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.6);
+}
+.o2-trust-item svg { color: var(--c-accent); }
+.o2-hero-right { position: relative; }
+.o2-hero-img {
+  width: 100%;
+  aspect-ratio: 5/4;
+  border-radius: var(--radius-lg);
+  border: 2px solid rgba(255,255,255,0.08);
+}
+
+/* Visual Craft: Overlapping sections (-mt) for scale-contrast stats bar */
+.o2-stats-wrapper {
+  background: var(--c-bg);
+  padding: 0 40px 64px;
+}
+.o2-stats-bar {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--c-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 -4px 60px rgba(3,105,161,0.15), 0 8px 40px rgba(0,0,0,0.1);
+  border: 1px solid var(--c-border);
+  overflow: hidden;
+  position: relative;
+  top: -48px;
+}
+.o2-stat {
+  padding: 28px 32px;
+  border-right: 1px solid var(--c-border);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.o2-stat:last-child { border-right: none; }
+/* Visual Craft: V4 — Scale contrast */
+.o2-stat-number {
+  font-family: var(--font-head);
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--c-primary);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.o2-stat-number .o2-stat-unit {
+  font-size: 24px;
+  font-weight: 700;
+}
+.o2-stat-label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--c-text-muted);
+  line-height: 1.4;
+}
+
+/* Editorial services — 2-col asymmetric (big card left + 2 stacked right) */
+.o2-services {
+  background: var(--c-bg);
+  padding: 8px 40px 72px;
+}
+.o2-services-inner { max-width: 1360px; margin: 0 auto; }
+.o2-services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+/* Visual Craft: L2 Asymmetric editorial layout */
+.o2-services-grid {
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+.o2-card-main {
+  grid-row: span 2;
+  background: var(--c-navy);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+.o2-card-main-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--c-navy) 40%, #1e3a8a 100%);
+}
+.o2-card-main-accent {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: var(--c-accent);
+  opacity: 0.08;
+}
+.o2-card-main-content { position: relative; z-index: 2; }
+.o2-card-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  background: rgba(250,204,21,0.15);
+  color: var(--c-accent);
+  margin-bottom: 16px;
+}
+.o2-card-main-title {
+  font-family: var(--font-head);
+  font-size: 32px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+.o2-card-main-text {
+  font-size: 15px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.o2-card-small {
+  background: var(--c-surface);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  border: 1px solid var(--c-border);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.o2-card-small:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-3px); }
+.o2-small-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--c-surface-blue);
+  border: 1px solid #BFDBFE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-primary);
+  margin-bottom: 14px;
+}
+.o2-small-title {
+  font-family: var(--font-head);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--c-navy);
+  margin-bottom: 6px;
+}
+.o2-small-text {
+  font-size: 14px;
+  color: var(--c-text-muted);
+  line-height: 1.5;
+}
+
+
+/* ═══════════════════════════════════════════════════════
+   OPTIE 3 — "Transparant & Werkwijze"
+   Typography-led hero + S-curve flourish + timeline process
+   ═══════════════════════════════════════════════════════ */
+
+.o3-hero {
+  background: var(--c-bg);
+  padding: 80px 40px 72px;
+  position: relative;
+  overflow: hidden;
+}
+/* Visual Craft: SVG dot grid in hero background */
+.o3-dotgrid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(3,105,161,0.12) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+.o3-hero-inner {
+  max-width: 1360px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 80px;
+  align-items: center;
+}
+.o3-hero-left {}
+.o3-eyebrow {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--c-primary);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.o3-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 2px;
+  background: var(--c-accent);
+  border-radius: 2px;
+}
+/* Visual Craft: Large-scale hero headline with S-curve flourish beside it */
+.o3-h1-wrapper { position: relative; }
+.o3-flourish {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  opacity: 0.35;
+}
+.o3-h1 {
+  font-family: var(--font-head);
+  font-size: clamp(40px, 4.5vw, 68px);
+  font-weight: 800;
+  line-height: 1.05;
+  color: var(--c-navy);
+  letter-spacing: -0.025em;
+  margin-bottom: 10px;
+}
+/* Visual Craft: Gradient underline on headline */
+.o3-h1 .headline-underline {
+  position: relative;
+  display: inline;
+}
+.o3-h1 .headline-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--c-accent) 0%, var(--c-primary-light) 100%);
+  border-radius: 2px;
+}
+.o3-sub {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--c-text-muted);
+  margin-bottom: 36px;
+  max-width: 520px;
+}
+.o3-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.o3-phone-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--c-text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.o3-phone-link:hover { color: var(--c-primary); }
+.o3-trust-strip {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.o3-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--c-text-muted);
+  font-weight: 500;
+}
+.o3-trust-sep { width: 1px; height: 20px; background: var(--c-border); }
+
+/* Rating display */
+.o3-rating-display {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--shadow-card);
+}
+.o3-rating-big {
+  font-family: var(--font-head);
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--c-navy);
+  line-height: 1;
+}
+.o3-rating-info {}
+.o3-rating-stars { color: var(--c-accent); font-size: 16px; margin-bottom: 2px; }
+.o3-rating-count { font-size: 12px; color: var(--c-text-muted); }
+
+/* Hero right: stacked info cards + image */
+.o3-hero-right { display: flex; flex-direction: column; gap: 16px; }
+.o3-img-main {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-lg);
+}
+.o3-cert-strip {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+}
+.o3-cert-badge {
+  flex: 1;
+  text-align: center;
+}
+.o3-cert-name {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--c-text-muted);
+}
+.o3-cert-icon-big {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--c-surface-blue);
+  border: 1px solid #BFDBFE;
+  border-radius: 10px;
+  color: var(--c-primary);
+  margin: 0 auto 6px;
+}
+.o3-cert-div { width: 1px; height: 40px; background: var(--c-border); }
+
+/* Process section — timeline */
+.o3-process {
+  background: var(--c-surface);
+  padding: 64px 40px 72px;
+  position: relative;
+  overflow: hidden;
+}
+/* Visual Craft: Curved section edge at top */
+.o3-process::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: var(--c-bg);
+  clip-path: ellipse(55% 80px at 50% 0%);
+}
+
+.o3-process-inner {
+  max-width: 1360px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.o3-process-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+/* Visual Craft: Oversized step numbers (V4 scale contrast) */
+.o3-timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  position: relative;
+}
+/* Connector line */
+.o3-timeline::before {
+  content: '';
+  position: absolute;
+  top: 32px;
+  left: calc(16.66% + 24px);
+  right: calc(16.66% + 24px);
+  height: 2px;
+  background: linear-gradient(90deg, var(--c-primary) 0%, var(--c-primary-light) 100%);
+  z-index: 1;
+}
+.o3-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.o3-step-number {
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--c-primary);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border: 4px solid var(--c-surface);
+  box-shadow: 0 0 0 3px var(--c-primary);
+  position: relative;
+}
+.o3-step:nth-child(2) .o3-step-number { background: var(--c-primary-light); box-shadow: 0 0 0 3px var(--c-primary-light); }
+.o3-step:nth-child(3) .o3-step-number { background: var(--c-navy); box-shadow: 0 0 0 3px var(--c-navy); }
+/* Oversized number in background for visual interest */
+.o3-step-bg-num {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
+  font-family: var(--font-head);
+  font-size: 120px;
+  font-weight: 900;
+  color: var(--c-primary);
+  opacity: 0.04;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+.o3-step-card {
+  background: var(--c-bg);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  border: 1px solid var(--c-border);
+  box-shadow: var(--shadow-card);
+  width: 100%;
+}
+.o3-step-title {
+  font-family: var(--font-head);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--c-navy);
+  margin-bottom: 8px;
+}
+.o3-step-text {
+  font-size: 14px;
+  color: var(--c-text-muted);
+  line-height: 1.6;
+}
+.o3-step-time {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--c-primary);
+  background: var(--c-surface-blue);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  .o1-hero-inner,
+  .o2-hero-inner,
+  .o3-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .o2-stats-bar { grid-template-columns: repeat(2, 1fr); }
+  .o2-services-grid { grid-template-columns: 1fr; }
+  .o2-card-main { grid-row: span 1; min-height: 280px; }
+  .o1-cards { grid-template-columns: 1fr 1fr; }
+  .o3-timeline { grid-template-columns: 1fr; }
+  .o3-timeline::before { display: none; }
+  .o3-step-bg-num { display: none; }
+  .o1-floating-card, .o1-floating-card-2 { display: none; }
+}
+@media (max-width: 640px) {
+  body { padding: 20px 12px 60px; }
+  .o1-hero, .o2-hero, .o3-hero, .o1-services, .o2-services, .o2-stats-wrapper, .o3-process {
+    padding-left: 20px; padding-right: 20px;
+  }
+  .site-nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .o1-cards { grid-template-columns: 1fr; }
+  .o2-stats-bar { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<h1 class="page-title">Layout Opties — John's Schoonmaakbedrijf</h1>
+<p class="page-subtitle">3 hero/layout benaderingen · Kleurpalet D (Energiek Schoon) · Typografie: Outfit 800/700 + Inter 400/600</p>
+<div class="palette-preview">
+  <div class="pal-swatch" style="background:#0369A1;"></div>
+  <div class="pal-swatch" style="background:#0EA5E9;"></div>
+  <div class="pal-swatch" style="background:#FACC15;"></div>
+  <div class="pal-swatch" style="background:#0F172A;"></div>
+  <div class="pal-swatch" style="background:#F9FAFB; border:1px solid #ddd;"></div>
+  <span class="pal-label">L1+V1+C1 · L3+V3+V4 · L2+C3+V2</span>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════ -->
+<!--  OPTIE 1 — ASYMMETRISCHE AUTORITEIT                 -->
+<!--  L1 (60/40 split) + V1 (wave divider) + hover lift  -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="option-wrapper">
+  <div class="option-label-bar">
+    <span class="option-number">Optie 1</span>
+    <span class="option-name">Asymmetrische Autoriteit</span>
+    <span class="option-desc">L1 split hero · wave divider · icon cards</span>
+  </div>
+  <div class="option-tags">
+    <span class="tag">L1 — Asymmetrisch hero 60/40</span>
+    <span class="tag">V1 — Golfverdeler</span>
+    <span class="tag">Hover Lift Cards</span>
+    <span class="tag">Blob Mesh Achtergrond</span>
+    <span class="tag">Pill Buttons (CSU/EW)</span>
+  </div>
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <div class="nav-logo">
+      <div class="nav-logo-dot"></div>
+      John's Schoonmaakbedrijf
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Diensten</a></li>
+      <li><a href="#">Over ons</a></li>
+      <li><a href="#">Referenties</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <button class="nav-cta">Offerte aanvragen</button>
+  </nav>
+
+  <!-- HERO — Visual Craft: Ambient Blob Mesh -->
+  <section class="o1-hero">
+    <!-- Visual Craft: Ambient Blob Mesh -->
+    <div class="o1-blob-mesh" aria-hidden="true"></div>
+
+    <div class="o1-hero-inner">
+      <div class="o1-hero-left">
+        <div class="o1-eyebrow">VCA-gecertificeerd · Betuwe &amp; Rivierenland</div>
+        <h1 class="o1-h1">
+          Schone kantoren,<br>
+          <span class="accent-word">tevreden teams</span>
+        </h1>
+        <p class="o1-sub">
+          Professionele kantoorschoonmaak voor bedrijven in de Betuwe en Rivierenland. Vaste schoonmaakteams, transparante tarieven en persoonlijk contact — al meer dan 15 jaar.
+        </p>
+        <div class="o1-cta-row">
+          <a href="#" class="btn-primary">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg>
+            Offerte aanvragen
+          </a>
+          <a href="tel:0623545276" class="btn-secondary">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 011 1.22 2 2 0 013 .04h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Bel 06 23545276
+          </a>
+        </div>
+
+        <!-- Trust strip — Certification badge repetition (Hensen pattern) -->
+        <div class="o1-trust-strip">
+          <div class="o1-cert-badge">
+            <div class="o1-cert-icon">✓</div>
+            <span>VCA-gecertificeerd</span>
+          </div>
+          <div class="o1-divider"></div>
+          <div class="o1-cert-badge">
+            <div class="o1-cert-icon">★</div>
+            <span><strong>9.7/10</strong> · 84 reviews</span>
+          </div>
+          <div class="o1-divider"></div>
+          <div class="o1-cert-badge">
+            <div class="o1-cert-icon">♦</div>
+            <span>Keurmerk Schoon</span>
+          </div>
+          <div class="o1-divider"></div>
+          <div class="o1-cert-badge">
+            <div class="o1-cert-icon">+</div>
+            <span>Sinds 2009</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="o1-hero-right">
+        <div class="img-placeholder o1-hero-img">
+          <svg width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          [Foto: professionele kantoorschoonmaak]
+        </div>
+        <!-- Visual Craft: Floating stats card overlapping image edge -->
+        <div class="o1-floating-card">
+          <div class="o1-fc-number">40+</div>
+          <div class="o1-fc-label">actieve locaties</div>
+        </div>
+        <div class="o1-floating-card-2">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#0F172A" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div class="o1-fc2-text">Morgen<br>beginnen</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual Craft: Gentle Wave Divider between hero and services -->
+  <div class="o1-wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 72" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:72px;">
+      <path d="M0,40 C240,72 480,8 720,40 C960,72 1200,8 1440,40 L1440,72 L0,72 Z" fill="#F9FAFB"/>
+    </svg>
+  </div>
+
+  <!-- SERVICES — Icon in colored circle + Hover lift -->
+  <section class="o1-services">
+    <div class="o1-services-inner">
+      <span class="section-kicker">Onze diensten</span>
+      <h2 class="section-heading">Wat we voor je bedrijf doen</h2>
+      <p class="section-sub">Van dagelijkse kantoorschoonmaak tot glasbewassing op hoogte — alles onder één dak.</p>
+
+      <div class="o1-cards">
+        <!-- Visual Craft: Icon in colored circle -->
+        <div class="o1-card">
+          <div class="o1-card-icon">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="o1-card-title">Kantoorschoonmaak</div>
+          <div class="o1-card-text">Dagelijkse, wekelijkse of maandelijkse reiniging van uw kantoorruimtes. Vaste teams, vaste dag, altijd op tijd.</div>
+          <a href="#" class="o1-card-link">
+            Meer informatie
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="o1-card">
+          <div class="o1-card-icon">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div class="o1-card-title">Glazenwassen</div>
+          <div class="o1-card-text">Professioneel ramen wassen inclusief kozijnwerk. Met Telewash-systeem voor ramen op hoogte tot 12 meter.</div>
+          <a href="#" class="o1-card-link">
+            Meer informatie
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="o1-card">
+          <div class="o1-card-icon">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="o1-card-title">Bouw-oplevering</div>
+          <div class="o1-card-text">Grondige schoonmaak na verbouwing of nieuwbouw. Stof, bouwresten en vlekken worden grondig verwijderd.</div>
+          <a href="#" class="o1-card-link">
+            Meer informatie
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════ -->
+<!--  OPTIE 2 — MARINEBLAUW AUTORITEIT                   -->
+<!--  L3 full-bleed navy + overlapping stats + editorial  -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="option-wrapper">
+  <div class="option-label-bar">
+    <span class="option-number">Optie 2</span>
+    <span class="option-name">Marineblauw Autoriteit</span>
+    <span class="option-desc">L3 full-bleed navy · V3 donkere sectie · V4 scale contrast · L2 editorial grid</span>
+  </div>
+  <div class="option-tags">
+    <span class="tag">L3 — Full-bleed marineblauwe hero</span>
+    <span class="tag">V3 — Donkere sectie</span>
+    <span class="tag">V4 — Scale contrast (oversized cijfers)</span>
+    <span class="tag">L2 — Asymmetrisch editorial grid</span>
+    <span class="tag">Grain overlay (Hensen-stijl)</span>
+    <span class="tag">Overlapping stats bar</span>
+  </div>
+
+  <!-- NAV — dark variant -->
+  <nav class="site-nav" style="background: var(--c-navy); border-bottom-color: rgba(255,255,255,0.08);">
+    <div class="nav-logo" style="color: #fff;">
+      <div class="nav-logo-dot"></div>
+      John's Schoonmaakbedrijf
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" style="color:rgba(255,255,255,0.5)">Home</a></li>
+      <li><a href="#" style="color:rgba(255,255,255,0.5)">Diensten</a></li>
+      <li><a href="#" style="color:rgba(255,255,255,0.5)">Over ons</a></li>
+      <li><a href="#" style="color:rgba(255,255,255,0.5)">Referenties</a></li>
+      <li><a href="#" style="color:rgba(255,255,255,0.5)">Contact</a></li>
+    </ul>
+    <button class="nav-cta" style="background: var(--c-accent); color: var(--c-navy);">Offerte aanvragen</button>
+  </nav>
+
+  <!-- HERO — Full-bleed navy with grain, yellow accents -->
+  <section class="o2-hero">
+    <!-- Visual Craft: Grain/noise overlay -->
+    <div class="o2-grain" aria-hidden="true"></div>
+    <!-- Decorative circles -->
+    <div class="o2-bg-circle" aria-hidden="true"></div>
+    <div class="o2-bg-circle-2" aria-hidden="true"></div>
+    <!-- Visual Craft: Layered topographic waves -->
+    <svg class="o2-topo" viewBox="0 0 1440 400" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,160 C320,220 640,100 960,180 C1120,220 1280,140 1440,200" stroke="#0EA5E9" stroke-width="1.5" fill="none" opacity="0.15"/>
+      <path d="M0,200 C360,130 720,270 1080,170 C1260,130 1360,210 1440,180" stroke="#0EA5E9" stroke-width="1.5" fill="none" opacity="0.08"/>
+      <path d="M0,280 C280,330 560,220 840,300 C1120,380 1300,260 1440,300" stroke="#FACC15" stroke-width="1" fill="none" opacity="0.06"/>
+    </svg>
+
+    <div class="o2-hero-inner">
+      <div class="o2-hero-left">
+        <div class="o2-eyebrow">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Erkend schoonmaakbedrijf · Betuwe &amp; Rivierenland
+        </div>
+        <h1 class="o2-h1">
+          Uw kantoor<br>
+          altijd <span class="o2-accent">perfect</span><br>
+          schoon
+        </h1>
+        <p class="o2-sub">
+          VCA-gecertificeerde kantoorschoonmaak voor bedrijven in de Betuwe. Vaste medewerkers, eerlijke tarieven, persoonlijk aanspreekpunt.
+        </p>
+        <div class="o2-cta-row">
+          <a href="#" class="btn-primary-white">
+            Vrijblijvende offerte aanvragen
+          </a>
+          <a href="tel:0623545276" class="btn-ghost-white">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 011 1.22 2 2 0 013 .04h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            06 23545276
+          </a>
+        </div>
+        <div class="o2-trust-row">
+          <div class="o2-trust-item">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            VCA-gecertificeerd
+          </div>
+          <div class="o2-trust-item">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            9.7/10 beoordeeld
+          </div>
+          <div class="o2-trust-item">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            Keurmerk Schoon
+          </div>
+        </div>
+      </div>
+      <div class="o2-hero-right">
+        <div class="img-placeholder o2-hero-img" style="background:linear-gradient(135deg,rgba(3,105,161,0.3),rgba(14,165,233,0.15));">
+          <svg width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          <span style="color:rgba(255,255,255,0.5)">[Foto: schoon kantoor interieur]</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual Craft: Overlapping stats bar (scale contrast V4) -->
+  <div class="o2-stats-wrapper">
+    <div class="o2-stats-bar">
+      <div class="o2-stat">
+        <div class="o2-stat-number">40<span class="o2-stat-unit">+</span></div>
+        <div class="o2-stat-label">Actieve<br>locaties</div>
+      </div>
+      <div class="o2-stat">
+        <div class="o2-stat-number">9<span class="o2-stat-unit">.7</span></div>
+        <div class="o2-stat-label">Gemiddelde<br>klantscore</div>
+      </div>
+      <div class="o2-stat">
+        <div class="o2-stat-number">15<span class="o2-stat-unit">+</span></div>
+        <div class="o2-stat-label">Jaar<br>ervaring</div>
+      </div>
+      <div class="o2-stat">
+        <div class="o2-stat-number">100<span class="o2-stat-unit">%</span></div>
+        <div class="o2-stat-label">Tevreden<br>garandeert</div>
+      </div>
+    </div>
+
+    <!-- Visual Craft: L2 — Asymmetric editorial services layout -->
+    <div class="o2-services">
+      <div class="o2-services-inner">
+        <div class="o2-services-header">
+          <div>
+            <span class="section-kicker">Onze diensten</span>
+            <h2 class="section-heading">Wat we voor u verzorgen</h2>
+          </div>
+          <a href="#" class="btn-secondary">Alle diensten bekijken</a>
+        </div>
+        <div class="o2-services-grid">
+          <!-- Main editorial card (dark) — L2 asymmetric layout -->
+          <div class="o2-card-main">
+            <div class="o2-card-main-bg"></div>
+            <div class="o2-card-main-accent" aria-hidden="true"></div>
+            <div class="o2-card-main-content">
+              <span class="o2-card-tag">Meest gevraagd</span>
+              <div class="o2-card-main-title">Kantoor&shy;schoonmaak op maat</div>
+              <div class="o2-card-main-text">Dagelijkse, wekelijkse of tweewekelijkse reiniging van uw kantoorruimtes. Vaste teams, vaste contactpersoon, altijd bereikbaar. U bepaalt de frequentie — wij zorgen voor de uitvoering.</div>
+              <a href="#" class="btn-primary-white" style="font-size:14px;padding:11px 22px;">
+                Offerte aanvragen
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+          <!-- Two smaller cards (stacked) -->
+          <div class="o2-card-small">
+            <div class="o2-small-icon">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <div class="o2-small-title">Glazenwassen</div>
+            <div class="o2-small-text">Binnen- en buitenramen, kozijnwerk en serre. Telewash-systeem tot 12 meter hoogte.</div>
+          </div>
+          <div class="o2-card-small">
+            <div class="o2-small-icon">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="o2-small-title">Bouw-oplevering</div>
+            <div class="o2-small-text">Grondige eindreiniging na verbouwing of nieuwbouw. Stof, vlekken en bouwresten verdwijnen.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════ -->
+<!--  OPTIE 3 — TRANSPARANT & WERKWIJZE                  -->
+<!--  7/5 split hero + S-curve flourish + timeline        -->
+<!-- ════════════════════════════════════════════════════ -->
+<div class="option-wrapper">
+  <div class="option-label-bar">
+    <span class="option-number">Optie 3</span>
+    <span class="option-name">Transparant &amp; Werkwijze</span>
+    <span class="option-desc">7/5 typografie-hero · gradient underline · C3 tijdlijn met scale contrast</span>
+  </div>
+  <div class="option-tags">
+    <span class="tag">7/5 asymmetrisch split</span>
+    <span class="tag">S-curve flourish</span>
+    <span class="tag">Gradient underline</span>
+    <span class="tag">C3 — Werkwijze tijdlijn</span>
+    <span class="tag">V2 — Dot grid achtergrond</span>
+    <span class="tag">V4 — Oversized stap-nummers</span>
+  </div>
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <div class="nav-logo">
+      <div class="nav-logo-dot"></div>
+      John's Schoonmaakbedrijf
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Diensten</a></li>
+      <li><a href="#">Over ons</a></li>
+      <li><a href="#">Referenties</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <button class="nav-cta">Offerte aanvragen</button>
+  </nav>
+
+  <!-- HERO — 7/5 typography-led, dot grid background -->
+  <section class="o3-hero">
+    <!-- Visual Craft: CSS dot grid (V2 background texture) -->
+    <div class="o3-dotgrid" aria-hidden="true"></div>
+
+    <div class="o3-hero-inner">
+      <div class="o3-hero-left">
+        <div class="o3-eyebrow">Kantoorschoonmaak · Betuwe &amp; Rivierenland</div>
+
+        <div class="o3-h1-wrapper">
+          <!-- Visual Craft: S-curve brand flourish beside headline -->
+          <svg class="o3-flourish" width="140" height="70" viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M10,80 C40,80 50,20 100,50 C150,80 160,20 190,20" stroke="url(#grad1)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <defs>
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#0369A1"/>
+                <stop offset="100%" stop-color="#FACC15"/>
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <!-- Visual Craft: Gradient underline on key word -->
+          <h1 class="o3-h1">
+            Professionele schoonmaak<br>
+            voor <span class="headline-underline">bedrijven</span> die<br>
+            kwaliteit waarderen
+          </h1>
+        </div>
+
+        <p class="o3-sub">
+          John's Schoonmaakbedrijf zorgt voor schone, frisse werkomgevingen in de Betuwe en Rivierenland. VCA-gecertificeerd, vaste teams, transparante tarieven — offerte binnen 24 uur.
+        </p>
+        <div class="o3-cta-row">
+          <a href="#" class="btn-primary">
+            Vrijblijvende offerte aanvragen
+          </a>
+          <a href="tel:0623545276" class="o3-phone-link">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 011 1.22 2 2 0 013 .04h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            06 23545276
+          </a>
+        </div>
+        <div class="o3-trust-strip">
+          <div class="o3-trust-item">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="var(--c-primary)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            VCA-gecertificeerd
+          </div>
+          <div class="o3-trust-sep"></div>
+          <div class="o3-trust-item">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="var(--c-primary)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            Keurmerk Schoon
+          </div>
+          <div class="o3-trust-sep"></div>
+          <div class="o3-trust-item">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="var(--c-primary)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            15+ jaar ervaring
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Rating + Image + Cert strip -->
+      <div class="o3-hero-right">
+        <div class="o3-rating-display">
+          <div class="o3-rating-big">9.7</div>
+          <div class="o3-rating-info">
+            <div class="o3-rating-stars">★★★★★</div>
+            <div style="font-size:14px;font-weight:600;color:var(--c-navy);">Uitstekend beoordeeld</div>
+            <div class="o3-rating-count">Gebaseerd op 84 reviews</div>
+          </div>
+        </div>
+
+        <div class="img-placeholder o3-img-main">
+          <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          [Foto: medewerker aan het werk]
+        </div>
+
+        <div class="o3-cert-strip">
+          <div class="o3-cert-badge">
+            <div class="o3-cert-icon-big">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <span class="o3-cert-name">VCA</span>
+          </div>
+          <div class="o3-cert-div"></div>
+          <div class="o3-cert-badge">
+            <div class="o3-cert-icon-big">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <span class="o3-cert-name">Keurmerk Schoon</span>
+          </div>
+          <div class="o3-cert-div"></div>
+          <div class="o3-cert-badge">
+            <div class="o3-cert-icon-big">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <span class="o3-cert-name">Reactie &lt; 2 uur</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS — Timeline with oversized numbers (V4 + C3) -->
+  <section class="o3-process">
+    <div class="o3-process-inner">
+      <div class="o3-process-header">
+        <span class="section-kicker">Onze werkwijze</span>
+        <h2 class="section-heading">In 3 stappen naar een schoon kantoor</h2>
+        <p class="section-sub" style="margin:0 auto;text-align:center;">Geen verrassingen, geen gedoe — gewoon een helder proces van A tot Z.</p>
+      </div>
+
+      <div class="o3-timeline">
+        <!-- Visual Craft: Oversized step numbers in background (V4) + Timeline (C3) -->
+        <div class="o3-step">
+          <div class="o3-step-bg-num" aria-hidden="true">1</div>
+          <div class="o3-step-number" aria-hidden="true">1</div>
+          <div class="o3-step-card">
+            <div class="o3-step-title">Vrijblijvende offerte</div>
+            <div class="o3-step-text">Vul het offerteformulier in of bel ons. We nemen binnen 2 uur contact op voor een korte intake. Geen verplichtingen.</div>
+            <span class="o3-step-time">Binnen 2 uur reactie</span>
+          </div>
+        </div>
+        <div class="o3-step">
+          <div class="o3-step-bg-num" aria-hidden="true">2</div>
+          <div class="o3-step-number" aria-hidden="true">2</div>
+          <div class="o3-step-card">
+            <div class="o3-step-title">Locatiebezoek &amp; plan</div>
+            <div class="o3-step-text">We komen langs, bekijken de locatie en stellen een schoonmaakplan op maat op. U ontvangt een duidelijke offerte zonder verborgen kosten.</div>
+            <span class="o3-step-time">Offerte binnen 24 uur</span>
+          </div>
+        </div>
+        <div class="o3-step">
+          <div class="o3-step-bg-num" aria-hidden="true">3</div>
+          <div class="o3-step-number" aria-hidden="true">3</div>
+          <div class="o3-step-card">
+            <div class="o3-step-title">Vaste teams aan het werk</div>
+            <div class="o3-step-text">Uw vaste schoonmaakteam start op de afgesproken datum. Altijd dezelfde mensen, altijd kwaliteitscontrole, altijd bereikbaar.</div>
+            <span class="o3-step-time" style="background:rgba(3,105,161,0.08);color:var(--c-navy);font-weight:700;">Tevredenheidsgarantie</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</body>
+</html>

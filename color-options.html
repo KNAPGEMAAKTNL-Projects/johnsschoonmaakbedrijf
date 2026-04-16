@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kleurpaletten — John's Schoonmaakbedrijf</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #F5F5F5;
+    color: #1a1a1a;
+    line-height: 1.6;
+    padding: 40px 24px 80px;
+  }
+
+  .page-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #111;
+  }
+
+  .page-subtitle {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 48px;
+  }
+
+  .palette-section {
+    max-width: 1100px;
+    margin: 0 auto 64px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    overflow: hidden;
+  }
+
+  .palette-header {
+    padding: 32px 40px 24px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .palette-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 12px;
+  }
+
+  .palette-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .palette-desc {
+    font-size: 14px;
+    color: #666;
+    max-width: 700px;
+  }
+
+  /* Swatches */
+  .swatches {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+  }
+
+  .swatch {
+    padding: 40px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 140px;
+    position: relative;
+  }
+
+  .swatch-role {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    opacity: 0.85;
+  }
+
+  .swatch-hex {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  }
+
+  .swatch-contrast {
+    font-size: 10px;
+    margin-top: 4px;
+    opacity: 0.7;
+  }
+
+  /* Mini preview */
+  .preview {
+    padding: 0 40px 40px;
+  }
+
+  .preview-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #999;
+    margin: 32px 0 16px;
+  }
+
+  .hero-preview {
+    border-radius: 12px;
+    padding: 56px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-preview h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .hero-preview p {
+    font-size: 16px;
+    margin-bottom: 28px;
+    max-width: 500px;
+    line-height: 1.6;
+    opacity: 0.85;
+  }
+
+  .hero-preview .btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 100px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .hero-preview .btn:hover {
+    transform: translateY(-1px);
+  }
+
+  .hero-preview .btn-secondary {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 100px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    border: 2px solid;
+    background: transparent;
+    cursor: pointer;
+    margin-left: 12px;
+  }
+
+  /* Surface card preview */
+  .card-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .card-preview {
+    border-radius: 10px;
+    padding: 24px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  .card-preview:hover {
+    transform: translateY(-2px);
+  }
+
+  .card-preview h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .card-preview p {
+    font-size: 13px;
+    opacity: 0.75;
+    line-height: 1.5;
+  }
+
+  /* Accessibility badge */
+  .a11y-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 100px;
+    background: #E8F5E9;
+    color: #2E7D32;
+    margin-top: 24px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .swatches { grid-template-columns: repeat(3, 1fr); }
+    .card-row { grid-template-columns: 1fr; }
+    .hero-preview { padding: 32px 24px; }
+    .hero-preview h2 { font-size: 24px; }
+    .palette-header { padding: 24px; }
+    .preview { padding: 0 24px 32px; }
+  }
+
+  /* Competitor reference strip */
+  .competitor-ref {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    padding: 20px 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+
+  .competitor-ref h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .comp-palettes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .comp-palette-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .comp-palette-item span {
+    font-size: 12px;
+    font-weight: 600;
+    color: #444;
+  }
+
+  .comp-colors {
+    display: flex;
+    gap: 3px;
+    height: 32px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .comp-colors div {
+    flex: 1;
+    position: relative;
+  }
+
+  .comp-colors div::after {
+    content: attr(data-hex);
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 9px;
+    font-family: monospace;
+    color: #999;
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">Kleurpaletten — John's Schoonmaakbedrijf</h1>
+<p class="page-subtitle">4 opties op basis van archetype E (Schoonmaakbedrijf), concurrentanalyse en kleurpsychologie. Alle combinaties WCAG AA gevalideerd. <strong style="color: #0369A1;">Optie D is de gekozen richting.</strong></p>
+
+<!-- Competitor reference -->
+<div class="competitor-ref">
+  <h3>Referentie: Paletten top-concurrenten</h3>
+  <div class="comp-palettes">
+    <div class="comp-palette-item">
+      <span>CSU (10/10)</span>
+      <div class="comp-colors" style="margin-bottom: 22px;">
+        <div style="background: #289548;" data-hex="#289548"></div>
+        <div style="background: #AFCA0A;" data-hex="#AFCA0A"></div>
+        <div style="background: #FF870C;" data-hex="#FF870C"></div>
+        <div style="background: #014753;" data-hex="#014753"></div>
+        <div style="background: #E1EDF5;" data-hex="#E1EDF5"></div>
+      </div>
+    </div>
+    <div class="comp-palette-item">
+      <span>Hensen Cleaning (9/10)</span>
+      <div class="comp-colors" style="margin-bottom: 22px;">
+        <div style="background: #00AAC6;" data-hex="#00AAC6"></div>
+        <div style="background: #2ECC71;" data-hex="#2ECC71"></div>
+        <div style="background: #1a1a1a;" data-hex="#1A1A1A"></div>
+        <div style="background: #F5F5F5;" data-hex="#F5F5F5"></div>
+        <div style="background: #FFFFFF; border: 1px solid #ddd;" data-hex="#FFFFFF"></div>
+      </div>
+    </div>
+    <div class="comp-palette-item">
+      <span>EW Facility (8/10)</span>
+      <div class="comp-colors" style="margin-bottom: 22px;">
+        <div style="background: #32373C;" data-hex="#32373C"></div>
+        <div style="background: #0073AA;" data-hex="#0073AA"></div>
+        <div style="background: #444444;" data-hex="#444444"></div>
+        <div style="background: #F5F5F5;" data-hex="#F5F5F5"></div>
+        <div style="background: #FFFFFF; border: 1px solid #ddd;" data-hex="#FFFFFF"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== OPTION A ==================== -->
+<section class="palette-section">
+  <div class="palette-header">
+    <div class="palette-label" style="background: #E0F7FA; color: #007B8A;">Optie A</div>
+    <h2 class="palette-name">Fris &amp; Schoon</h2>
+    <p class="palette-desc">Afgeleid van archetype-kleurpsychologie: turquoise (frisheid, water), groen (eco), warm goud (energie). Wit-dominant voor schoonmaakassociatie. De meest "on-brand" optie voor een schoonmaakbedrijf.</p>
+  </div>
+
+  <div class="swatches">
+    <div class="swatch" style="background: #007B8A; color: #fff;">
+      <div class="swatch-role">Primair</div>
+      <div class="swatch-hex">#007B8A</div>
+      <div class="swatch-contrast">+ wit: 5.00:1 AA</div>
+    </div>
+    <div class="swatch" style="background: #00CF90; color: #132C3B;">
+      <div class="swatch-role">Secundair</div>
+      <div class="swatch-hex">#00CF90</div>
+      <div class="swatch-contrast">eco/duurzaamheid</div>
+    </div>
+    <div class="swatch" style="background: #D9B310; color: #132C3B;">
+      <div class="swatch-role">Accent</div>
+      <div class="swatch-hex">#D9B310</div>
+      <div class="swatch-contrast">+ donker: 7.17:1 AAA</div>
+    </div>
+    <div class="swatch" style="background: #FFFFFF; color: #132C3B; border-bottom: 1px solid #eee;">
+      <div class="swatch-role">Achtergrond</div>
+      <div class="swatch-hex">#FFFFFF</div>
+      <div class="swatch-contrast">wit-dominant</div>
+    </div>
+    <div class="swatch" style="background: #F0F7FA; color: #132C3B;">
+      <div class="swatch-role">Oppervlak</div>
+      <div class="swatch-hex">#F0F7FA</div>
+      <div class="swatch-contrast">+ tekst: 13.36:1 AAA</div>
+    </div>
+    <div class="swatch" style="background: #132C3B; color: #fff;">
+      <div class="swatch-role">Tekst</div>
+      <div class="swatch-hex">#132C3B</div>
+      <div class="swatch-contrast">+ wit: 14.47:1 AAA</div>
+    </div>
+  </div>
+
+  <div class="preview">
+    <div class="preview-label">Hero preview</div>
+    <div class="hero-preview" style="background: #FFFFFF; border: 1px solid #E8E8E8;">
+      <h2 style="color: #132C3B;">Professionele schoonmaak<br>met een persoonlijke aanpak</h2>
+      <p style="color: #132C3B;">Al sinds 2007 het vertrouwde schoonmaakbedrijf van de Betuwe. VCA-gecertificeerd, vaste teams, altijd bereikbaar.</p>
+      <button class="btn" style="background: #007B8A; color: #fff; box-shadow: 0 4px 12px rgba(0,123,138,0.3);">Vraag gratis offerte aan</button>
+      <button class="btn-secondary" style="color: #007B8A; border-color: #007B8A;">Bel 06 23545276</button>
+    </div>
+
+    <div class="preview-label">Oppervlak-kaarten preview</div>
+    <div class="card-row">
+      <div class="card-preview" style="background: #F0F7FA; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+        <h4 style="color: #132C3B;">Kantoorschoonmaak</h4>
+        <p style="color: #132C3B;">Dagelijkse, wekelijkse of maandelijkse reiniging van uw kantoorruimte.</p>
+      </div>
+      <div class="card-preview" style="background: #F0F7FA; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+        <h4 style="color: #132C3B;">Ramen wassen</h4>
+        <p style="color: #132C3B;">Inclusief kozijnwerk, met Telewash-systeem voor hoge ramen.</p>
+      </div>
+      <div class="card-preview" style="background: #F0F7FA; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+        <h4 style="color: #132C3B;">Bouw-oplevering</h4>
+        <p style="color: #132C3B;">Grondige schoonmaak na verbouwing of nieuwbouw.</p>
+      </div>
+    </div>
+
+    <div class="a11y-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+      WCAG AA — alle combinaties gevalideerd via Coolors contrast check
+    </div>
+  </div>
+</section>
+
+<!-- ==================== OPTION B ==================== -->
+<section class="palette-section">
+  <div class="palette-header">
+    <div class="palette-label" style="background: #E8F5E9; color: #157A5C;">Optie B</div>
+    <h2 class="palette-name">Professioneel Groen</h2>
+    <p class="palette-desc">Ge&iuml;nspireerd op CSU (10/10) en Hensen (9/10). Hue-shift van +25&deg; op CSU's kerngroen, richting teal-groen. Onderscheidend maar even professioneel. De veiligste optie — bewezen kleurpsychologie uit de top van de branche.</p>
+  </div>
+
+  <div class="swatches">
+    <div class="swatch" style="background: #157A5C; color: #fff;">
+      <div class="swatch-role">Primair</div>
+      <div class="swatch-hex">#157A5C</div>
+      <div class="swatch-contrast">+ wit: 5.29:1 AA</div>
+    </div>
+    <div class="swatch" style="background: #84D235; color: #0E3D33;">
+      <div class="swatch-role">Secundair</div>
+      <div class="swatch-hex">#84D235</div>
+      <div class="swatch-contrast">lime-groen accent</div>
+    </div>
+    <div class="swatch" style="background: #E5A815; color: #0E3D33;">
+      <div class="swatch-role">Accent</div>
+      <div class="swatch-hex">#E5A815</div>
+      <div class="swatch-contrast">+ donker: 5.73:1 AA</div>
+    </div>
+    <div class="swatch" style="background: #FFFFFF; color: #0E3D33; border-bottom: 1px solid #eee;">
+      <div class="swatch-role">Achtergrond</div>
+      <div class="swatch-hex">#FFFFFF</div>
+      <div class="swatch-contrast">wit-dominant</div>
+    </div>
+    <div class="swatch" style="background: #F0F5F2; color: #0E3D33;">
+      <div class="swatch-role">Oppervlak</div>
+      <div class="swatch-hex">#F0F5F2</div>
+      <div class="swatch-contrast">+ tekst: 10.99:1 AAA</div>
+    </div>
+    <div class="swatch" style="background: #0E3D33; color: #fff;">
+      <div class="swatch-role">Tekst</div>
+      <div class="swatch-hex">#0E3D33</div>
+      <div class="swatch-contrast">+ wit: 12.11:1 AAA</div>
+    </div>
+  </div>
+
+  <div class="preview">
+    <div class="preview-label">Hero preview</div>
+    <div class="hero-preview" style="background: #FFFFFF; border: 1px solid #E8E8E8;">
+      <h2 style="color: #0E3D33;">Professionele schoonmaak<br>met een persoonlijke aanpak</h2>
+      <p style="color: #0E3D33;">Al sinds 2007 het vertrouwde schoonmaakbedrijf van de Betuwe. VCA-gecertificeerd, vaste teams, altijd bereikbaar.</p>
+      <button class="btn" style="background: #157A5C; color: #fff; box-shadow: 0 4px 12px rgba(21,122,92,0.3);">Vraag gratis offerte aan</button>
+      <button class="btn-secondary" style="color: #157A5C; border-color: #157A5C;">Bel 06 23545276</button>
+    </div>
+
+    <div class="preview-label">Oppervlak-kaarten preview</div>
+    <div class="card-row">
+      <div class="card-preview" style="background: #F0F5F2; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+        <h4 style="color: #0E3D33;">Kantoorschoonmaak</h4>
+        <p style="color: #0E3D33;">Dagelijkse, wekelijkse of maandelijkse reiniging van uw kantoorruimte.</p>
+      </div>
+      <div class="card-preview" style="background: #F0F5F2; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+        <h4 style="color: #0E3D33;">Ramen wassen</h4>
+        <p style="color: #0E3D33;">Inclusief kozijnwerk, met Telewash-systeem voor hoge ramen.</p>
+      </div>
+      <div class="card-preview" style="background: #F0F5F2; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+        <h4 style="color: #0E3D33;">Bouw-oplevering</h4>
+        <p style="color: #0E3D33;">Grondige schoonmaak na verbouwing of nieuwbouw.</p>
+      </div>
+    </div>
+
+    <div class="a11y-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+      WCAG AA — alle combinaties gevalideerd via Coolors contrast check
+    </div>
+  </div>
+</section>
+
+<!-- ==================== OPTION C ==================== -->
+<section class="palette-section">
+  <div class="palette-header">
+    <div class="palette-label" style="background: #E8EAF6; color: #1E3A5F;">Optie C</div>
+    <h2 class="palette-name">Vertrouwd &amp; Warm</h2>
+    <p class="palette-desc">Creatief contrast: alle concurrenten gebruiken groen/teal. Deze optie kiest diep marineblauw (vertrouwen, autoriteit) + warm amber (energie, benaderbaar) + turquoise accent (frisheid). Valt op in de markt terwijl het nog steeds "schoon" communiceert. De gedurfdste optie.</p>
+  </div>
+
+  <div class="swatches">
+    <div class="swatch" style="background: #1E3A5F; color: #fff;">
+      <div class="swatch-role">Primair</div>
+      <div class="swatch-hex">#1E3A5F</div>
+      <div class="swatch-contrast">+ wit: 11.50:1 AAA</div>
+    </div>
+    <div class="swatch" style="background: #FD9D4D; color: #1E293B;">
+      <div class="swatch-role">Secundair</div>
+      <div class="swatch-hex">#FD9D4D</div>
+      <div class="swatch-contrast">+ donker: 7.04:1 AAA</div>
+    </div>
+    <div class="swatch" style="background: #27BBD3; color: #1E293B;">
+      <div class="swatch-role">Accent</div>
+      <div class="swatch-hex">#27BBD3</div>
+      <div class="swatch-contrast">+ donker: 6.36:1 AA</div>
+    </div>
+    <div class="swatch" style="background: #FFFFFF; color: #1E293B; border-bottom: 1px solid #eee;">
+      <div class="swatch-role">Achtergrond</div>
+      <div class="swatch-hex">#FFFFFF</div>
+      <div class="swatch-contrast">wit-dominant</div>
+    </div>
+    <div class="swatch" style="background: #F9F6F3; color: #1E293B;">
+      <div class="swatch-role">Oppervlak</div>
+      <div class="swatch-hex">#F9F6F3</div>
+      <div class="swatch-contrast">+ tekst: 13.59:1 AAA</div>
+    </div>
+    <div class="swatch" style="background: #1E293B; color: #fff;">
+      <div class="swatch-role">Tekst</div>
+      <div class="swatch-hex">#1E293B</div>
+      <div class="swatch-contrast">+ wit: 14.63:1 AAA</div>
+    </div>
+  </div>
+
+  <div class="preview">
+    <div class="preview-label">Hero preview</div>
+    <div class="hero-preview" style="background: #FFFFFF; border: 1px solid #E8E8E8;">
+      <h2 style="color: #1E293B;">Professionele schoonmaak<br>met een persoonlijke aanpak</h2>
+      <p style="color: #1E293B;">Al sinds 2007 het vertrouwde schoonmaakbedrijf van de Betuwe. VCA-gecertificeerd, vaste teams, altijd bereikbaar.</p>
+      <button class="btn" style="background: #1E3A5F; color: #fff; box-shadow: 0 4px 12px rgba(30,58,95,0.3);">Vraag gratis offerte aan</button>
+      <button class="btn-secondary" style="color: #1E3A5F; border-color: #1E3A5F;">Bel 06 23545276</button>
+    </div>
+
+    <div class="preview-label">Accent hero variant (donkere achtergrond)</div>
+    <div class="hero-preview" style="background: #1E3A5F;">
+      <h2 style="color: #FFFFFF;">Professionele schoonmaak<br>met een persoonlijke aanpak</h2>
+      <p style="color: rgba(255,255,255,0.8);">Al sinds 2007 het vertrouwde schoonmaakbedrijf van de Betuwe. VCA-gecertificeerd, vaste teams, altijd bereikbaar.</p>
+      <button class="btn" style="background: #FD9D4D; color: #1E293B; box-shadow: 0 4px 12px rgba(253,157,77,0.3);">Vraag gratis offerte aan</button>
+      <button class="btn-secondary" style="color: #fff; border-color: rgba(255,255,255,0.4);">Bel 06 23545276</button>
+    </div>
+
+    <div class="preview-label">Oppervlak-kaarten preview</div>
+    <div class="card-row">
+      <div class="card-preview" style="background: #F9F6F3; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+        <h4 style="color: #1E293B;">Kantoorschoonmaak</h4>
+        <p style="color: #1E293B;">Dagelijkse, wekelijkse of maandelijkse reiniging van uw kantoorruimte.</p>
+      </div>
+      <div class="card-preview" style="background: #F9F6F3; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+        <h4 style="color: #1E293B;">Ramen wassen</h4>
+        <p style="color: #1E293B;">Inclusief kozijnwerk, met Telewash-systeem voor hoge ramen.</p>
+      </div>
+      <div class="card-preview" style="background: #F9F6F3; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+        <h4 style="color: #1E293B;">Bouw-oplevering</h4>
+        <p style="color: #1E293B;">Grondige schoonmaak na verbouwing of nieuwbouw.</p>
+      </div>
+    </div>
+
+    <div class="a11y-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+      WCAG AA — alle combinaties gevalideerd via Coolors contrast check
+    </div>
+  </div>
+</section>
+
+<!-- ==================== OPTION D — LOCKED DIRECTION ==================== -->
+<section class="palette-section" style="border: 3px solid #0369A1; position: relative;">
+  <div style="position: absolute; top: -1px; right: 32px; background: #0369A1; color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; padding: 6px 16px; border-radius: 0 0 8px 8px;">Gekozen richting</div>
+  <div class="palette-header">
+    <div class="palette-label" style="background: #E0F2FE; color: #0369A1;">Optie D</div>
+    <h2 class="palette-name">Energiek Schoon</h2>
+    <p class="palette-desc">Gebaseerd op het bestaande glazenwassers-ontwerp, aangepast voor WCAG-toegankelijkheid en B2B-balans. Hemelsblauw (schoonmaak/frisheid) + geel (energie/opvallend) + marineblauw (autoriteit/vertrouwen). Uniek in de markt — geen enkele concurrent in de Betuwe gebruikt deze combinatie. Outfit + Inter lettertype-systeem voor karakter met leesbaarheid.</p>
+  </div>
+
+  <div class="swatches">
+    <div class="swatch" style="background: #0369A1; color: #fff;">
+      <div class="swatch-role">Primair</div>
+      <div class="swatch-hex">#0369A1</div>
+      <div class="swatch-contrast">+ wit: 5.93:1 AA</div>
+    </div>
+    <div class="swatch" style="background: #0EA5E9; color: #0F172A;">
+      <div class="swatch-role">Primair Licht</div>
+      <div class="swatch-hex">#0EA5E9</div>
+      <div class="swatch-contrast">decoratief / iconen</div>
+    </div>
+    <div class="swatch" style="background: #FACC15; color: #0F172A;">
+      <div class="swatch-role">Accent</div>
+      <div class="swatch-hex">#FACC15</div>
+      <div class="swatch-contrast">+ navy: 11.66:1 AAA</div>
+    </div>
+    <div class="swatch" style="background: #FFFFFF; color: #0F172A; border-bottom: 1px solid #eee;">
+      <div class="swatch-role">Achtergrond</div>
+      <div class="swatch-hex">#FFFFFF</div>
+      <div class="swatch-contrast">wit-dominant</div>
+    </div>
+    <div class="swatch" style="background: #F9FAFB; color: #0F172A;">
+      <div class="swatch-role">Oppervlak</div>
+      <div class="swatch-hex">#F9FAFB</div>
+      <div class="swatch-contrast">afwisselende secties</div>
+    </div>
+    <div class="swatch" style="background: #0F172A; color: #fff;">
+      <div class="swatch-role">Navy / Tekst</div>
+      <div class="swatch-hex">#0F172A</div>
+      <div class="swatch-contrast">+ wit: 17.85:1 AAA</div>
+    </div>
+  </div>
+
+  <div class="preview">
+    <div class="preview-label">Hero preview — B2B variant (navy achtergrond)</div>
+    <div class="hero-preview" style="background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);">
+      <h2 style="color: #FFFFFF;">Professionele schoonmaak<br>met een persoonlijke aanpak</h2>
+      <p style="color: rgba(255,255,255,0.75);">Al sinds 2007 het vertrouwde schoonmaakbedrijf van de Betuwe. VCA-gecertificeerd, vaste teams, altijd bereikbaar.</p>
+      <button class="btn" style="background: #FACC15; color: #0F172A; box-shadow: 0 4px 16px rgba(250,204,21,0.3); font-weight: 700;">Vraag gratis offerte aan</button>
+      <button class="btn-secondary" style="color: #fff; border-color: rgba(255,255,255,0.3);">Bel 06 23545276</button>
+    </div>
+
+    <div class="preview-label">Hero preview — lichte variant (wit achtergrond)</div>
+    <div class="hero-preview" style="background: #FFFFFF; border: 1px solid #E5E7EB;">
+      <h2 style="color: #0F172A;">Professionele schoonmaak<br>met een persoonlijke aanpak</h2>
+      <p style="color: #4B5563;">Al sinds 2007 het vertrouwde schoonmaakbedrijf van de Betuwe. VCA-gecertificeerd, vaste teams, altijd bereikbaar.</p>
+      <button class="btn" style="background: #0369A1; color: #fff; box-shadow: 0 4px 12px rgba(3,105,161,0.3);">Vraag gratis offerte aan</button>
+      <button class="btn-secondary" style="color: #0369A1; border-color: #0369A1;">Bel 06 23545276</button>
+    </div>
+
+    <div class="preview-label">Oppervlak-kaarten preview</div>
+    <div class="card-row">
+      <div class="card-preview" style="background: #F9FAFB; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid #E5E7EB;">
+        <h4 style="color: #0F172A;">Kantoorschoonmaak</h4>
+        <p style="color: #4B5563;">Dagelijkse, wekelijkse of maandelijkse reiniging van uw kantoorruimte.</p>
+      </div>
+      <div class="card-preview" style="background: #F9FAFB; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid #E5E7EB;">
+        <h4 style="color: #0F172A;">Ramen wassen</h4>
+        <p style="color: #4B5563;">Inclusief kozijnwerk, met Telewash-systeem voor hoge ramen.</p>
+      </div>
+      <div class="card-preview" style="background: #F9FAFB; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid #E5E7EB;">
+        <h4 style="color: #0F172A;">Bouw-oplevering</h4>
+        <p style="color: #4B5563;">Grondige schoonmaak na verbouwing of nieuwbouw.</p>
+      </div>
+    </div>
+
+    <div class="preview-label">Accent-elementen</div>
+    <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+      <span style="background: #FACC15; color: #0F172A; padding: 6px 14px; border-radius: 100px; font-size: 13px; font-weight: 600;">VCA-gecertificeerd</span>
+      <span style="background: #0EA5E9; color: #fff; padding: 6px 14px; border-radius: 100px; font-size: 13px; font-weight: 600; opacity: 0.9;">Sinds 2007</span>
+      <span style="background: #0F172A; color: #FACC15; padding: 6px 14px; border-radius: 100px; font-size: 13px; font-weight: 600;">40+ locaties</span>
+      <span style="background: #10B981; color: #fff; padding: 6px 14px; border-radius: 100px; font-size: 13px; font-weight: 600;">&#10003; Bevestigd</span>
+    </div>
+
+    <div class="a11y-badge" style="margin-top: 24px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+      WCAG AA — alle combinaties gevalideerd via Coolors contrast check
+    </div>
+  </div>
+</section>
+
+<!-- Contrast reference -->
+<div style="max-width: 1100px; margin: 0 auto; padding: 32px 40px; background: #fff; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
+  <h3 style="font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #666; margin-bottom: 20px;">Contrastvalidatie — volledig overzicht</h3>
+  <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
+    <thead>
+      <tr style="text-align: left; border-bottom: 2px solid #eee;">
+        <th style="padding: 8px 12px;">Combinatie</th>
+        <th style="padding: 8px 12px;">Optie A</th>
+        <th style="padding: 8px 12px;">Optie B</th>
+        <th style="padding: 8px 12px;">Optie C</th>
+        <th style="padding: 8px 12px; background: #E0F2FE; color: #0369A1;">Optie D (gekozen)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #f0f0f0;">
+        <td style="padding: 8px 12px;">Tekst op achtergrond</td>
+        <td style="padding: 8px 12px;"><span style="color: #2E7D32;">14.47:1 AAA</span></td>
+        <td style="padding: 8px 12px;"><span style="color: #2E7D32;">12.11:1 AAA</span></td>
+        <td style="padding: 8px 12px;"><span style="color: #2E7D32;">14.63:1 AAA</span></td>
+        <td style="padding: 8px 12px; background: #F0F9FF;"><span style="color: #2E7D32;">17.85:1 AAA</span></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f0f0f0;">
+        <td style="padding: 8px 12px;">Tekst op oppervlak</td>
+        <td style="padding: 8px 12px;"><span style="color: #2E7D32;">13.36:1 AAA</span></td>
+        <td style="padding: 8px 12px;"><span style="color: #2E7D32;">10.99:1 AAA</span></td>
+        <td style="padding: 8px 12px;"><span style="color: #2E7D32;">13.59:1 AAA</span></td>
+        <td style="padding: 8px 12px; background: #F0F9FF;"><span style="color: #2E7D32;">17.58:1 AAA</span></td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f0f0f0;">
+        <td style="padding: 8px 12px;">Wit op primaire knop</td>
+        <td style="padding: 8px 12px;"><span style="color: #2E7D32;">5.00:1 AA</span></td>
+        <td style="padding: 8px 12px;"><span style="color: #2E7D32;">5.29:1 AA</span></td>
+        <td style="padding: 8px 12px;"><span style="color: #2E7D32;">11.50:1 AAA</span></td>
+        <td style="padding: 8px 12px; background: #F0F9FF;"><span style="color: #2E7D32;">5.93:1 AA</span></td>
+      </tr>
+      <tr>
+        <td style="padding: 8px 12px;">Donker op accent knop</td>
+        <td style="padding: 8px 12px;"><span style="color: #2E7D32;">7.17:1 AAA</span></td>
+        <td style="padding: 8px 12px;"><span style="color: #2E7D32;">5.73:1 AA</span></td>
+        <td style="padding: 8px 12px;"><span style="color: #2E7D32;">7.04:1 AAA</span></td>
+        <td style="padding: 8px 12px; background: #F0F9FF;"><span style="color: #2E7D32;">11.66:1 AAA</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import CtaSection from "../../components/CtaSection.astro";
+import SchemaService from "../../components/seo/SchemaService.astro";
+import SchemaFAQ from "../../components/seo/SchemaFAQ.astro";
+
+const faqs = [
+  { question: "Wat houdt opleveringsschoonmaak precies in?", answer: "Alles wat nodig is om een verbouwd of nieuwgebouwd pand klaar te maken voor gebruik. Stof verwijderen, vloeren reinigen, sanitair poetsen, ramen wassen, kozijnen schoonmaken, cement- en lijmresten verwijderen. Het doel: je loopt binnen en het is schoon." },
+  { question: "Hoe snel kunnen jullie beginnen na de verbouwing?", answer: "Meestal binnen een week na aanvraag. Voor spoedklussen lukt het soms al binnen een paar dagen. Neem even contact op, dan kijken we naar de planning." },
+  { question: "Moet ik als aannemer zelf een schoonmaakbedrijf regelen?", answer: "Dat hangt van de afspraken met je opdrachtgever af. Aannemers schakelen ons regelmatig in voor de eindschoonmaak. Het bespaart tijd en het resultaat is professioneler." },
+  { question: "Hoe lang duurt een opleveringsschoonmaak?", answer: "Verschilt per project. Een verbouwde woning is meestal in een dag klaar. Een nieuwbouwkantoor van 500 m² duurt 2 tot 3 dagen. We geven vooraf een inschatting zodat je weet waar je aan toe bent." },
+];
+---
+
+<Layout title="Opleveringsschoonmaak | John's Schoonmaakbedrijf" description="Grondige opleveringsschoonmaak na verbouwing of nieuwbouw. Stof, bouwresten en cementresten verwijderd. Team binnen een week beschikbaar. Vraag een vrijblijvende offerte aan.">
+  <Header />
+  <main>
+    <!-- Hero -->
+    <section class="bg-bg relative overflow-hidden" style="padding-top: 64px; padding-bottom: 56px;">
+      <div class="absolute pointer-events-none" style="bottom: -60px; right: 10%; width: 300px; height: 300px; border-radius: 50%; background: var(--color-accent); opacity: 0.04; filter: blur(50px);" aria-hidden="true"></div>
+      <div class="max-w-[1360px] mx-auto px-5 md:px-10 relative z-10">
+        <nav class="text-[13px] text-text-muted mb-6" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-primary transition-colors">Home</a><span class="mx-2">/</span>
+          <a href="/diensten/" class="hover:text-primary transition-colors">Diensten</a><span class="mx-2">/</span>
+          <span class="text-text">Bouw-oplevering</span>
+        </nav>
+        <div class="max-w-2xl">
+          <h1 class="mb-5">Opleveringsschoonmaak in de Betuwe</h1>
+          <p class="text-text-muted text-[17px]" style="line-height: 1.7;">Na een verbouwing of nieuwbouwproject zorgt John's Schoonmaakbedrijf voor de grondige eindschoonmaak. Stof, bouwresten, cementresten en lijmresten van vloeren, kozijnen, sanitair en ramen. Klaar voor gebruik of bewoning, team meestal binnen een week beschikbaar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Description -->
+    <section class="bg-surface" style="padding-top: 64px; padding-bottom: 80px;">
+      <div class="max-w-[1360px] mx-auto px-5 md:px-10">
+        <div class="max-w-3xl scroll-fade-up">
+          <h2 class="mb-5">Grondig schoon na de bouw</h2>
+          <div class="text-[16px] text-text-muted space-y-5" style="line-height: 1.75;">
+            <p>Na een verbouwing of nieuwbouw zit er overal stof. In de kozijnen, op de vloer, achter de radiatoren. Daar komt professionele schoonmaak om de hoek kijken.</p>
+            <p>Onze opleveringsschoonmaak is een grondige, eenmalige klus. We pakken alles aan: stof afzuigen en afnemen, vloeren reinigen en in de was zetten, kozijnen en deurkozijnen schoonmaken, sanitair poetsen, ramen wassen binnen en buiten, plinten, lichtschakelaars, stopcontacten. Cementresten, lijmresten en stickerresten verwijderen we ook.</p>
+            <p>Het verschil tussen een schone indruk en een pand dat echt klaar is voor gebruik. Daar zorgen wij voor.</p>
+            <p>Voor aannemers die netjes willen opleveren, projectontwikkelaars die een goede indruk willen maken en particulieren die na de verbouwing in een schoon huis willen stappen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits: full-width cards with icons (different from other service pages) -->
+    <section class="bg-bg" style="padding-top: 72px; padding-bottom: 72px;">
+      <div class="max-w-[1360px] mx-auto px-5 md:px-10">
+        <h2 class="scroll-fade-up mb-8">Waarom kiezen voor onze opleveringsschoonmaak?</h2>
+        <div class="stagger-container grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div class="card-lift bg-surface rounded-lg border border-border p-7 text-center" style="border-radius: var(--radius-lg);">
+            <div class="w-12 h-12 mx-auto rounded-full bg-primary text-white flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <h3 class="text-[18px] font-bold text-text mb-2">Ervaring met bouwprojecten</h3>
+            <p class="text-[14px] text-text-muted leading-relaxed">We weten wat er na een verbouwing overblijft. Cementresten op tegels, stof achter radiatoren, lijm op kozijnen. Niks nieuws voor ons.</p>
+          </div>
+          <div class="card-lift bg-surface rounded-lg border border-border p-7 text-center" style="border-radius: var(--radius-lg);">
+            <div class="w-12 h-12 mx-auto rounded-full bg-primary-light text-white flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h3 class="text-[18px] font-bold text-text mb-2">Team binnen een week beschikbaar</h3>
+            <p class="text-[14px] text-text-muted leading-relaxed">Na je aanvraag maken we snel een planning. De meeste projecten starten binnen een week. Eerder iemand nodig? Neem contact op.</p>
+          </div>
+          <div class="card-lift bg-surface rounded-lg border border-border p-7 text-center" style="border-radius: var(--radius-lg);">
+            <div class="w-12 h-12 mx-auto rounded-full bg-primary text-white flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            </div>
+            <h3 class="text-[18px] font-bold text-text mb-2">Flexibel in te plannen</h3>
+            <p class="text-[14px] text-text-muted leading-relaxed">We passen ons aan jouw situatie aan, of het nu om een enkel project gaat of een doorlopende samenwerking.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process: 4-step cards (different layout from other service pages) -->
+    <section class="bg-surface-blue" style="padding-top: 72px; padding-bottom: 80px;">
+      <div class="max-w-[1360px] mx-auto px-5 md:px-10">
+        <h2 class="scroll-fade-up text-center mb-10">Hoe werkt het?</h2>
+        <div class="stagger-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-bg rounded-lg p-6 border border-border text-center" style="border-radius: var(--radius-lg);"><div class="w-8 h-8 mx-auto rounded-full bg-primary text-white flex items-center justify-center font-head font-bold text-[14px] mb-3">1</div><h3 class="text-[16px] font-bold text-text mb-2">Briefing</h3><p class="text-[13px] text-text-muted leading-relaxed">Vertel ons wat er gebouwd of verbouwd is. Oppervlakte, type ruimte, wanneer het klaar moet zijn. Bel of mail, we reageren snel.</p></div>
+          <div class="bg-bg rounded-lg p-6 border border-border text-center" style="border-radius: var(--radius-lg);"><div class="w-8 h-8 mx-auto rounded-full bg-primary-light text-white flex items-center justify-center font-head font-bold text-[14px] mb-3">2</div><h3 class="text-[16px] font-bold text-text mb-2">Inspectie</h3><p class="text-[13px] text-text-muted leading-relaxed">Bij grotere projecten komen we even kijken. We schatten de klus in en geven een heldere prijs, zodat je vooraf weet wat het kost.</p></div>
+          <div class="bg-bg rounded-lg p-6 border border-border text-center" style="border-radius: var(--radius-lg);"><div class="w-8 h-8 mx-auto rounded-full bg-primary text-white flex items-center justify-center font-head font-bold text-[14px] mb-3">3</div><h3 class="text-[16px] font-bold text-text mb-2">Schoonmaak</h3><p class="text-[13px] text-text-muted leading-relaxed">Ons team werkt van boven naar beneden, ruimte voor ruimte, tot alles grondig schoon is. Afhankelijk van de grootte duurt het 1 tot 3 dagen.</p></div>
+          <div class="bg-bg rounded-lg p-6 border border-border text-center" style="border-radius: var(--radius-lg);"><div class="w-8 h-8 mx-auto rounded-full bg-primary-light text-white flex items-center justify-center font-head font-bold text-[14px] mb-3">4</div><h3 class="text-[16px] font-bold text-text mb-2">Oplevering</h3><p class="text-[13px] text-text-muted leading-relaxed">We lopen samen door de ruimte. Iets gemist? Dan pakken we het direct aan. We zijn pas klaar als jij tevreden bent.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-bg" style="padding-top: 64px; padding-bottom: 64px;">
+      <div class="max-w-3xl mx-auto px-5 md:px-10">
+        <h2 class="scroll-fade-up text-center mb-8">Veelgestelde vragen over opleveringsschoonmaak</h2>
+        <div class="space-y-4">
+          <details class="faq-item"><summary class="faq-summary">Wat houdt opleveringsschoonmaak precies in?</summary><div class="faq-body"><p>Alles wat nodig is om een verbouwd of nieuwgebouwd pand klaar te maken voor gebruik. Stof verwijderen, vloeren reinigen, sanitair poetsen, ramen wassen, kozijnen schoonmaken, cement- en lijmresten verwijderen. Het doel: je loopt binnen en het is schoon.</p></div></details>
+          <details class="faq-item"><summary class="faq-summary">Hoe snel kunnen jullie beginnen na de verbouwing?</summary><div class="faq-body"><p>Meestal binnen een week na aanvraag. Voor spoedklussen lukt het soms al binnen een paar dagen. Neem even <a href="/contact/" class="text-primary hover:underline">contact</a> op, dan kijken we naar de planning.</p></div></details>
+          <details class="faq-item"><summary class="faq-summary">Moet ik als aannemer zelf een schoonmaakbedrijf regelen?</summary><div class="faq-body"><p>Dat hangt van de afspraken met je opdrachtgever af. Aannemers schakelen ons regelmatig in voor de eindschoonmaak. Het bespaart tijd en het resultaat is professioneler.</p></div></details>
+          <details class="faq-item"><summary class="faq-summary">Hoe lang duurt een opleveringsschoonmaak?</summary><div class="faq-body"><p>Verschilt per project. Een verbouwde woning is meestal in een dag klaar. Een nieuwbouwkantoor van 500 m² duurt 2 tot 3 dagen. We geven vooraf een inschatting zodat je weet waar je aan toe bent.</p></div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cross-links -->
+    <section class="bg-surface" style="padding-top: 48px; padding-bottom: 48px;">
+      <div class="max-w-[1360px] mx-auto px-5 md:px-10">
+        <h3 class="font-head text-[16px] font-bold text-text-muted uppercase tracking-[1.5px] mb-5">Ook interessant</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <a href="/diensten/kantoorschoonmaak/" class="card-lift flex items-center gap-4 p-5 bg-bg rounded-lg border border-border transition-all" style="border-radius: var(--radius-lg);">
+            <div class="w-10 h-10 rounded-md bg-primary-100 flex items-center justify-center shrink-0" style="border-radius: var(--radius-md);"><svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div>
+            <div><p class="text-[15px] font-semibold text-text">Kantoorschoonmaak</p><p class="text-[13px] text-text-muted">Na de oplevering reguliere schoonmaak nodig? Bekijk onze kantoorschoonmaak.</p></div>
+          </a>
+          <a href="/over-ons/" class="card-lift flex items-center gap-4 p-5 bg-bg rounded-lg border border-border transition-all" style="border-radius: var(--radius-lg);">
+            <div class="w-10 h-10 rounded-md bg-primary-100 flex items-center justify-center shrink-0" style="border-radius: var(--radius-md);"><svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg></div>
+            <div><p class="text-[15px] font-semibold text-text">Over ons</p><p class="text-[13px] text-text-muted">Al sinds 2009 actief in de regio.</p></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <CtaSection heading="Net klaar met bouwen of verbouwen?" subtext="Neem contact op voor een vrijblijvende offerte. We komen kijken en maken snel een planning." primaryText="Offerte aanvragen" primaryHref="/contact/?dienst=bouw-oplevering" />
+  </main>
+  <Footer />
+  <SchemaService
+    name="Opleveringsschoonmaak"
+    description="Grondige opleveringsschoonmaak na verbouwing of nieuwbouw. Stof, bouwresten, cementresten en lijmresten verwijderd. Team meestal binnen een week beschikbaar."
+    url="/diensten/bouw-oplevering/"
+  />
+  <SchemaFAQ faqs={faqs} />
+</Layout>
+
+<style>
+  .faq-item { border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; transition: box-shadow 0.2s; }
+  .faq-item[open] { box-shadow: var(--shadow-card); }
+  .faq-summary { padding: 20px 24px; font-family: var(--font-head); font-size: 16px; font-weight: 600; color: var(--color-text); cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 16px; transition: background 0.15s; }
+  .faq-summary:hover { background: var(--color-surface); }
+  .faq-summary::-webkit-details-marker { display: none; }
+  .faq-summary::after { content: '+'; font-size: 20px; font-weight: 300; color: var(--color-primary); flex-shrink: 0; }
+  .faq-item[open] .faq-summary::after { content: '\2212'; }
+  .faq-body { padding: 0 24px 20px; font-size: 15px; color: var(--color-text-muted); line-height: 1.75; }
+</style>

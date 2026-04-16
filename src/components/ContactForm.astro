@@ -1,0 +1,257 @@
+---
+// ContactForm.astro — Offerte form per DESIGN.md §10 + CONTENT/homepage.md
+// Card-wrapped, honeypot + Turnstile, privacy consent, loading/success/error states
+---
+
+<div class="bg-surface border border-border rounded-xl p-6 md:p-9" style="border-radius: var(--radius-xl);">
+  <h3 class="font-head text-[20px] font-bold text-text mb-1">Offerte aanvragen</h3>
+  <p class="text-[14px] text-text-muted mb-6">Vrijblijvend. Vul het formulier in en we nemen binnen 24 uur contact op voor een afspraak.</p>
+
+  <!-- Success message (hidden by default) -->
+  <div id="form-success" class="hidden p-4 bg-green-50 border border-green-200 rounded-lg mb-6" style="border-radius: var(--radius-md);">
+    <p class="text-green-800 text-[14px] font-medium">Bedankt voor je aanvraag! We nemen binnen 24 uur contact met je op.</p>
+  </div>
+
+  <!-- Error message (hidden by default) -->
+  <div id="form-error" class="hidden p-4 bg-red-50 border border-red-200 rounded-lg mb-6" style="border-radius: var(--radius-md);">
+    <p class="text-red-800 text-[14px] font-medium">Er ging iets mis. Probeer het opnieuw of bel ons op <a href="tel:0623545276" class="underline">06 23545276</a>.</p>
+  </div>
+
+  <form id="contact-form" action="/api/contact/" method="POST" class="space-y-4" novalidate>
+    <!-- Honeypot (anti-spam, hidden from users) -->
+    <div class="absolute -left-[9999px]" aria-hidden="true">
+      <input type="text" name="website" tabindex="-1" autocomplete="off" />
+    </div>
+
+    <!-- Row 1: Voornaam + Achternaam -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label for="voornaam" class="block text-[13px] font-semibold text-text mb-1.5">
+          Voornaam <span class="text-red-500">*</span>
+        </label>
+        <input
+          type="text" id="voornaam" name="voornaam"
+          placeholder="Jan" required autocomplete="given-name"
+          class="form-field" minlength="2"
+        />
+        <p class="form-error-msg hidden text-red-500 text-[12px] mt-1">Vul je voornaam in.</p>
+      </div>
+      <div>
+        <label for="achternaam" class="block text-[13px] font-semibold text-text mb-1.5">
+          Achternaam <span class="text-red-500">*</span>
+        </label>
+        <input
+          type="text" id="achternaam" name="achternaam"
+          placeholder="de Vries" required autocomplete="family-name"
+          class="form-field" minlength="2"
+        />
+        <p class="form-error-msg hidden text-red-500 text-[12px] mt-1">Vul je achternaam in.</p>
+      </div>
+    </div>
+
+    <!-- Row 2: Bedrijfsnaam -->
+    <div>
+      <label for="bedrijf" class="block text-[13px] font-semibold text-text mb-1.5">
+        Bedrijfsnaam <span class="text-red-500">*</span>
+      </label>
+      <input
+        type="text" id="bedrijf" name="bedrijf"
+        placeholder="Je bedrijfsnaam" required autocomplete="organization"
+        class="form-field" minlength="2"
+      />
+      <p class="form-error-msg hidden text-red-500 text-[12px] mt-1">Vul je bedrijfsnaam in.</p>
+    </div>
+
+    <!-- Row 3: E-mail + Telefoon -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label for="email" class="block text-[13px] font-semibold text-text mb-1.5">
+          E-mailadres <span class="text-red-500">*</span>
+        </label>
+        <input
+          type="email" id="email" name="email"
+          placeholder="jan@bedrijf.nl" required autocomplete="email"
+          class="form-field"
+        />
+        <p class="form-error-msg hidden text-red-500 text-[12px] mt-1">Vul een geldig e-mailadres in.</p>
+      </div>
+      <div>
+        <label for="telefoon" class="block text-[13px] font-semibold text-text mb-1.5">
+          Telefoonnummer
+        </label>
+        <input
+          type="tel" id="telefoon" name="telefoon"
+          placeholder="06-12345678" autocomplete="tel"
+          class="form-field" pattern="[0-9\s\-\+]{7,15}"
+        />
+        <p class="form-error-msg hidden text-red-500 text-[12px] mt-1">Vul een geldig telefoonnummer in.</p>
+      </div>
+    </div>
+
+    <!-- Row 4: Gewenste dienst -->
+    <div>
+      <label for="dienst" class="block text-[13px] font-semibold text-text mb-1.5">
+        Gewenste dienst
+      </label>
+      <select id="dienst" name="dienst" class="form-field appearance-none">
+        <option value="" disabled selected>Selecteer een dienst</option>
+        <option value="kantoorschoonmaak">Kantoorschoonmaak</option>
+        <option value="glazenwassen">Glazenwassen</option>
+        <option value="bouw-oplevering">Opleveringsschoonmaak</option>
+        <option value="zonnepanelen">Zonnepanelen reinigen</option>
+        <option value="dakgoten">Dakgoten leegmaken</option>
+        <option value="gevelreiniging">Gevelreiniging</option>
+        <option value="anders">Anders of combinatie</option>
+      </select>
+    </div>
+
+    <!-- Row 5: Toelichting -->
+    <div>
+      <label for="bericht" class="block text-[13px] font-semibold text-text mb-1.5">
+        Toelichting
+      </label>
+      <textarea
+        id="bericht" name="bericht" rows="4"
+        placeholder="Vertel kort over je locatie, oppervlak en gewenste frequentie..."
+        class="form-field resize-y"
+      ></textarea>
+    </div>
+
+    <!-- Cloudflare Turnstile placeholder (key added during deployment) -->
+    <div class="cf-turnstile" data-sitekey="0x0000000000000000000000" data-theme="light"></div>
+
+    <!-- Privacy consent -->
+    <label class="flex items-start gap-3 cursor-pointer">
+      <input
+        type="checkbox" name="privacy" required
+        class="mt-0.5 w-4 h-4 shrink-0 rounded border-border text-primary accent-primary cursor-pointer"
+      />
+      <span class="text-[13px] text-text-muted leading-snug">
+        Ik ga akkoord met het <a href="/privacybeleid/" class="text-primary hover:underline" target="_blank">privacybeleid</a>. <span class="text-red-500">*</span>
+      </span>
+    </label>
+
+    <!-- Submit button with loading state -->
+    <button
+      type="submit"
+      id="form-submit-btn"
+      class="w-full bg-primary text-white font-head text-[15px] font-semibold py-3.5 rounded-full hover:bg-navy hover:shadow-btn transition-all duration-200 flex items-center justify-center gap-2 min-w-0 min-h-[44px] disabled:opacity-60 disabled:cursor-not-allowed"
+    >
+      <span id="btn-text">Offerte aanvragen</span>
+      <svg id="btn-arrow" class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+      </svg>
+      <!-- Loading spinner (hidden by default) -->
+      <svg id="btn-spinner" class="w-4 h-4 shrink-0 hidden animate-spin" viewBox="0 0 24 24" fill="none">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+      </svg>
+    </button>
+
+    <!-- AVG note -->
+    <p class="text-[11px] text-text-light text-center">
+      Wij gebruiken je gegevens alleen om contact met je op te nemen. Lees ons <a href="/privacybeleid/" class="hover:underline">privacybeleid</a>.
+    </p>
+  </form>
+</div>
+
+<style>
+  .form-field {
+    width: 100%;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 12px 14px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--color-text);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    min-height: 44px;
+  }
+  .form-field::placeholder {
+    color: var(--color-text-light);
+  }
+  .form-field:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(3, 105, 161, 0.12);
+  }
+  .form-field:invalid:not(:placeholder-shown):not(:focus) {
+    border-color: #ef4444;
+  }
+  .form-field:invalid:not(:placeholder-shown):not(:focus) ~ .form-error-msg {
+    display: block;
+  }
+</style>
+
+<script>
+  function initContactForm() {
+    // Auto-select service from URL param (e.g., /contact/?dienst=glazenwassen)
+    const params = new URLSearchParams(window.location.search);
+    const dienst = params.get("dienst");
+    if (dienst) {
+      const select = document.getElementById("dienst") as HTMLSelectElement;
+      if (select) {
+        const option = select.querySelector(`option[value="${dienst}"]`);
+        if (option) select.value = dienst;
+      }
+    }
+
+    const form = document.getElementById("contact-form") as HTMLFormElement;
+    if (!form) return;
+
+    const btn = document.getElementById("form-submit-btn") as HTMLButtonElement;
+    const btnText = document.getElementById("btn-text");
+    const btnArrow = document.getElementById("btn-arrow");
+    const btnSpinner = document.getElementById("btn-spinner");
+    const successDiv = document.getElementById("form-success");
+    const errorDiv = document.getElementById("form-error");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      // Validate
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      // Check honeypot
+      const honeypot = form.querySelector<HTMLInputElement>('[name="website"]');
+      if (honeypot && honeypot.value) return;
+
+      // Loading state
+      btn.disabled = true;
+      if (btnText) btnText.textContent = "Verzenden...";
+      btnArrow?.classList.add("hidden");
+      btnSpinner?.classList.remove("hidden");
+      successDiv?.classList.add("hidden");
+      errorDiv?.classList.add("hidden");
+
+      try {
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+        });
+
+        if (response.ok) {
+          form.reset();
+          successDiv?.classList.remove("hidden");
+          form.classList.add("hidden");
+        } else {
+          throw new Error("Submit failed");
+        }
+      } catch {
+        errorDiv?.classList.remove("hidden");
+      } finally {
+        btn.disabled = false;
+        if (btnText) btnText.textContent = "Offerte aanvragen";
+        btnArrow?.classList.remove("hidden");
+        btnSpinner?.classList.add("hidden");
+      }
+    });
+  }
+
+  document.addEventListener("astro:page-load", initContactForm);
+</script>

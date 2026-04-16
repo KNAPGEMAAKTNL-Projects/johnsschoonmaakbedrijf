@@ -1,0 +1,190 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import CtaSection from "../../components/CtaSection.astro";
+import SchemaFAQ from "../../components/seo/SchemaFAQ.astro";
+
+const faqs = [
+  { question: "Wat kost kantoorschoonmaak?", answer: "De kosten van kantoorschoonmaak hangen af van je situatie: het oppervlak van je kantoor, hoe vaak je wilt laten schoonmaken en welke ruimtes erbij moeten. Na een locatiebezoek maken we een offerte op maat. Die offerte is sowieso vrijblijvend. Neem even contact op, dan kijken we samen wat past bij je budget." },
+  { question: "Hoe vaak moet een kantoor worden schoongemaakt?", answer: "Twee tot drie keer per week is gebruikelijk. Kantoren met minder dan tien werkplekken komen vaak uit op wekelijks. Het hangt af van het type werk en hoeveel mensen er dagelijks zitten. We denken graag even mee over de juiste frequentie voor jouw kantoor." },
+  { question: "Werken jullie met vaste schoonmakers?", answer: "Ja, altijd. Elke locatie krijgt een vast team. Dezelfde mensen, elke keer. Ze leren je kantoor kennen en weten precies wat er nodig is. Bij ziekte of vakantie regelen wij de vervanging. Daar hoef je niet zelf achteraan." },
+  { question: "Hoe snel kunnen jullie beginnen?", answer: "Voor kantoorschoonmaak kan je vaste team meestal binnen een week na het locatiebezoek starten. Soms al eerder. Bij opleveringsschoonmaak zijn we vaak al binnen een paar dagen beschikbaar. Het hangt af van de grootte van de klus. Bel gerust, dan bespreken we de planning." },
+  { question: "In welke regio zijn jullie actief?", answer: "We werken vanuit Buren en rijden door de hele regio. Denk aan Tiel, Culemborg, Geldermalsen, Elst en omstreken. Niet zeker of we bij jou in de buurt komen? Neem gerust contact op." },
+  { question: "Zijn jullie verzekerd?", answer: "Ja. John's Schoonmaakbedrijf is volledig verzekerd via een bedrijfsaansprakelijkheidsverzekering. Mocht er onverhoopt iets misgaan, dan ben je gedekt. Alle medewerkers zijn VCA-gecertificeerd, wat betekent dat ze opgeleid zijn om veilig te werken in jouw kantoor of bedrijfspand." },
+  { question: "Hoe vraag ik een offerte aan?", answer: "Via het contactformulier op de website of door te bellen naar 06 23545276. We nemen binnen 24 uur contact op. Daarna plannen we een locatiebezoek in en je ontvangt een heldere offerte. Sowieso vrijblijvend." },
+  { question: "Kunnen meerdere diensten gecombineerd worden?", answer: "Ja, dat kan. Kantoorschoonmaak en glazenwassen of zonnepanelen reinigen laten zich goed combineren. Je hebt dan één aanspreekpunt, één factuur en de planning is op elkaar afgestemd. Vaak ook voordeliger." },
+  { question: "Hoe lang duurt een opleveringsschoonmaak?", answer: "Dat verschilt per project. Een verbouwde woning is meestal in een dag klaar. Een groter bedrijfspand of nieuwbouwkantoor van 500 m² duurt 2 tot 3 dagen. We geven vooraf altijd een inschatting, zodat je weet waar je aan toe bent." },
+  { question: "Hoe vaak moeten zonnepanelen worden gereinigd?", answer: "Minstens één keer per jaar voor optimaal rendement. Staat je pand onder bomen of bij akkerbouw? Dan is twee keer per jaar verstandiger. Vuile panelen leveren tot 15% minder stroom op. Best zonde, eigenlijk." },
+  { question: "Is gevelreiniging met hogedruk verstandig?", answer: "In de meeste gevallen niet. Hogedruk beschadigt verflagen, dringt in naden en maakt kunststof oppervlakken ruw. Wij werken met zachte borstels en het juiste reinigingsmiddel per materiaal. Beter resultaat, langere levensduur." },
+  { question: "Wat houdt VCA-certificering in?", answer: "VCA staat voor Veiligheid, Gezondheid en Milieu Checklist Aannemers. Het betekent dat onze medewerkers getraind zijn om veilig te werken. Ze weten hoe ze omgaan met schoonmaakmiddelen en veilig werken in kantoren waar jouw personeel aanwezig is. Voor B2B-schoonmaak is VCA eigenlijk de standaard." },
+];
+---
+
+<Layout title="Veelgestelde vragen | John's Schoonmaakbedrijf" description="Veelgestelde vragen over kantoorschoonmaak, glazenwassen en opleveringsschoonmaak. Kosten, werkwijze, VCA-certificering en meer. Bekijk de antwoorden.">
+  <Header />
+  <main>
+    <!-- Hero -->
+    <section class="bg-surface-blue" style="padding-top: 64px; padding-bottom: 48px;">
+      <div class="max-w-[1360px] mx-auto px-5 md:px-10">
+        <nav class="text-[13px] text-text-muted mb-6" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-primary transition-colors">Home</a>
+          <span class="mx-2">/</span>
+          <span class="text-text">FAQ</span>
+        </nav>
+        <h1>Veelgestelde vragen</h1>
+        <p class="text-text-muted text-[17px] mt-4 max-w-xl" style="line-height: 1.7;">Hieronder vind je antwoord op de vragen die we het vaakst krijgen. Staat je vraag er niet bij? Neem dan gerust even <a href="/contact/" class="text-primary hover:underline">contact</a> op.</p>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="bg-bg" style="padding-top: 64px; padding-bottom: 80px;">
+      <div class="max-w-3xl mx-auto px-5 md:px-10 space-y-4">
+
+        <details class="faq-item group" open>
+          <summary class="faq-summary">Wat kost kantoorschoonmaak?</summary>
+          <div class="faq-body">
+            <p>De kosten van kantoorschoonmaak hangen af van je situatie: het oppervlak van je kantoor, hoe vaak je wilt laten schoonmaken en welke ruimtes erbij moeten. Na een locatiebezoek maken we een offerte op maat. Die offerte is sowieso vrijblijvend. Neem even <a href="/contact/" class="text-primary hover:underline">contact</a> op, dan kijken we samen wat past bij je budget.</p>
+            <p class="text-[13px] mt-3"><a href="/diensten/kantoorschoonmaak/" class="text-primary hover:underline font-medium">Meer over kantoorschoonmaak &rarr;</a></p>
+          </div>
+        </details>
+
+        <details class="faq-item group">
+          <summary class="faq-summary">Hoe vaak moet een kantoor worden schoongemaakt?</summary>
+          <div class="faq-body">
+            <p>Twee tot drie keer per week is gebruikelijk. Kantoren met minder dan tien werkplekken komen vaak uit op wekelijks. Het hangt af van het type werk en hoeveel mensen er dagelijks zitten. We denken graag even mee over de juiste frequentie voor jouw kantoor.</p>
+          </div>
+        </details>
+
+        <details class="faq-item group">
+          <summary class="faq-summary">Werken jullie met vaste schoonmakers?</summary>
+          <div class="faq-body">
+            <p>Ja, altijd. Elke locatie krijgt een vast team. Dezelfde mensen, elke keer. Ze leren je kantoor kennen en weten precies wat er nodig is. Bij ziekte of vakantie regelen wij de vervanging. Daar hoef je niet zelf achteraan.</p>
+          </div>
+        </details>
+
+        <details class="faq-item group">
+          <summary class="faq-summary">Hoe snel kunnen jullie beginnen?</summary>
+          <div class="faq-body">
+            <p>Voor <a href="/diensten/kantoorschoonmaak/" class="text-primary hover:underline">kantoorschoonmaak</a> kan je vaste team meestal binnen een week na het locatiebezoek starten. Soms al eerder. Bij <a href="/diensten/bouw-oplevering/" class="text-primary hover:underline">opleveringsschoonmaak</a> zijn we vaak al binnen een paar dagen beschikbaar. Het hangt af van de grootte van de klus. Bel gerust, dan bespreken we de planning.</p>
+          </div>
+        </details>
+
+        <details class="faq-item group">
+          <summary class="faq-summary">In welke regio zijn jullie actief?</summary>
+          <div class="faq-body">
+            <p>We werken vanuit Buren en rijden door de hele regio. Denk aan Tiel, Culemborg, Geldermalsen, Elst en omstreken. Niet zeker of we bij jou in de buurt komen? Neem gerust <a href="/contact/" class="text-primary hover:underline">contact</a> op.</p>
+          </div>
+        </details>
+
+        <details class="faq-item group">
+          <summary class="faq-summary">Zijn jullie verzekerd?</summary>
+          <div class="faq-body">
+            <p>Ja. John's Schoonmaakbedrijf is volledig verzekerd via een bedrijfsaansprakelijkheidsverzekering. Mocht er onverhoopt iets misgaan, dan ben je gedekt. Alle medewerkers zijn VCA-gecertificeerd, wat betekent dat ze opgeleid zijn om veilig te werken in jouw kantoor of bedrijfspand.</p>
+          </div>
+        </details>
+
+        <details class="faq-item group">
+          <summary class="faq-summary">Hoe vraag ik een offerte aan?</summary>
+          <div class="faq-body">
+            <p>Via het <a href="/contact/" class="text-primary hover:underline">contactformulier</a> op de website of door te bellen naar <a href="tel:0623545276" class="text-primary hover:underline">06 23545276</a>. We nemen binnen 24 uur contact op. Daarna plannen we een locatiebezoek in en je ontvangt een heldere offerte. Sowieso vrijblijvend.</p>
+          </div>
+        </details>
+
+        <details class="faq-item group">
+          <summary class="faq-summary">Kunnen meerdere diensten gecombineerd worden?</summary>
+          <div class="faq-body">
+            <p>Ja, dat kan. <a href="/diensten/kantoorschoonmaak/" class="text-primary hover:underline">Kantoorschoonmaak</a> en <a href="/diensten/glazenwassen/" class="text-primary hover:underline">glazenwassen</a> of <a href="/diensten/zonnepanelen/" class="text-primary hover:underline">zonnepanelen reinigen</a> laten zich goed combineren. Je hebt dan één aanspreekpunt, één factuur en de planning is op elkaar afgestemd. Vaak ook voordeliger.</p>
+          </div>
+        </details>
+
+        <details class="faq-item group">
+          <summary class="faq-summary">Hoe lang duurt een opleveringsschoonmaak?</summary>
+          <div class="faq-body">
+            <p>Dat verschilt per project. Een verbouwde woning is meestal in een dag klaar. Een groter bedrijfspand of nieuwbouwkantoor van 500 m² duurt 2 tot 3 dagen. We geven vooraf altijd een inschatting, zodat je weet waar je aan toe bent.</p>
+            <p class="text-[13px] mt-3"><a href="/diensten/bouw-oplevering/" class="text-primary hover:underline font-medium">Meer over opleveringsschoonmaak &rarr;</a></p>
+          </div>
+        </details>
+
+        <details class="faq-item group">
+          <summary class="faq-summary">Hoe vaak moeten zonnepanelen worden gereinigd?</summary>
+          <div class="faq-body">
+            <p>Minstens één keer per jaar voor optimaal rendement. Staat je pand onder bomen of bij akkerbouw? Dan is twee keer per jaar verstandiger. Vuile panelen leveren tot 15% minder stroom op. Best zonde, eigenlijk.</p>
+            <p class="text-[13px] mt-3"><a href="/diensten/zonnepanelen/" class="text-primary hover:underline font-medium">Meer over zonnepanelen reinigen &rarr;</a></p>
+          </div>
+        </details>
+
+        <details class="faq-item group">
+          <summary class="faq-summary">Is gevelreiniging met hogedruk verstandig?</summary>
+          <div class="faq-body">
+            <p>In de meeste gevallen niet. Hogedruk beschadigt verflagen, dringt in naden en maakt kunststof oppervlakken ruw. Wij werken met zachte borstels en het juiste reinigingsmiddel per materiaal. Beter resultaat, langere levensduur.</p>
+            <p class="text-[13px] mt-3"><a href="/diensten/gevelreiniging/" class="text-primary hover:underline font-medium">Meer over gevelreiniging &rarr;</a></p>
+          </div>
+        </details>
+
+        <details class="faq-item group">
+          <summary class="faq-summary">Wat houdt VCA-certificering in?</summary>
+          <div class="faq-body">
+            <p>VCA staat voor Veiligheid, Gezondheid en Milieu Checklist Aannemers. Het betekent dat onze medewerkers getraind zijn om veilig te werken. Ze weten hoe ze omgaan met schoonmaakmiddelen en veilig werken in kantoren waar jouw personeel aanwezig is. Voor B2B-schoonmaak is VCA eigenlijk de standaard.</p>
+            <p class="text-[13px] mt-3"><a href="/over-ons/" class="text-primary hover:underline font-medium">Meer over onze certificeringen &rarr;</a></p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <CtaSection
+      heading="Staat je vraag er niet bij?"
+      subtext="Bel gerust naar <a href='tel:0623545276' class='underline hover:text-primary transition-colors'>06 23545276</a> of vul het contactformulier in. We nemen binnen 24 uur contact op."
+      primaryText="Offerte aanvragen"
+      primaryHref="/contact/"
+    />
+  </main>
+  <Footer />
+  <SchemaFAQ faqs={faqs} />
+</Layout>
+
+<style>
+  .faq-item {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  .faq-item[open] {
+    box-shadow: var(--shadow-card);
+  }
+  .faq-summary {
+    padding: 20px 24px;
+    font-family: var(--font-head);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    transition: background 0.15s;
+  }
+  .faq-summary:hover { background: var(--color-surface); }
+  .faq-summary::-webkit-details-marker { display: none; }
+  .faq-summary::after {
+    content: '+';
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--color-primary);
+    transition: transform 0.2s;
+    flex-shrink: 0;
+  }
+  .faq-item[open] .faq-summary::after {
+    content: '\2212'; /* minus */
+    transform: rotate(0deg);
+  }
+  .faq-body {
+    padding: 0 24px 20px;
+    font-size: 15px;
+    color: var(--color-text-muted);
+    line-height: 1.75;
+  }
+</style>

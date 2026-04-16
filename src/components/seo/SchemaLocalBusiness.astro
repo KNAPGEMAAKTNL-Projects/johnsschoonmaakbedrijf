@@ -1,0 +1,190 @@
+---
+/**
+ * SchemaLocalBusiness.astro
+ * JSON-LD @graph: CleaningService (LocalBusiness) + WebSite
+ *
+ * TODO markers indicate data that must be filled in from client records.
+ * After filling in, validate at: https://search.google.com/test/rich-results
+ */
+
+const SITE_URL = "https://www.johnsschoonmaakbedrijf.nl";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    // ─── CleaningService (LocalBusiness) ───
+    {
+      "@type": "CleaningService",
+      "@id": `${SITE_URL}/#organization`,
+      "name": "John's Schoonmaakbedrijf",
+      "legalName": "John's Schoonmaakbedrijf", // TODO: verify exact KvK legal name
+      "description":
+        "VCA-gecertificeerd schoonmaakbedrijf in Buren. Kantoorschoonmaak, glazenwassen, opleveringsschoonmaak, zonnepanelen reinigen, dakgoten leegmaken en gevelreiniging in de Betuwe en Rivierenland.",
+      "url": SITE_URL,
+      "logo": {
+        "@type": "ImageObject",
+        "@id": `${SITE_URL}/#logo`,
+        "url": `${SITE_URL}/images/logo.png`, // TODO: place logo at public/images/logo.png
+        "contentUrl": `${SITE_URL}/images/logo.png`,
+        "caption": "John's Schoonmaakbedrijf",
+        "width": 400,
+        "height": 400,
+      },
+      "image": `${SITE_URL}/images/og-default.jpg`,
+      "telephone": "+31623545276",
+      "email": "info@johnsschoonmaakbedrijf.nl",
+      "founder": {
+        "@type": "Person",
+        "name": "John van Ekeren",
+      },
+      "foundingDate": "2007",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Randweg 32",
+        "addressLocality": "Buren",
+        "postalCode": "4116 GH",
+        "addressRegion": "Gelderland",
+        "addressCountry": "NL",
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.9116, // TODO: verify exact coordinates
+        "longitude": 5.3311,
+      },
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "name": "KvK-nummer",
+          "value": "55028330",
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "BTW-nummer",
+          "value": "TODO", // TODO: fill in NL + 9 digits + B + 2 digits
+        },
+      ],
+      "priceRange": "$$",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Factuur, Bankoverschrijving",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+          ],
+          "opens": "08:00",
+          "closes": "18:00",
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "12:00",
+        },
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "bestRating": "5",
+        "ratingCount": "15",
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Buren" },
+        { "@type": "City", "name": "Tiel" },
+        { "@type": "City", "name": "Culemborg" },
+        { "@type": "City", "name": "Geldermalsen" },
+        { "@type": "City", "name": "Elst" },
+        { "@type": "City", "name": "Huissen" },
+        { "@type": "City", "name": "Bemmel" },
+        { "@type": "City", "name": "Maurik" },
+        { "@type": "City", "name": "West Betuwe" },
+        { "@type": "City", "name": "Druten" },
+      ],
+      "knowsAbout": [
+        "Kantoorschoonmaak",
+        "Glazenwassen",
+        "Opleveringsschoonmaak",
+        "Bouwschoonmaak",
+        "Zonnepanelen reinigen",
+        "Dakgoten leegmaken",
+        "Gevelreiniging",
+        "VCA-gecertificeerd schoonmaken",
+        "Zakelijke schoonmaak",
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Schoonmaakdiensten",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Kantoorschoonmaak",
+            "url": `${SITE_URL}/diensten/kantoorschoonmaak/`,
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Glazenwassen",
+            "url": `${SITE_URL}/diensten/glazenwassen/`,
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Opleveringsschoonmaak",
+            "url": `${SITE_URL}/diensten/bouw-oplevering/`,
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Zonnepanelen reinigen",
+            "url": `${SITE_URL}/diensten/zonnepanelen/`,
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Dakgoten leegmaken",
+            "url": `${SITE_URL}/diensten/dakgoten/`,
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Gevelreiniging",
+            "url": `${SITE_URL}/diensten/gevelreiniging/`,
+          },
+        ],
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certificate",
+          "name": "VCA (Veiligheid, Gezondheid en Milieu Checklist Aannemers)",
+        },
+      ],
+      "sameAs": [
+        // TODO: add actual profile URLs
+        // "https://www.google.com/maps/place/...",  // GBP
+        // "https://www.facebook.com/...",
+        // "https://www.linkedin.com/company/...",
+        // "https://www.werkspot.nl/...",
+      ],
+    },
+
+    // ─── WebSite ───
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      "url": SITE_URL,
+      "name": "John's Schoonmaakbedrijf",
+      "description":
+        "VCA-gecertificeerd schoonmaakbedrijf in de Betuwe en Rivierenland. Kantoorschoonmaak, glazenwassen en meer.",
+      "publisher": {
+        "@id": `${SITE_URL}/#organization`,
+      },
+      "inLanguage": "nl-NL",
+    },
+  ],
+};
+---
+
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify(schema, null, 0)}
+/>

@@ -1,0 +1,131 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import CtaSection from "../../components/CtaSection.astro";
+import SchemaService from "../../components/seo/SchemaService.astro";
+import SchemaFAQ from "../../components/seo/SchemaFAQ.astro";
+
+const faqs = [
+  { question: "Hoe vaak moeten zonnepanelen worden gereinigd?", answer: "Minstens een keer per jaar. Woon je onder bomen of bij akkerbouw? Dan is twee keer per jaar beter. Je merkt het verschil in je opbrengst." },
+  { question: "Kan ik mijn zonnepanelen zelf reinigen?", answer: "Dat kan, maar dan moet je het dak op. Niet zonder risico. En met gewoon water krijg je kalkvlekken. Wij werken met osmosewater en hoeven niet op het dak. Veiliger en beter resultaat." },
+  { question: "Worden mijn panelen beschadigd door het reinigen?", answer: "Nee. We gebruiken zachte borstels en osmosewater zonder chemie. Geen hogedruk, geen schurende middelen. Je panelen worden schoner, niet slechter." },
+];
+---
+
+<Layout title="Zonnepanelen reinigen | John's Schoonmaakbedrijf" description="Zonnepanelen reinigen met osmosewater, schadevrij, vanaf de grond. Minstens 1x per jaar voor optimaal rendement. Vraag een vrijblijvende offerte aan.">
+  <Header />
+  <main>
+    <!-- Hero -->
+    <section class="bg-bg relative overflow-hidden" style="padding-top: 64px; padding-bottom: 56px;">
+      <div class="absolute pointer-events-none" style="top: -80px; right: -60px; width: 350px; height: 350px; border-radius: 50%; background: var(--color-accent); opacity: 0.04; filter: blur(60px);" aria-hidden="true"></div>
+      <div class="max-w-[1360px] mx-auto px-5 md:px-10 relative z-10">
+        <nav class="text-[13px] text-text-muted mb-6" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-primary transition-colors">Home</a><span class="mx-2">/</span>
+          <a href="/diensten/" class="hover:text-primary transition-colors">Diensten</a><span class="mx-2">/</span>
+          <span class="text-text">Zonnepanelen reinigen</span>
+        </nav>
+        <div class="max-w-2xl">
+          <h1 class="mb-5">Zonnepanelen reinigen in de Betuwe</h1>
+          <p class="text-text-muted text-[17px]" style="line-height: 1.7;">Zonnepanelen reinigen doe je minstens één keer per jaar voor optimaal rendement. John's Schoonmaakbedrijf reinigt je panelen met osmosewater en zachte borstels via het Telewash-systeem. Meestal hoeven we niet eens het dak op.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Description -->
+    <section class="bg-surface" style="padding-top: 64px; padding-bottom: 80px;">
+      <div class="max-w-[1360px] mx-auto px-5 md:px-10">
+        <div class="max-w-3xl scroll-fade-up">
+          <h2 class="mb-5">Meer rendement uit je panelen</h2>
+          <div class="text-[16px] text-text-muted space-y-5" style="line-height: 1.75;">
+            <p>Wij reinigen je zonnepanelen met osmosewater: gezuiverd water zonder mineralen. Dat laat geen strepen of kalkvlekken achter op het glas. We gebruiken zachte borstels op telescoopstelen, dus in de meeste gevallen hoeven we niet op het dak. Veiliger voor ons, geen rompslomp voor jou.</p>
+            <p>Ook bij pannendaken met een steile helling werken we gewoon vanaf de grond met het Telewash-systeem. Je hoeft er niet eens bij te zijn. We spreken een moment af en regelen het.</p>
+            <p>Een keer per jaar reinigen is voor de meeste situaties voldoende. Staat je huis onder bomen of in de buurt van akkerbouw? Dan is twee keer per jaar verstandiger. We kijken graag mee wat voor jou het beste werkt.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits: numbered list (like glazenwassen) -->
+    <section class="bg-bg" style="padding-top: 72px; padding-bottom: 72px;">
+      <div class="max-w-[1360px] mx-auto px-5 md:px-10">
+        <h2 class="scroll-fade-up mb-8">Waarom kiezen voor onze zonnepaneelreiniging?</h2>
+        <div class="stagger-container max-w-3xl space-y-6">
+          <div class="scroll-fade-up flex gap-5 items-start">
+            <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shrink-0 font-head font-bold text-[16px]">1</div>
+            <div><h3 class="text-[18px] font-bold text-text mb-1">Osmosewater: streeploos en veilig</h3><p class="text-[15px] text-text-muted leading-relaxed">Geen zeep of chemie op je panelen. Osmosewater droogt zonder vlekken op en tast de coating van je panelen niet aan. Beter voor je panelen, beter rendement.</p></div>
+          </div>
+          <div class="scroll-fade-up flex gap-5 items-start">
+            <div class="w-10 h-10 rounded-full bg-primary-light text-white flex items-center justify-center shrink-0 font-head font-bold text-[16px]">2</div>
+            <div><h3 class="text-[18px] font-bold text-text mb-1">Vanaf de grond, zonder steiger</h3><p class="text-[15px] text-text-muted leading-relaxed">Met telescoopstelen bereiken we de meeste daken zonder erop te klimmen, dus geen ladder tegen je gevel en geen voetsporen op je dakpannen.</p></div>
+          </div>
+          <div class="scroll-fade-up flex gap-5 items-start">
+            <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shrink-0 font-head font-bold text-[16px]">3</div>
+            <div><h3 class="text-[18px] font-bold text-text mb-1">Alles in een afspraak</h3><p class="text-[15px] text-text-muted leading-relaxed">We kunnen in dezelfde afspraak ook je <a href="/diensten/glazenwassen/" class="text-primary hover:underline">ramen wassen</a> of <a href="/diensten/dakgoten/" class="text-primary hover:underline">dakgoten leegmaken</a>. Dat scheelt je een extra afspraak en is vaak voordeliger.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process: horizontal steps -->
+    <section class="bg-surface-blue" style="padding-top: 72px; padding-bottom: 80px;">
+      <div class="max-w-[1360px] mx-auto px-5 md:px-10">
+        <h2 class="scroll-fade-up text-center mb-10">Hoe werkt het?</h2>
+        <div class="stagger-container grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div class="text-center"><div class="w-10 h-10 mx-auto rounded-full bg-primary text-white flex items-center justify-center font-head text-[16px] font-bold mb-3">1</div><h3 class="text-[17px] font-bold text-text mb-2">Aanvraag</h3><p class="text-[14px] text-text-muted leading-relaxed">Bel of mail ons even. We vragen hoeveel panelen je hebt en of er bijzonderheden zijn (steile helling, dakraam, etc.).</p></div>
+          <div class="text-center"><div class="w-10 h-10 mx-auto rounded-full bg-primary-light text-white flex items-center justify-center font-head text-[16px] font-bold mb-3">2</div><h3 class="text-[17px] font-bold text-text mb-2">Planning</h3><p class="text-[14px] text-text-muted leading-relaxed">We plannen een moment in dat jou uitkomt. Je hoeft er niet per se bij te zijn. We maken foto's voor en na.</p></div>
+          <div class="text-center"><div class="w-10 h-10 mx-auto rounded-full bg-primary text-white flex items-center justify-center font-head text-[16px] font-bold mb-3">3</div><h3 class="text-[17px] font-bold text-text mb-2">Reiniging</h3><p class="text-[14px] text-text-muted leading-relaxed">We reinigen je panelen met osmosewater en zachte borstels. Duurt meestal een uur of twee. Klaar terwijl jij gewoon doorwerkt of boodschappen doet.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-bg" style="padding-top: 64px; padding-bottom: 64px;">
+      <div class="max-w-3xl mx-auto px-5 md:px-10">
+        <h2 class="scroll-fade-up text-center mb-8">Veelgestelde vragen over zonnepanelen reinigen</h2>
+        <div class="space-y-4">
+          <details class="faq-item"><summary class="faq-summary">Hoe vaak moeten zonnepanelen worden gereinigd?</summary><div class="faq-body"><p>Minstens een keer per jaar. Woon je onder bomen of bij akkerbouw? Dan is twee keer per jaar beter. Je merkt het verschil in je opbrengst.</p></div></details>
+          <details class="faq-item"><summary class="faq-summary">Kan ik mijn zonnepanelen zelf reinigen?</summary><div class="faq-body"><p>Dat kan, maar dan moet je het dak op. Niet zonder risico. En met gewoon water krijg je kalkvlekken. Wij werken met osmosewater en hoeven niet op het dak. Veiliger en beter resultaat.</p></div></details>
+          <details class="faq-item"><summary class="faq-summary">Worden mijn panelen beschadigd door het reinigen?</summary><div class="faq-body"><p>Nee. We gebruiken zachte borstels en osmosewater zonder chemie. Geen hogedruk, geen schurende middelen. Je panelen worden schoner, niet slechter.</p></div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cross-links -->
+    <section class="bg-surface" style="padding-top: 48px; padding-bottom: 48px;">
+      <div class="max-w-[1360px] mx-auto px-5 md:px-10">
+        <h3 class="font-head text-[16px] font-bold text-text-muted uppercase tracking-[1.5px] mb-5">Ook interessant</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <a href="/diensten/glazenwassen/" class="card-lift flex items-center gap-4 p-5 bg-bg rounded-lg border border-border transition-all" style="border-radius: var(--radius-lg);">
+            <div class="w-10 h-10 rounded-md bg-primary-100 flex items-center justify-center shrink-0" style="border-radius: var(--radius-md);"><svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7"/></svg></div>
+            <div><p class="text-[15px] font-semibold text-text">Glazenwassen</p><p class="text-[13px] text-text-muted">Combineer met glazenwassen voor een afspraak.</p></div>
+          </a>
+          <a href="/diensten/dakgoten/" class="card-lift flex items-center gap-4 p-5 bg-bg rounded-lg border border-border transition-all" style="border-radius: var(--radius-lg);">
+            <div class="w-10 h-10 rounded-md bg-primary-100 flex items-center justify-center shrink-0" style="border-radius: var(--radius-md);"><svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 4h18l-2 16H5L3 4zm0 0l1.5 2m13.5-2l-1.5 2M9 8v8m6-8v8"/></svg></div>
+            <div><p class="text-[15px] font-semibold text-text">Dakgoten leegmaken</p><p class="text-[13px] text-text-muted">Dakgoten ook meteen meenemen?</p></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <CtaSection heading="Zonnepanelen die wel weer eens schoongemaakt mogen worden?" subtext="Neem even contact op. We geven een heldere prijs en plannen het snel in." primaryText="Offerte aanvragen" primaryHref="/contact/?dienst=zonnepanelen" />
+  </main>
+  <Footer />
+  <SchemaService
+    name="Zonnepanelen reinigen"
+    description="Zonnepanelen reinigen met osmosewater en zachte borstels. Vanaf de grond, zonder het dak op te hoeven. Minstens 1x per jaar."
+    url="/diensten/zonnepanelen/"
+  />
+  <SchemaFAQ faqs={faqs} />
+</Layout>
+
+<style>
+  .faq-item { border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; transition: box-shadow 0.2s; }
+  .faq-item[open] { box-shadow: var(--shadow-card); }
+  .faq-summary { padding: 20px 24px; font-family: var(--font-head); font-size: 16px; font-weight: 600; color: var(--color-text); cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 16px; transition: background 0.15s; }
+  .faq-summary:hover { background: var(--color-surface); }
+  .faq-summary::-webkit-details-marker { display: none; }
+  .faq-summary::after { content: '+'; font-size: 20px; font-weight: 300; color: var(--color-primary); flex-shrink: 0; }
+  .faq-item[open] .faq-summary::after { content: '\2212'; }
+  .faq-body { padding: 0 24px 20px; font-size: 15px; color: var(--color-text-muted); line-height: 1.75; }
+</style>

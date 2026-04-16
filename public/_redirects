@@ -1,0 +1,66 @@
+# Cloudflare Pages redirects
+# Old johnsschoonmaakbedrijf.nl URLs → new site structure
+# 301 = permanent redirect (SEO value transferred)
+
+# Service pages (old slugs → new slugs)
+/diensten/schoonmaken                          /diensten/kantoorschoonmaak/    301
+/diensten/ramen-wassen                         /diensten/glazenwassen/         301
+/diensten/bouw-opleveringen                    /diensten/bouw-oplevering/      301
+/diensten/reinigen-van-zonnepanelen            /diensten/zonnepanelen/         301
+/diensten/dakgoten-leegmaken                   /diensten/dakgoten/             301
+/diensten/dakpannen-reinigen                   /diensten/                      301
+/diensten/reinigen-van-houtwerk-kunststof-en-trespa  /diensten/gevelreiniging/ 301
+/diensten/reinigen-met-telewash-systeem        /diensten/glazenwassen/         301
+
+# Pages that no longer exist
+/nieuws                                        /                              301
+
+# Trailing slash normalization (Cloudflare handles this, but explicit for safety)
+/diensten                                      /diensten/                      301
+/contact                                       /contact/                       301
+
+# Location pages (schoonmaakbedrijf-* pattern → homepage for now)
+# These will be updated to /werkgebied/[stad]/ when location pages are built
+/schoonmaakbedrijf-acquoy        /  301
+/schoonmaakbedrijf-asch          /  301
+/schoonmaakbedrijf-asperen       /  301
+/schoonmaakbedrijf-beesd         /  301
+/schoonmaakbedrijf-beusichem     /  301
+/schoonmaakbedrijf-buren         /  301
+/schoonmaakbedrijf-buurmalsen    /  301
+/schoonmaakbedrijf-culemborg     /  301
+/schoonmaakbedrijf-deil          /  301
+/schoonmaakbedrijf-enspijk       /  301
+/schoonmaakbedrijf-erichem       /  301
+/schoonmaakbedrijf-est           /  301
+/schoonmaakbedrijf-everdingen    /  301
+/schoonmaakbedrijf-gameren       /  301
+/schoonmaakbedrijf-geldermalsen  /  301
+/schoonmaakbedrijf-gellicum      /  301
+/schoonmaakbedrijf-haaften       /  301
+/schoonmaakbedrijf-hagestein     /  301
+/schoonmaakbedrijf-hei-en-boeicop  /  301
+/schoonmaakbedrijf-hellouw       /  301
+/schoonmaakbedrijf-herwijnen     /  301
+/schoonmaakbedrijf-heukelum      /  301
+/schoonmaakbedrijf-kapel-avezaath  /  301
+/schoonmaakbedrijf-kerk-avezaath   /  301
+/schoonmaakbedrijf-leerdam       /  301
+/schoonmaakbedrijf-meteren       /  301
+/schoonmaakbedrijf-neerijnen     /  301
+/schoonmaakbedrijf-nieuwaal      /  301
+/schoonmaakbedrijf-opijnen       /  301
+/schoonmaakbedrijf-ravenswaaij   /  301
+/schoonmaakbedrijf-rhenoy        /  301
+/schoonmaakbedrijf-rumpt         /  301
+/schoonmaakbedrijf-tiel          /  301
+/schoonmaakbedrijf-tricht        /  301
+/schoonmaakbedrijf-tuil          /  301
+/schoonmaakbedrijf-varik         /  301
+/schoonmaakbedrijf-vianen        /  301
+/schoonmaakbedrijf-vuren         /  301
+/schoonmaakbedrijf-waardenburg   /  301
+/schoonmaakbedrijf-wadenoyen     /  301
+/schoonmaakbedrijf-zoelen        /  301
+/schoonmaakbedrijf-zoelmond      /  301
+/schoonmaakbedrijf-zuilichem     /  301
