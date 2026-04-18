@@ -2,16 +2,16 @@
 
 > **URL**: `/diensten/zonnepanelen/`
 > **Primary keyword**: `zonnepanelen reinigen betuwe`
-> **Secondary keywords**: `zonnepanelen schoonmaken rivierenland`, `zonnepanelen laten reinigen gelderland`
+> **Secondary keywords**: `zonnepanelen schoonmaken rivierenland`, `zakelijke zonnepanelen reiniging gelderland`, `zonnepanelen onderhoud bedrijf`
 > **Search intent**: Transactional
-> **Created**: 27 maart 2026
+> **Register**: `u / uw`
 
 ---
 
 ## Meta
 
 **Title**: `Zonnepanelen reinigen | John's Schoonmaakbedrijf Betuwe`
-**Description**: `Zonnepanelen reinigen in de Betuwe en Rivierenland. Met osmosewater, vanaf de grond. Minstens 1x per jaar voor optimaal rendement. Vraag een offerte aan.`
+**Description**: `Zonnepanelen reinigen voor bedrijfsdaken en grote panden in de Betuwe en Rivierenland. Met osmosewater, vanaf de grond waar mogelijk. Minimaal één keer per jaar.`
 
 ---
 
@@ -26,80 +26,83 @@ Zonnepanelen reinigen in de Betuwe
 ## Direct answer paragraph
 
 ```
-Zonnepanelen reinigen doe je minstens één keer per jaar voor
-optimaal rendement. John's Schoonmaakbedrijf reinigt je panelen
-met osmosewater en zachte borstels via het Telewash-systeem.
-Meestal hoeven we niet eens het dak op. Actief in de hele
-Betuwe en Rivierenland.
+Voor optimaal rendement van uw zonnepanelen is het van
+belang deze minimaal één keer per jaar te laten reinigen.
+John's Schoonmaakbedrijf reinigt panelen met het
+Telewash-systeem: osmosewater en zachte borstels. In de
+meeste situaties kunnen wij het werk vanaf de grond doen,
+zonder het dak te betreden. Actief in de Betuwe en
+Rivierenland, zakelijk en voor VvE's.
 ```
-*Word count*: 40 words ✓
-*Particles*: eens ✓
-*Keyword*: zonnepanelen reinigen (1) ✓
+*Word count*: 60 words ✓
+*John-signatures*: `Voor optimaal rendement van uw zonnepanelen is het van groot belang deze minimaal 1x per jaar te laten reinigen` — near-verbatim from his zonnepanelen page
+*Keyword*: `zonnepanelen reinigen`
 
 ---
 
 ## Beschrijving
 
-### Meer rendement uit je panelen
+### Meer rendement uit uw panelen
 
 ```
 Vuile zonnepanelen leveren minder op. Stof, vogelpoep,
-blad en pollen vormen een laagje dat het zonlicht tegenhoudt.
-Onderzoek laat zien dat vuile panelen tot 15% minder stroom
-opwekken. Best zonde, eigenlijk.
+bladeren, pollen en landbouwstof vormen een laagje dat
+zonlicht tegenhoudt. Afhankelijk van locatie en
+vervuilingsgraad kan dat oplopen tot een kwart van de
+opbrengst in de zomermaanden.
 
-Wij reinigen je zonnepanelen met osmosewater: gezuiverd water
-zonder mineralen. Dat laat geen strepen of kalkvlekken achter
-op het glas. We gebruiken zachte borstels op telescoopstelen,
-dus in de meeste gevallen hoeven we niet op het dak. Veiliger
-voor ons, geen gedoe voor jou.
+Wij reinigen uw panelen met osmosewater: gezuiverd water
+zonder mineralen. Dat laat geen strepen of kalkvlekken
+achter. Wij werken met zachte borstels op telescoopstelen,
+dus in de meeste gevallen hoeven wij niet op het dak.
+Dat is veiliger — voor ons en voor uw dakbedekking.
 
-In de Betuwe en Rivierenland hebben veel panden pannendaken
-met een steile helling. Geen probleem. Met het Telewash-systeem
-werken we gewoon vanaf de grond. Je hoeft er niet eens bij
-te zijn — we spreken een moment af en regelen het.
+In de regio zien wij veel bedrijfspanden met panelen op
+pannendaken of platte daken. Voor beide werkt deze
+methode. Voor zeer hoge of moeilijk bereikbare daken
+schakelen wij, waar nodig, een partner met hoogwerker
+in — en dat melden wij vooraf in de offerte.
 
-Eén keer per jaar reinigen is voor de meeste situaties
-voldoende. Staat je huis onder bomen of in de buurt van
-akkerbouw? Dan is twee keer per jaar verstandiger. We kijken
-graag even mee wat voor jou het beste werkt.
+Eén keer per jaar reinigen is voor de meeste zakelijke
+opstellingen voldoende. Voor panden onder bomen, nabij
+akkerbouw of op een stoffige industrielocatie is twee
+keer per jaar verstandiger. In overleg bepalen wij wat
+bij uw situatie past.
 ```
-*Word count*: 157 words ✓
-*Particles*: eigenlijk, gewoon, eens, even ✓
-*Fragments*: "Best zonde, eigenlijk." / "Geen probleem." ✓
-*Concrete details*: 15% minder stroom, telescoopstelen, osmosewater ✓
-*Regional*: Betuwe, Rivierenland ✓
+*Word count*: 172 words ✓
+*John-signatures*: `In overleg bepalen wij`, honest-outsourcing for hoge daken
+*Trade vocabulary*: osmosewater, telescoopstelen, pannendaken, platte daken
 
 ---
 
-## Waarom kiezen voor onze zonnepaneelreiniging?
+## Waarom professioneel laten reinigen?
 
-### 1. Osmosewater: streeploos en veilig
-
-```
-Geen zeep of chemie op je panelen. Osmosewater droogt zonder
-vlekken op en tast de coating van je panelen niet aan. Beter
-voor je panelen, beter rendement.
-```
-
-### 2. Vanaf de grond, zonder steiger
+### 1. Osmosewater — streeploos en veilig voor de panelen
 
 ```
-Met telescoopstelen bereiken we de meeste daken zonder erop
-te klimmen. Geen ladder tegen je gevel, geen voetsporen op
-je dakpannen. Scheelt stress.
+Geen zeep of chemie op de coating van uw panelen.
+Osmosewater droogt zonder vlekken op en tast de coating
+niet aan. Beter resultaat en geen onnodig risico voor
+de levensduur van uw panelen.
 ```
-*Fragment*: "Scheelt stress." ✓
 
-### 3. Combineer met glazenwassen of dakgoten
+### 2. Vanaf de grond waar dat kan
 
 ```
-Moet het dak toch al aan de beurt? Combineer zonnepanelen
-reinigen met glazenwassen of dakgoten leegmaken. Eén afspraak,
-alles in één keer geregeld.
+Met telescoopstelen bereiken wij de meeste bedrijfsdaken
+zonder erop te klimmen. Geen ladder tegen uw gevel, geen
+voetsporen op uw dakpannen, geen dakbetreding als het
+niet hoeft.
 ```
-*Particle*: toch ✓
-*Internal links*: [glazenwassen](/diensten/glazenwassen/) · [dakgoten](/diensten/dakgoten/)
+
+### 3. Combineer met andere dak- of gevelwerkzaamheden
+
+```
+Moet het dak toch al aan de beurt? Combineer zonnepaneel-
+reiniging met dakgoten leegmaken of gevelreiniging. Eén
+afspraak, één factuur, alles in één rit.
+```
+*Internal links*: [dakgoten](/diensten/dakgoten/) · [gevelreiniging](/diensten/gevelreiniging/)
 
 ---
 
@@ -108,71 +111,84 @@ alles in één keer geregeld.
 ### Stap 1: Aanvraag
 
 ```
-Bel of mail ons even. We vragen hoeveel panelen je hebt en
-of er bijzonderheden zijn (steile helling, dakraam, etc.).
+Laat ons weten hoeveel panelen u heeft, waar ze staan
+(dak, carport, bedrijfshal) en of er bijzonderheden zijn.
+Foto's van de opstelling zijn welkom.
 ```
-*Particle*: even ✓
 
 ### Stap 2: Planning
 
 ```
-We plannen een moment in dat jou uitkomt. Je hoeft er niet
-per se bij te zijn. We maken foto's voor en na.
+Wij plannen een moment in dat u schikt. U hoeft er niet
+per se bij te zijn — zolang wij bij uw pand kunnen
+werken, is het geregeld. Wij maken foto's voor en na.
 ```
+*John-signature*: echoes Culemborg page's "poort open laten"
 
 ### Stap 3: Reiniging
 
 ```
-We reinigen je panelen met osmosewater en zachte borstels.
-Duurt meestal een uur of twee. Klaar terwijl jij gewoon
-doorwerkt of boodschappen doet.
+Wij reinigen de panelen met osmosewater en zachte borstels.
+Duurt doorgaans één tot twee uur voor een reguliere
+zakelijke opstelling. Grotere installaties langer.
 ```
-*Particle*: gewoon ✓
 
 ---
 
 ## Veelgestelde vragen over zonnepanelen reinigen
 
-### Hoe vaak moeten zonnepanelen worden gereinigd?
+### Hoe vaak moeten zakelijke zonnepanelen worden gereinigd?
 
 ```
-Minstens één keer per jaar. Woon je onder bomen of bij
-akkerbouw? Dan is twee keer per jaar beter. Je merkt het
-verschil in je opbrengst.
+Eén keer per jaar is voor de meeste opstellingen
+voldoende. Staat uw pand onder bomen, nabij akkerbouw
+of op een industrielocatie? Dan is twee keer per jaar
+verstandiger. U merkt het verschil in de opbrengst.
 ```
-*Word count*: 28 words
+*Word count*: 37 words ✓
 
-### Kan ik mijn zonnepanelen zelf reinigen?
-
-```
-Dat kan, maar dan moet je het dak op. Niet zonder risico.
-En met gewoon water krijg je kalkvlekken. Wij werken met
-osmosewater en hoeven niet op het dak. Veiliger en beter
-resultaat.
-```
-*Word count*: 38 words
-*Particles*: maar, gewoon ✓
-
-### Worden mijn panelen beschadigd door het reinigen?
+### Kunnen wij de panelen ook zelf reinigen?
 
 ```
-Nee. We gebruiken zachte borstels en osmosewater zonder
-chemie. Geen hogedruk, geen schurende middelen. Je panelen
-worden schoner, niet slechter.
+Dat kan, maar daarvoor moet u meestal het dak op.
+Niet zonder risico. Bovendien geeft leidingwater
+kalkvlekken. Wij werken met osmosewater en vanaf de
+grond — veiliger en met beter resultaat.
 ```
-*Word count*: 25 words
-*Fragment*: "Niet slechter." ✓ (dry contrast)
+*Word count*: 32 words ✓
+
+### Worden de panelen beschadigd door reiniging?
+
+```
+Nee, mits op de juiste manier gedaan. Wij gebruiken
+zachte borstels en osmosewater — geen hogedruk, geen
+schurende middelen, geen agressieve chemie. De coating
+blijft intact.
+```
+*Word count*: 26 words ✓
+
+### Is dit alleen voor bedrijven of ook voor particulieren?
+
+```
+Wij richten ons primair op zakelijke opstellingen,
+bedrijfsdaken en grotere VvE-installaties. Voor
+particuliere zonnepanelen verwijzen wij doorgaans door
+naar een particuliere vakman. Twijfelt u? Neem contact
+op, wij zeggen eerlijk wat bij ons past.
+```
+*Word count*: 38 words ✓
+*Position*: honest scoping, not taking every job
 
 ---
 
 ## CTA
 
 ```
-Zonnepanelen die wel weer eens schoongemaakt mogen worden?
-Neem even contact op. We geven een heldere prijs en plannen
-het snel in.
+Zonnepanelen die wel weer eens een reinigingsbeurt
+kunnen gebruiken? Laat uw gegevens achter. Wij geven
+een heldere prijs en plannen het in een rit mee met
+andere werkzaamheden als dat past.
 ```
-*Particles*: eens, even ✓
 
 **Button**: [Offerte aanvragen](/contact/) (`btn-primary`)
 
@@ -180,21 +196,23 @@ het snel in.
 
 ## Internal links
 
-- [Glazenwassen](/diensten/glazenwassen/) — "Combineer met glazenwassen voor één afspraak."
-- [Dakgoten leegmaken](/diensten/dakgoten/) — "Dakgoten ook meteen meenemen?"
-- [Contact](/contact/) — "Neem even contact op"
+- [Glazenwassen](/diensten/glazenwassen/) — "Combineer met glazenwassen"
+- [Dakgoten leegmaken](/diensten/dakgoten/) — "Dakgoten meteen ook schoon"
+- [Gevelreiniging](/diensten/gevelreiniging/) — "Gevelwerk erbij laten doen"
+- [Contact](/contact/) — "Neem gerust contact op"
 
 ---
 
-## Anti-AI check
+## Voice & CLAUDE.md compliance
 
-| Particle | Count | Locations |
-|---|---|---|
-| even | 3 | stap 1, CTA, FAQ 3 |
-| gewoon | 2 | beschrijving, stap 3 |
-| eigenlijk | 1 | beschrijving |
-| toch | 1 | bullet 3 |
-| maar | 1 | FAQ 2 |
-| eens | 2 | direct answer, CTA |
+| Check | Status |
+|---|---|
+| `u / uw` | ✓ |
+| John-signature openings (verbatim echo) | ✓ "Voor optimaal rendement… minimaal één keer per jaar" |
+| Honest-outsourcing for hoge daken | ✓ |
+| B2B-focus (particulier expliciet afgebakend) | ✓ |
+| No "zonder gedoe" / "scheelt gedoe" | ✓ |
+| No emphasis fragments | ✓ |
+| Trailing slashes | ✓ |
 
-**Total word count**: ~460 words ✓
+**Total word count**: ~590 words ✓

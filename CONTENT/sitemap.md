@@ -3,8 +3,12 @@
 > **Archetype**: E — Lifestyle & Personal Brand (schoonmaakbedrijf sub-variant, B2B primary)
 > **Service area**: Betuwe & Rivierenland
 > **Pricing display**: Hidden (offerte-based)
-> **Addressal**: je/jij throughout
-> **Created**: 27 maart 2026
+> **Addressal**: `u / uw` throughout — updated 2026-04-18 per voice extraction (CLIENT-VOICE.md)
+> **Owner**: John Hak (not "John van Ekeren" — DESIGN.md template leak corrected 2026-04-18)
+> **Founded**: november 2007 (not 2009)
+> **Reviews (honest)**: 4,5 op Google, 15 beoordelingen (not 9,7 / 84)
+> **Services**: 6 total — kantoorschoonmaak (kern), glazenwassen, opleveringsschoonmaak, zonnepanelen, gevelreiniging, dakgoten
+> **Created**: 27 maart 2026 · **Copy rewritten**: 2026-04-18
 
 ---
 
@@ -125,7 +129,7 @@
 | **Search intent** | Navigational / Informational |
 | **AI SEO opportunity** | "Wie zit er achter John's Schoonmaakbedrijf?" / "Is John's Schoonmaakbedrijf betrouwbaar?" |
 
-**Content**: John's story (since 2009, Buren), why he started, team approach (vaste medewerkers), values (vakmanschap, betrouwbaarheid, persoonlijk contact), certifications, stats (15+ jaar, 84 reviews, VCA), photo of John.
+**Content**: John Hak's story (since november 2007, bedrijfsadres Buren, operationele basis historisch Tricht), why he started (glazenwassersbedrijf, uitgebreid naar schoonmaak), team approach (vaste medewerkers), values (persoonlijke benadering, in overleg met u, het net anders doen dan de rest), certifications (VCA bevestigd; SNA + Schoonmakend NL provisioneel), photo of John. Register `u / uw`.
 
 ---
 
@@ -141,7 +145,7 @@
 | **Search intent** | Navigational / Informational |
 | **AI SEO opportunity** | "Wat vinden klanten van John's Schoonmaakbedrijf?" / "Ervaringen met schoonmaakbedrijven in de Betuwe" |
 
-**Content**: 9.7/10 score display, all named testimonials (with company), link to Google Reviews, CTA to offerte. This page catches "[brand] reviews" searches and strengthens E-E-A-T.
+**Content**: 4,5 / 5 score display, 15 beoordelingen via Google, named testimonials (zodra John deze aanlevert — placeholders nu), link naar Google Business Profile, CTA naar offerte. Deze pagina vangt "[brand] reviews" searches en versterkt E-E-A-T. **Note**: voorheen stond hier 9,7 / 84 — dat was niet de realiteit; 4,5 / 15 is de bevestigde Google-score.
 
 ---
 

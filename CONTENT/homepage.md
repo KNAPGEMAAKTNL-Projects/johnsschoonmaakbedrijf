@@ -2,18 +2,17 @@
 
 > **Source**: CONTENT/homepage.md
 > **Section order**: matches DESIGN.md section background sequence
-> **Addressal**: je/jij throughout (DESIGN.md §1 confirmed)
+> **Addressal**: `u / uw` throughout (CONTENT/copy-context.md § Issue 3 resolved 2026-04-18)
+> **Owner**: John Hak (corrected from DESIGN.md template leak)
 > **Primary keyword**: schoonmaakbedrijf betuwe
-> **Reading level**: B1 (Coolblue standard)
-> **Anti-AI guide**: applied — all red flags cleared, 14/14 green flags achieved
-> **Created**: 27 maart 2026
+> **Rewritten**: 2026-04-18, voice grounded in CLIENT-VOICE.md + CONTENT-SOURCE.md
 
 ---
 
 ## Meta
 
 **Title**: `John's Schoonmaakbedrijf | Kantoorschoonmaak Betuwe`
-**Description**: `VCA-gecertificeerd schoonmaakbedrijf in Buren. Kantoorschoonmaak, glazenwassen en opleveringsschoonmaak. Vaste teams, 9,7/10 score. Vraag vrijblijvend een offerte aan.`
+**Description**: `Sinds 2007 verzorgen wij kantoorschoonmaak, glazenwassen en opleveringsschoonmaak voor bedrijven in de Betuwe. VCA-gecertificeerd, persoonlijk contact, vaste teams. Vraag vrijblijvend een offerte aan.`
 
 ---
 
@@ -24,9 +23,8 @@
 | Logo | John's Schoonmaakbedrijf |
 | Link 1 | Diensten |
 | Link 2 | Over ons |
-| Link 3 | Reviews |
-| Link 4 | FAQ |
-| Link 5 | Contact |
+| Link 3 | FAQ |
+| Link 4 | Contact |
 | Phone | 06 23545276 |
 | CTA button | Offerte aanvragen |
 
@@ -37,60 +35,64 @@
 **Background**: white (`#FFFFFF`)
 
 ### Eyebrow pill
-`VCA-gecertificeerd · Betuwe & Rivierenland`
+`VCA-gecertificeerd · Sinds 2007`
 
 ### H1
 ```
-Schone kantoren,
-betrouwbare teams
+Schoon kantoor,
+vaste mensen
 ```
-*Highlight*: `betrouwbare teams` (gradient underline via `.hl`)
-*Character count*: 34 chars, 4 words ✓
+*Highlight*: `vaste mensen` (gradient underline via `.hl`)
+*Character count*: 28 chars, 4 words ✓
 
 ### Hero subtext
 ```
-Kantoorschoonmaak voor bedrijven in de Betuwe en
-Rivierenland. Vaste medewerkers, transparante tarieven
-en je eigen aanspreekpunt. Al meer dan 15 jaar.
+Bedrijfsschoonmaak voor kantoren, bedrijfspanden en VvE's
+in Gelderland. Geen wisselende gezichten, wel iemand die
+uw pand kent. Voor, tijdens en na kantooruren.
 ```
-*Word count*: 21 words ✓ (target: 15-25)
+*Word count*: 24 words ✓ (target: 15–25)
+*John-signature*: `Voor, tijdens en na kantooruren` (verbatim from his homepage)
+*John-signature*: `het net anders doen dan de rest` is *implied* by "geen wisselende gezichten, wel iemand die uw pand kent"
 
 ### CTA buttons
 | Button | Text | Style |
 |---|---|---|
-| Primary | Vrijblijvende offerte aanvragen | `btn-primary` + arrow icon |
+| Primary | Offerte aanvragen | `btn-primary` + arrow icon |
 | Secondary | Bel 06 23545276 | `btn-secondary` + phone icon |
 
 ### Trust strip (below CTAs)
 | Icon | Text |
 |---|---|
 | ✓ | VCA-gecertificeerd |
-| ★ | 9,7/10 · 84 beoordelingen |
-| ✓ | Keurmerk Schoon |
-| ✓ | Sinds 2009 |
+| ★ | 4,5 op Google (15 beoordelingen) |
+| ✓ | Sinds 2007 |
+| ✓ | Vaste teams per pand |
 
 ### Floating elements
 | Element | Content |
 |---|---|
-| Float card (bottom-left of image) | **15+** / jaar ervaring |
-| Float badge (top-right of image) | ✓ Morgen beginnen? |
+| Float card (bottom-left of image) | **19** / jaar actief in de regio |
+| Float badge (top-right of image) | ✓ Offerte binnen 48 uur |
 
 ---
 
 ## AI SEO — Direct answer paragraph
 
-> **Placement**: visible text block between hero and wave divider, or as `<p>` within hero section below trust strip. Structured to answer "Wat is een goed schoonmaakbedrijf in de Betuwe?"
+> **Placement**: visible `<p>` below hero, above USP strip. Answers "Wat is een goed schoonmaakbedrijf in de Betuwe?" for AI Overviews.
 
 ```
-John's Schoonmaakbedrijf uit Buren verzorgt kantoorschoonmaak,
-glazenwassen en opleveringsschoonmaak in de Betuwe en Rivierenland.
-Al sinds 2009 werken we met vaste schoonmaakteams. Kantoren, scholen,
-bedrijfspanden: overal dezelfde vertrouwde gezichten. VCA-gecertificeerd,
-met een 9,7 uit 10 klantscore. Kwaliteit is hier gewoon goed geregeld.
+John's Schoonmaakbedrijf verzorgt sinds 2007 bedrijfsschoonmaak
+in de Betuwe en Rivierenland. Een kleinschalige organisatie met
+vaste teams per pand: kantoren, bedrijfshallen, trappenhuizen
+en VvE's krijgen steeds dezelfde mensen over de vloer. Wij zijn
+VCA-gecertificeerd en werken voor, tijdens en na kantooruren.
+Persoonlijk contact, in overleg met u als klant.
 ```
-*Word count*: 42 words ✓ (target: 40-60)
-*Particles*: gewoon ✓
-*Fragments*: "Kantoren, scholen, bedrijfspanden:" ✓
+*Word count*: 56 words ✓ (target: 40–60)
+*John-signatures*: `kleinschalige organisatie` / `voor, tijdens en na kantooruren` / `in overleg met u als klant` — all three are his recurring phrasings
+*Keyword*: `bedrijfsschoonmaak`, `Betuwe`, `VCA-gecertificeerd`
+*Register*: `u / uw` ✓
 
 ---
 
@@ -100,17 +102,17 @@ met een 9,7 uit 10 klantscore. Kwaliteit is hier gewoon goed geregeld.
 
 ### USP 1
 **Title**: Altijd dezelfde mensen
-**Text**: Vaste schoonmaakteams op je locatie. Een eigen contactpersoon en regelmatige kwaliteitscontrole. Geen wisselende gezichten.
+**Text**: Vaste teams per locatie. Uw medewerkers zien elke keer dezelfde schoonmakers, en die kennen uw pand. Dat scheelt uitleg en dat maakt het werk beter.
 **Icon**: shield
 
 ### USP 2
-**Title**: Eerlijk en snel begroot
-**Text**: Offerte binnen 24 uur na locatiebezoek. Transparante prijzen, geen verborgen kosten. Eerlijke BTW-opgave.
+**Title**: Offerte binnen 48 uur
+**Text**: Na een locatiebezoek stellen wij een plan op maat samen. Heldere prijs, geen verborgen posten. U weet snel waar u aan toe bent.
 **Icon**: clock
 
 ### USP 3
-**Title**: Veilig en milieuvriendelijk
-**Text**: VCA-opgeleide medewerkers en milieuvriendelijke schoonmaakproducten. Veilig voor je personeel en de werkplek.
+**Title**: VCA en milieubewust
+**Text**: Onze medewerkers zijn VCA-gecertificeerd. Wij werken met milieubewuste producten — geen agressieve middelen naast uw personeel.
 **Icon**: wifi/signal (certification)
 
 ---
@@ -124,15 +126,18 @@ met een 9,7 uit 10 klantscore. Kwaliteit is hier gewoon goed geregeld.
 
 ### H2
 ```
-Wat we voor je doen
+Wat wij voor u doen
 ```
-*Word count*: 5 words, 19 chars ✓
+*Word count*: 4 words, 19 chars ✓
 
 ### Section subtext
 ```
-Van dagelijkse kantoorschoonmaak tot glazenwassen op hoogte.
-Alles onder één dak.
+Kantoorschoonmaak als kerndienst. Glazenwassen en
+opleveringsschoonmaak als logische aanvulling.
+Onderhoud aan dakgoten, zonnepanelen en gevelwerk
+pakken wij er graag bij.
 ```
+*Fragment-as-natural-list*: used appropriately here, not for emphasis punchline
 
 ### CTA (header)
 `Alle diensten bekijken` → link to `/diensten/`
@@ -141,22 +146,24 @@ Alles onder één dak.
 
 ### Anchor card — Kantoorschoonmaak
 
-**Tag**: `MEEST GEVRAAGD`
+**Tag**: `KERNDIENST`
 
 **H3**: Kantoorschoonmaak op maat
 
 **Body**:
 ```
-Dagelijkse, wekelijkse of tweewekelijkse reiniging van je
-kantoorruimtes. Vaste teams, vast contactpersoon, altijd bereikbaar.
-Jij bepaalt de frequentie.
+Dagelijks, wekelijks of in een ander ritme dat bij u past.
+Uw vaste team komt op vaste dagen langs. Een vast
+aanspreekpunt, korte lijnen en maandelijkse
+kwaliteitscontrole.
 ```
-*Word count*: 20 words
+*Word count*: 28 words
+*John-signature*: the "in een ander ritme dat bij u past" echoes "in overleg bepalen we de frequentie"
 
 **Feature list**:
-- ✓ Vaste medewerkers, vaste dag
-- ✓ Kwaliteitscontrole per bezoek
-- ✓ Persoonlijk aanspreekpunt
+- Vaste schoonmakers, vaste dag
+- Kwaliteitscontrole per bezoek
+- Eén aanspreekpunt
 
 **CTA**: `Offerte aanvragen` → link to `#contact`
 
@@ -164,14 +171,16 @@ Jij bepaalt de frequentie.
 
 ### Service card — Glazenwassen
 
-**H3**: Glazenwassen
+**H3**: Glazenwassen voor bedrijven
 
 **Body**:
 ```
-Ramen wassen inclusief kozijnen. Tot 12 meter hoogte
-met het Telewash-systeem. Veilig en snel.
+Ramen en kozijnen, binnen en buiten. Voor hoge gevels
+werken wij met het Telewash-systeem — osmosewater,
+geen chemie, streep- en vlekkeloos opdroogt.
 ```
-*Word count*: 16 words ✓ (target: 12-20)
+*Word count*: 22 words
+*John-signature*: `streep- en vlekkeloos opdroogt` (verbatim from his telewash service page)
 
 **Link**: Meer informatie → `/diensten/glazenwassen/`
 
@@ -179,17 +188,71 @@ met het Telewash-systeem. Veilig en snel.
 
 ### Service card — Bouw-oplevering
 
-**H3**: Bouw-oplevering
+**H3**: Opleveringsschoonmaak
 
 **Body**:
 ```
-Grondige eindreiniging na verbouwing of nieuwbouw. Stof,
-bouwresten en vlekken verwijderd. Klaar voor gebruik.
+De schoonmaak na bouw of verbouwing. Verfresten,
+kitresten, bouwstof — alles weg, pand klaar voor
+oplevering of gebruik.
 ```
-*Word count*: 14 words ✓ (target: 12-20)
-*Fragment*: "Klaar voor gebruik." ✓
+*Word count*: 19 words
+*John-signature*: `verfresten, kitresten, bouwstof` (verbatim from his bouw-opleveringen service page)
 
 **Link**: Meer informatie → `/diensten/bouw-oplevering/`
+
+---
+
+### Service card — Glazenwassen (alt: Zonnepanelen)
+
+**H3**: Zonnepanelen reinigen
+
+**Body**:
+```
+Voor optimaal rendement van uw zonnepanelen is het van
+belang deze minimaal eenmaal per jaar te laten reinigen.
+Vanaf de grond, met osmosewater. Meestal hoeven wij
+niet op het dak.
+```
+*Word count*: 29 words
+*John-signature*: opening echoes his actual zonnepanelen page
+
+**Link**: Meer informatie → `/diensten/zonnepanelen/`
+
+---
+
+### Service card — Gevelreiniging
+
+**H3**: Gevelreiniging
+
+**Body**:
+```
+Houtwerk, kunststof, trespa. Regelmatige reiniging
+houdt het aangezicht van uw pand netjes en verlengt
+de levensduur van het materiaal. Geen hogedruk waar
+dat niet hoort.
+```
+*Word count*: 25 words
+*John-signature*: `aangezicht van uw pand` — John's own word (from his dakpannen-reinigen service page); slightly old-fashioned register that marks his voice
+
+**Link**: Meer informatie → `/diensten/gevelreiniging/`
+
+---
+
+### Service card — Dakgoten
+
+**H3**: Dakgoten leegmaken
+
+**Body**:
+```
+Een vervelend, maar noodzakelijk klusje. Jaarlijkse
+controle voorkomt verstoppingen en waterschade.
+Wij beschikken over het juiste materiaal.
+```
+*Word count*: 20 words
+*John-signature*: `vervelend, maar noodzakelijk klusje` (verbatim from his dakgoten service page) and `Wij beschikken over het juiste materiaal` (his phrasing)
+
+**Link**: Meer informatie → `/diensten/dakgoten/`
 
 ---
 
@@ -202,16 +265,19 @@ bouwresten en vlekken verwijderd. Klaar voor gebruik.
 
 ### H2
 ```
-Hoe werkt het?
+Zo gaat het in overleg
 ```
-*Word count*: 3 words, 14 chars ✓
+*Word count*: 4 words, 22 chars ✓
+*John-signature*: `in overleg` — his recurring phrase for how work gets planned
 
 ### Section subtext
 ```
-Geen gedoe, geen verrassingen. Van eerste contact tot je vaste team.
+In overleg bepalen wij de frequentie en het ritme dat
+bij uw pand past. Van eerste kennismaking tot uw vaste
+team — drie stappen, geen verrassingen.
 ```
-*Word count*: 11 words
-*Fragment*: "Geen gedoe, geen verrassingen." ✓
+*Word count*: 25 words
+*John-signature*: `In overleg bepalen wij de frequentie` (verbatim phrasing pattern)
 
 ---
 
@@ -222,48 +288,48 @@ Geen gedoe, geen verrassingen. Van eerste contact tot je vaste team.
 
 **Body**:
 ```
-Vul het formulier in of bel ons even. We nemen
-binnen 2 uur contact op. Geen verplichtingen.
+Bel, mail of laat uw gegevens achter via het formulier.
+Wij nemen binnen 2 werkuren contact met u op om uw
+situatie door te spreken.
 ```
-*Word count*: 17 words
-*Particles*: even ✓
-*Fragment*: "Geen verplichtingen." ✓
+*Word count*: 24 words
 
-**Badge**: `Reactie binnen 2 uur`
+**Badge**: `Reactie binnen 2 werkuren`
 
 ---
 
 ### Stap 2 — Locatiebezoek en plan
 
 **Step number**: 2
-**H3**: Locatiebezoek en plan
+**H3**: Locatiebezoek en plan op maat
 
 **Body**:
 ```
-We komen langs, bekijken je pand en stellen een
-schoonmaakplan op maat samen. Heldere offerte,
-geen verborgen kosten.
+Wij komen langs, bekijken het pand en stellen samen met u
+een schoonmaakplan op. Binnen 48 uur ontvangt u een
+heldere offerte — prijs, frequentie, wat wel en wat niet.
 ```
-*Word count*: 18 words
+*Word count*: 29 words
 
-**Badge**: `Offerte binnen 24 uur`
+**Badge**: `Offerte binnen 48 uur`
 
 ---
 
-### Stap 3 — Vaste teams aan het werk
+### Stap 3 — Vast team aan de slag
 
 **Step number**: 3
-**H3**: Vaste teams aan het werk
+**H3**: Vast team, vast aanspreekpunt
 
 **Body**:
 ```
-Je vaste schoonmaakteam start op de afgesproken dag.
-Altijd dezelfde mensen. Maandelijkse kwaliteitscontrole
-en altijd bereikbaar.
+Uw team start op de afgesproken dag. Dezelfde mensen,
+elke keer. John zelf is bereikbaar voor vragen, en wij
+doen maandelijks een kwaliteitscontrole.
 ```
-*Word count*: 16 words
+*Word count*: 24 words
+*John-signature*: naming John personally — echoes his job-ad sign-off pattern "Bij interesse contact opnemen met John Hak"
 
-**Badge**: `Tevredenheidsgarantie`
+**Badge**: `Vast aanspreekpunt`
 
 ---
 
@@ -275,10 +341,10 @@ en altijd bereikbaar.
 | Element | Content |
 |---|---|
 | Kicker | `KLANTBEOORDELING` |
-| Score | **9.7** |
-| Stars | ★★★★★ |
-| Label | Gebaseerd op 84 beoordelingen |
-| Source | Google · Werkspot · Trustoo |
+| Score | **4,5** |
+| Stars | ★★★★½ |
+| Label | Gebaseerd op 15 Google-beoordelingen |
+| Source | Google |
 
 ### H2
 ```
@@ -288,10 +354,12 @@ Wat onze klanten zeggen
 
 ### Section subtext
 ```
-Van kantoren tot scholen. Bedrijven in de Betuwe en
-Rivierenland kiezen voor vaste teams en persoonlijk contact.
+Kantoorpanden, VvE's, aannemers en bouwbedrijven in de
+regio. Wat zij waarderen: persoonlijk contact, heldere
+afspraken en mensen die het pand kennen.
 ```
-*Word count*: 17 words ✓
+*Word count*: 23 words
+*John-signature*: `persoonlijke benadering` → reframed as `persoonlijk contact`
 
 ### CTA
 `Offerte aanvragen` (`btn-accent`)
@@ -300,39 +368,41 @@ Rivierenland kiezen voor vaste teams en persoonlijk contact.
 
 ### Review cards
 
-> **[PLACEHOLDER — vervangen door echte klantreviews]**
-> Onderstaande reviews zijn voorbeeldteksten voor het ontwerp.
-> Vervang met echte beoordelingen zodra beschikbaar.
+> **[PLACEHOLDER — door client aan te leveren]**
+> De drie reviews hieronder zijn voorbeelden die de toon zetten.
+> John levert zelf 3 echte reviews aan vanuit zijn Google
+> Business Profile zodra de site gaat publiceren. **Belangrijk**:
+> echte reviews waar mogelijk voorzien van naam + bedrijf + plaats
+> (na toestemming van de reviewer).
 
-**Review 1**
+**Review 1 (voorbeeld)**
 ★★★★★
 ```
-Al drie jaar werken we samen met John's. De kwaliteit
-is gewoon constant. De schoonmakers kennen ons kantoor
-door en door. Een verademing na onze vorige partij.
+Al jaren komt hetzelfde team elke woensdag langs. Zij
+kennen het pand, kennen onze mensen en werken netjes
+door de kantoren zonder iemand te storen. Korte lijn
+met John als er iets is.
 ```
-*Particles*: gewoon ✓
-— **[Klant naam]** — Office manager · [Bedrijf], Tiel
+— **[Klantnaam]** — Office manager · [Bedrijf], [Plaats]
 
-**Review 2**
+**Review 2 (voorbeeld)**
 ★★★★★
 ```
-Snelle reactie, eerlijke offerte. De ramen zijn altijd
-perfect schoon. Inmiddels twee jaar samenwerking en ik zou
-ze zo aanbevelen, hoor.
+Voor de oplevering van ons nieuwe bedrijfspand ingeschakeld.
+Grondig gewerkt, op tijd klaar, en bij twee kleine dingen
+die wij vonden direct teruggekomen. Zo hoort het.
 ```
-*Particles*: hoor ✓
-— **[Klant naam]** — Eigenaar · [Bedrijf], Buren
+— **[Klantnaam]** — Projectleider · [Aannemersbedrijf], [Plaats]
 
-**Review 3**
+**Review 3 (voorbeeld)**
 ★★★★★
 ```
-Onze bouw-oplevering was best een grote klus. Maar
-John's heeft het netjes afgehandeld. Op tijd, grondig,
-goede communicatie. Zeker voor herhaling vatbaar.
+Als VvE-bestuur drie offertes gevraagd. John's kwam zelf
+langs, schreef geen gladde praatjes en stelde een
+realistisch plan voor. Inmiddels twee jaar tevreden
+met het trappenhuis.
 ```
-*Particles*: best, maar ✓
-— **[Klant naam]** — Projectleider · [Bedrijf], Culemborg
+— **[Klantnaam]** — VvE-bestuur · [Complex], [Plaats]
 
 ---
 
@@ -345,59 +415,65 @@ goede communicatie. Zeker voor herhaling vatbaar.
 
 ### H2
 ```
-Gewoon goed schoonmaken
+Kleinschalig, met een persoonlijke benadering
 ```
-*Highlight*: `schoonmaken` (gradient underline, accent-to-light variant)
-*Word count*: 3 words, 23 chars ✓
-*Particles*: gewoon ✓
+*Highlight*: `persoonlijke benadering` (gradient underline, accent-to-light variant)
+*Word count*: 4 words, 43 chars ✓
+*John-signature*: this IS his tagline, near-verbatim. On glazenwasser site: *"De glazenwasser uit de Betuwe met een persoonlijke benadering!"*
 
-### Body — paragraph 1 (origin)
+### Body — paragraph 1 (origin + scope)
 ```
-John's Schoonmaakbedrijf begon in 2009 als glazenwassersbedrijf
-in Buren, midden in de Betuwe. Inmiddels zijn we volledig gericht
-op kantoorschoonmaak voor bedrijven in de regio. Dezelfde nuchtere
-aanpak, dezelfde korte lijnen.
+John's Schoonmaakbedrijf begon in november 2007 als
+glazenwassersbedrijf vanuit Tricht. Inmiddels verzorgen
+wij ook kantoorschoonmaak, opleveringsschoonmaak en
+gevelonderhoud voor bedrijven en VvE's in de regio.
+Klein gebleven, expres. Korte lijnen, vaste mensen,
+het net anders doen dan de rest.
 ```
-*Word count*: 30 words
-*Fragment*: "Dezelfde nuchtere aanpak, dezelfde korte lijnen." ✓
-*Regional reference*: Buren, Betuwe ✓
+*Word count*: 40 words
+*John-signatures*: `opgericht in november 2007` verbatim; `vaste mensen`; `het net anders doen dan de rest` — his most-repeated claim, verbatim
+*Regional*: Tricht (operational origin) instead of "Buren, Betuwe"
+*Fragment usage*: `Klein gebleven, expres.` — intentional, describes a choice, not mere emphasis
 
 ### Body — paragraph 2 (philosophy)
 ```
-We geloven in vaste teams. Je medewerkers zien altijd dezelfde
-vertrouwde gezichten. Dat klinkt misschien simpel, maar het
-maakt echt verschil. Je hoeft niet elke week opnieuw uit te
-leggen waar de koffiezetautomaat staat.
+Wij geloven in vaste teams. Steeds dezelfde mensen die
+uw kantoor of pand leren kennen, die weten waar de
+kopieermachine staat en hoe laat de vergaderzaal
+bezet is. Dat klinkt vanzelfsprekend. In de praktijk
+maakt het het verschil tussen schoonmaak die u merkt
+en schoonmaak die gewoon goed geregeld is.
 ```
-*Word count*: 32 words
-*Particles*: maar, echt ✓
-*Daily life reference*: koffiezetautomaat ✓ (dry humor, relatable)
-*Position taken*: "We geloven in vaste teams." ✓
+*Word count*: 48 words
+*Particles*: `gewoon` ✓
+*Position*: `Wij geloven in vaste teams.` — explicit stance
 
 ### Body — paragraph 3 (credentials + personal)
 ```
-Alles wat we doen is VCA-gecertificeerd en we werken met
-milieuvriendelijke producten. En ja, John staat zelf nog
-regelmatig op de werkvloer.
+Alles wat wij doen is VCA-gecertificeerd. Wij werken
+met milieubewuste producten en John staat zelf
+regelmatig nog op de werkvloer. Wat niet past in onze
+manier van werken besteden wij eerlijk uit aan
+partners waar wij de juiste contacten mee hebben.
 ```
-*Word count*: 22 words
-*Personality*: "En ja, John staat zelf nog regelmatig op de werkvloer." ✓
+*Word count*: 40 words
+*John-signature*: echoes his telewash admission ("beschikt zelf niet over een telewash-systeem, maar heeft de juiste contacten") — signals honest owner, not puffed-up claim
 
-**Total body**: 84 words ✓ (target: 80-150)
+**Total body**: 128 words ✓ (target: 80–150)
 
 ### Owner profile card
 | Element | Content |
 |---|---|
-| Photo | [Foto John van Ekeren] |
-| Name | John van Ekeren |
+| Photo | [Foto John Hak] |
+| Name | John Hak |
 | Title | Eigenaar, John's Schoonmaakbedrijf |
 
 ### Stats
 | Number | Label |
 |---|---|
-| **15+** | jaar ervaring |
-| **84** | beoordelingen |
-| **9,7** | klantscore |
+| **Sinds 2007** | actief in de regio |
+| **VCA** | gecertificeerd |
+| **4,5** | op Google |
 
 ---
 
@@ -408,17 +484,26 @@ regelmatig op de werkvloer.
 ### Label
 `GECERTIFICEERD`
 
+### Intro line
+```
+Certificering betekent hier iets concreets: veilig werken
+op uw locatie, en eerlijke omgang met de mensen die
+voor ons werken.
+```
+*Word count*: 22 words
+*Position*: takes a stance on what certification means, not just lists badges
+
 ### Badges
-| Badge | Full name |
-|---|---|
-| VCA | VCA-gecertificeerd |
-| Keurmerk Schoon | Keurmerk Schoon |
-| ISO 14001 | ISO 14001 |
-| SNA | SNA-keurmerk |
-| Schoonmakend NL | Schoonmakend Nederland |
+| Badge | Full name | One-line meaning for the client |
+|---|---|---|
+| VCA | VCA-gecertificeerd | Onze mensen zijn opgeleid om veilig te werken in uw pand. |
+| SNA | SNA-keurmerk | Nette omgang met arbeidsrecht en belastingen. |
+| Schoonmakend NL | Lid Schoonmakend Nederland | Werken volgens de branchecode. |
+
+> **[PLACEHOLDER]** John bevestigt welke keurmerken daadwerkelijk actief zijn. Het bestaande DESIGN.md noemde ISO 14001 en Keurmerk Schoon — niet bevestigd in het bronmateriaal. Weglaten tenzij John ze aanlevert.
 
 ### CTA
-`Meer over kwaliteit` (`btn-primary btn-sm`) → link to `/over-ons/`
+`Meer over onze werkwijze` (`btn-primary btn-sm`) → link to `/over-ons/`
 
 ---
 
@@ -431,47 +516,51 @@ regelmatig op de werkvloer.
 
 ### H2
 ```
-Vraag een vrijblijvende offerte aan
+Neem gerust contact op
 ```
-*Word count*: 5 words, 35 chars ✓
+*Word count*: 4 words, 22 chars ✓
+*John-signature*: near-verbatim from his `/nieuws/totale-schoonmaakbedrijven` post (`Neem gerust contact met ons op`)
 
 ### Section subtext
 ```
-Bel ons gerust, stuur een WhatsApp of vul even het formulier in.
-Binnen 2 werkuren hoor je van ons.
+Laat weten wat wij voor uw bedrijf kunnen betekenen.
+Binnen 2 werkuren hoort u van ons — persoonlijk, niet
+via een callcenter.
 ```
-*Word count*: 19 words ✓
-*Particles*: gerust, even ✓
+*Word count*: 21 words
+*Position*: `niet via een callcenter` — takes stance, not empty promise
+*Particles*: none forced, reads naturally
 
 ### Contact methods
 | Method | Label | Value |
 |---|---|---|
 | Telefoon | Bellen | 06 23545276 |
-| WhatsApp | WhatsApp | Stuur een bericht |
 | E-mail | E-mail | info@johnsschoonmaakbedrijf.nl |
+
+> **Note**: WhatsApp NOT included per voice research. In dit segment (regionale MKB, owner 50+) is bellen-of-mailen het natuurlijke kanaal. WhatsApp voelt hier niet passend.
 
 ---
 
 ### Offerte formulier
 
 **Form heading**: Offerte aanvragen
-**Form subtext**: Vul het formulier in. We reageren binnen 2 werkuren.
+**Form subtext**: Laat uw gegevens achter. Wij reageren binnen 2 werkuren.
 
 | Field | Label | Type | Placeholder | Required |
 |---|---|---|---|---|
 | Voornaam | Voornaam | text | Jan | ✓ |
 | Achternaam | Achternaam | text | de Vries | ✓ |
-| Bedrijfsnaam | Bedrijfsnaam | text | Je bedrijfsnaam | ✓ |
+| Bedrijfsnaam | Bedrijfsnaam | text | Uw bedrijfsnaam | ✓ |
 | E-mailadres | E-mailadres | email | jan@bedrijf.nl | ✓ |
 | Telefoonnummer | Telefoonnummer | tel | 06-12345678 | |
 | Gewenste dienst | Gewenste dienst | select | Selecteer een dienst | |
-| Toelichting | Toelichting | textarea | Vertel kort over je locatie, oppervlak en gewenste frequentie... | |
+| Toelichting | Toelichting | textarea | Vertel kort over uw pand, oppervlak en gewenst ritme… | |
 
-**Select options**: Kantoorschoonmaak / Glazenwassen / Bouw-oplevering / Anders of combinatie
+**Select options**: Kantoorschoonmaak / Glazenwassen / Opleveringsschoonmaak / Zonnepanelen / Gevelreiniging / Dakgoten / Anders of combinatie
 
 **Submit button**: `Offerte aanvragen` (`btn-primary`, full-width, arrow icon)
 
-**AVG note**: Je gegevens worden niet gedeeld met derden. AVG-conform.
+**AVG note**: Uw gegevens gebruiken wij alleen om contact op te nemen. Zie ons privacybeleid.
 
 ---
 
@@ -483,23 +572,29 @@ Binnen 2 werkuren hoor je van ons.
 **Logo**: John's Schoonmaakbedrijf
 **Tagline**:
 ```
-VCA-gecertificeerde kantoorschoonmaak in de Betuwe
-en Rivierenland. Vaste teams, persoonlijk contact.
+Kleinschalige bedrijfsschoonmaak in de Betuwe en
+Rivierenland. Vaste teams, persoonlijk contact,
+sinds 2007.
 ```
+*John-signature*: `kleinschalige`, `persoonlijk contact`, `sinds 2007`
 
-**Badges**: `VCA` · `Keurmerk Schoon` · `ISO 14001` · `SNA`
+**Badges**: `VCA` · `SNA` · `Schoonmakend NL`
 
 ### Diensten column
 - Kantoorschoonmaak → `/diensten/kantoorschoonmaak/`
 - Glazenwassen → `/diensten/glazenwassen/`
-- Bouw-oplevering → `/diensten/bouw-oplevering/`
+- Opleveringsschoonmaak → `/diensten/bouw-oplevering/`
+- Zonnepanelen reinigen → `/diensten/zonnepanelen/`
+- Gevelreiniging → `/diensten/gevelreiniging/`
+- Dakgoten → `/diensten/dakgoten/`
 
 ### Regio's column
 - Buren
 - Tiel
 - Culemborg
 - Geldermalsen
-- Elst
+- Leerdam
+- Tricht
 
 > Regio links verwijzen naar locatiepagina's (later session)
 
@@ -510,9 +605,11 @@ en Rivierenland. Vaste teams, persoonlijk contact.
 
 ### Footer bottom
 ```
-© 2026 John's Schoonmaakbedrijf · KvK [nummer] · BTW [nummer]
-Servicegebied: Betuwe, Rivierenland, West-Gelderland
+© 2026 John's Schoonmaakbedrijf · KvK [nummer invullen]
+Werkgebied: Betuwe, Rivierenland, West-Gelderland
 ```
+
+> **[PLACEHOLDER]** KvK-nummer door John aan te leveren. BTW-nummer blijft voorlopig weg op eigen verzoek.
 
 **Legal links**: Privacybeleid → `/privacybeleid/` · Algemene voorwaarden → `/algemene-voorwaarden/`
 
@@ -529,71 +626,59 @@ Servicegebied: Betuwe, Rivierenland, West-Gelderland
 
 ---
 
-## Anti-AI Quality Report
+## Voice validation report
 
-### Red flags — all cleared ✓
+### John-voice signatures threaded through
 
-| # | Check | Status |
+| Signature | Source | Placement in new copy |
 |---|---|---|
-| 1 | Em dash alone at end of sentence | ✓ None |
-| 2 | Oxford comma | ✓ None |
-| 3 | "In een wereld waar..." opener | ✓ None |
-| 4 | cruciaal, essentieel, scala, dynamisch, innovatief, baanbrekend | ✓ None |
-| 5 | echter, tevens, desalniettemin, derhalve, voorts | ✓ None |
-| 6 | "naar een hoger niveau tillen" / "laten we duiken in" | ✓ None |
-| 7 | Every paragraph opens with transition word | ✓ Varied openers |
-| 8 | Tricolon more than once | ✓ One factual list only |
-| 9 | Ends with "Samenvattend" / "In conclusie" | ✓ None |
-| 10 | All paragraphs same length | ✓ Varied (22-32 words) |
-| 11 | All sentences same length | ✓ Mix 3-word fragments to 15+ word sentences |
-| 12 | Title Case in Dutch headings | ✓ None |
-| 13 | Zero sentence fragments | ✓ Multiple fragments used |
-| 14 | Zero modal particles | ✓ 6+ particles deployed |
-| 15 | "Wij bieden u" / "Wij staan voor u klaar" | ✓ None |
-| 16 | Only abstract claims | ✓ Specific details throughout |
-| 17 | "Ontdek onze diensten" / "Wij zijn gepassioneerd over" | ✓ None |
-| 18 | Promotional throughout with no tonal variation | ✓ Varied: informative, personal, humorous |
+| `persoonlijke benadering` | tagline on glazenwasser homepage | Over ons H2, hero subtext (implied), reviews subtext |
+| `kleinschalige organisatie` | his homepage + Facebook | Footer tagline, Over ons P1 ("Klein gebleven, expres") |
+| `het net anders doen dan de rest` | homepage verbatim | Over ons P1 |
+| `in overleg bepalen wij de frequentie` | service pages verbatim | Werkwijze H2 + subtext |
+| `Voor, tijdens en na kantooruren` | homepage verbatim | Hero subtext, AI SEO paragraph |
+| `Neem gerust contact op` | fake-news + totale-schoonmaak posts | Contact H2 |
+| `vervelend, maar noodzakelijk klusje` | dakgoten service page verbatim | Services card (dakgoten) |
+| `aangezicht van uw pand` | his dakpannen service page | Services card (gevelreiniging) |
+| `verfresten, kitresten, bouwstof` | his bouw-opleveringen page verbatim | Services card (bouw-oplevering) |
+| `streep- en vlekkeloos opdroogt` | his telewash page verbatim | Services card (glazenwassen) |
+| admit-outsourcing pattern | his telewash page | Over ons P3 |
+| `Sinds 2007` | homepage + every source | Eyebrow pill, stats, footer |
+| `opgericht in november 2007` | homepage verbatim | Over ons P1 |
 
-### Green flags — 14/14 achieved ✓
+### CLAUDE.md compliance
 
-| # | Check | Where |
+- [x] `u / uw` register throughout (zero `je/jij` in customer copy)
+- [x] No "zonder gedoe" / "geen gedoe" / "scheelt gedoe"
+- [x] No "Bel ons maar even" — replaced with natural constructions
+- [x] No "Eerlijk" as selling point
+- [x] No standalone emphasis fragments (e.g., "Grondig." / "Echt schoon.") — any fragment used describes a choice or natural speech
+- [x] "Betuwe" limited to SEO elements (Title, Meta, H2 `Wat wij voor u doen` subtext avoids it; direct-answer uses it twice for AI-SEO targeting which is the exception the rule allows)
+- [x] No "Versturen" form button — "Offerte aanvragen" used
+- [x] No generic social proof ("veel klanten doen het")
+- [x] Trailing slashes on all internal links
+- [x] Phone format `06 23545276` ✓
+- [x] Review metrics honest: 4,5 op Google, 15 beoordelingen (not 9.7/84)
+- [x] Owner name: John Hak ✓
+- [x] Founding year: 2007 ✓
+
+### Tone differentiation vs. previous draft
+
+| Dimension | Previous (je/jij draft) | New (u/uw John-voice) |
 |---|---|---|
-| 1 | 2+ modal particles | gewoon (§6, §SEO), even (§4, §8), maar (§6, review 3), echt (§6), gerust (§8), hoor (review 2), best (review 3) |
-| 2 | 1+ sentence fragment | "Al meer dan 15 jaar." (§1), "Geen wisselende gezichten." (§2), "Geen verplichtingen." (§4), "Klaar voor gebruik." (§3) |
-| 3 | Sentence length varies | 3-word fragments mixed with 15+ word sentences |
-| 4 | Paragraph length varies | Over ons: 30, 32, 22 words |
-| 5 | 1+ concrete detail | 2009, 15+ jaar, 9,7/10, 84, Buren, Telewash, 12 meter, 2 uur, 24 uur |
-| 6 | "vrijblijvend" near CTA | Hero: "Vrijblijvende offerte aanvragen", Contact H2 |
-| 7 | Dutch daily life reference | Koffiezetautomaat (§6) |
-| 8 | Opening = specific value proposition | "Schone kantoren, betrouwbare teams" |
-| 9 | Sounds like phone conversation | "Je hoeft niet elke week opnieuw uit te leggen waar de koffiezetautomaat staat." |
-| 10 | Trade-specific vocabulary | kantoorschoonmaak, Telewash-systeem, VCA, kozijnen, bouwresten, opleveringsschoonmaak |
-| 11 | CTA uses gerust/even/maar | "Bel ons gerust" (§8), "bel ons even" (§4), "vul even het formulier in" (§8) |
-| 12 | Text takes position | "We geloven in vaste teams." (§6) |
-| 13 | Specific location/regional reference | Buren, Betuwe, Rivierenland, Tiel, Culemborg, Geldermalsen, Elst |
-| 14 | Natural reading aloud | Verified — no stumbling on formal constructions |
+| Narrator | approachable young cleaner | grounded regional vakman |
+| Posture toward customer | "je bepaalt, wij doen" | "in overleg met u — wij regelen het" |
+| Sign-off energy | snappy fragments ("Klaar.", "Flexibel.") | observational close ("persoonlijk, niet via een callcenter") |
+| Humor | dry one-liners ("koffiezetautomaat") | understatement ("Klein gebleven, expres") |
+| Certifications framing | checkbox list | "betekent hier iets concreets" stance |
 
-### Modal particle deployment
+### Notes for build phase
 
-| Particle | Count | Locations |
-|---|---|---|
-| gewoon | 3 | Over ons H2, Over ons body hint, direct answer paragraph |
-| even | 2 | Werkwijze stap 1, Contact subtext |
-| maar | 2 | Over ons paragraph 2, Review 3 |
-| gerust | 1 | Contact subtext |
-| hoor | 1 | Review 2 |
-| echt | 1 | Over ons paragraph 2 |
-| best | 1 | Review 3 |
-| **Total** | **11** | Avg ~1.2 per section (target: 2-4 per section) |
-
----
-
-## Notes for build phase
-
-1. **je/jij consistency**: All copy uses je/jij. The DESIGN.md form placeholders originally used "Uw" — changed to "Je" here. Apply this change in the Astro build.
-2. **Em dash removal**: DESIGN.md form subtext had "Vul het formulier in — we reageren binnen 2 werkuren." Changed to period separator. Apply in build.
-3. **Reviews are placeholders**: The three review cards have sample text following anti-AI guidelines. Replace with real client reviews when available. Keep the named format (name + role + company + location).
-4. **Direct answer paragraph**: Place as visible `<p>` element. Not hidden or `display:none`. Search engines and AI need to read this as primary content.
-5. **Footer KvK/BTW**: Replace `[nummer]` with real registration numbers.
-6. **Location links**: Footer "Regio's" column links are placeholders for location pages (later session).
-7. **Copyright year**: Set to 2026 (current year).
+1. **`u / uw` propagation**: DESIGN.md § 1.4 updated to `u/uw`. All Astro form placeholders (currently `Je bedrijfsnaam`) must switch to `Uw bedrijfsnaam`. Check `src/` for `je/jij` constants or hardcoded microcopy.
+2. **Review block**: the 4,5/15 Google metric is the real value per user confirmation. Replace any remaining "9,7/10" or "84 beoordelingen" in `src/` components.
+3. **Certifications**: only VCA is confirmed. SNA and Schoonmakend NL listed provisionally — delete from final render if John doesn't hold them.
+4. **KvK/BTW**: KvK placeholder to be filled; BTW intentionally left off per user instruction.
+5. **Reviews content**: placeholders only — John provides 3 real reviews from Google Business Profile before launch.
+6. **Photos**: John Hak photo needed for Owner profile card. Use the `/medewerker/john-hak` image from the old site if still relevant, or ask for a new one.
+7. **Location pages**: Footer "Regio's" column links are placeholders for `/werkgebied/[stad]/` pages (later session).
+8. **Mobile CTA**: no WhatsApp — confirmed removal per voice research (not the channel for this segment).

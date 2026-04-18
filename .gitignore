@@ -1,9 +1,57 @@
+# Dependencies & build
 node_modules/
 dist/
+build/
 .astro/
+
+# Environment & secrets
 .env
 .env.*
-.DS_Store
+.dev.vars
 
-# Local Claude Code settings — contain machine-specific tokens
+# OS & editor
+.DS_Store
+*.log
+.vscode/
+.idea/
+
+# Local Claude Code settings & tooling (contain machine-specific tokens, API keys, or transient state)
 .claude/settings.local.json
+.claude/agents/
+.claude/skills/
+.claude/commands/
+.claude/hooks/
+.claude/memory/
+.claude/projects/
+.mcp.json
+.impeccable.md
+.playwright-mcp/
+.wrangler/
+pics/
+
+# Note: .claude/rules/ is deliberately NOT ignored — it contains project rules
+# (astro-conversion.md, design-fidelity.md) that CLAUDE.md references and every
+# build session must follow.
+
+# SOP process artifacts (created during Sessions 1–3, stay local)
+# Per Hub/business/sops/website-creation-session1-design-direction-v3.md
+CLIENT-DATA.md
+CLIENT-VOICE.md
+COMPETITORS.md
+CONTENT-SOURCE.md
+CONTENT/copy-context.md
+CREATIVE-DIRECTION.md
+ARCHETYPE-FINAL.md
+REDIRECTS-SOURCE.md
+REDIRECTS.md
+REPO-STACK.md
+layout-direction.md
+layout-options.html
+color-options.html
+typography-options.html
+homepage-reference.html
+
+# Note: DESIGN.md, BUILD-PLAN.md, SITEMAP-DRAFT.md and CONTENT/ were already tracked
+# in the initial production commit and continue to track modifications. The SOP
+# would gitignore them for a new project, but retroactive untracking would
+# rewrite history unnecessarily.

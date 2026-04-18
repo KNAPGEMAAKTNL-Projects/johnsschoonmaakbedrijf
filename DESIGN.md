@@ -14,7 +14,10 @@
 | **Business type** | Schoonmaakbedrijf — kantoorschoonmaak (B2B primary) |
 | **Archetype** | E — Lifestyle & Personal Brand (schoonmaakbedrijf sub-type) |
 | **Sub-variant** | B2B: kantoorschoonmaak voor bedrijven |
-| **Location** | Buren, Betuwe |
+| **Owner** | John Hak |
+| **Business address** | Buren, Gelderland |
+| **Operational base** | Tricht (vestigingsplaats — historical) |
+| **Region framing** | Betuwe (primary SEO region), Rivierenland (secondary) |
 | **Service area** | Betuwe & Rivierenland |
 
 ### Visual tone scores
@@ -37,7 +40,7 @@
 
 ### Addressal
 
-**je/jij** — B2B sub-variant confirmation: client's audience is kantoor-/bedrijfsmanagers in a regional Dutch context. The approachable personality ("John van Ekeren, eigenaar") calls for je/jij over formal u/uw. Maintain consistently throughout all copy and UI microcopy.
+**u / uw** — resolved 2026-04-18 based on voice extraction from John Hak's historical copy (CLIENT-VOICE.md + CONTENT-SOURCE.md). John's entire 19-year body of work uses `u/uw` consistently, on both johnsglazenwassersbedrijf.nl and johnsschoonmaakbedrijf.nl, across service pages, location pages, the fake-news defense post, and even the rolluiken Facebook one-liners. He uses `je` ONLY in job ads (recruitment context) — a register shift that is sector-normal and doesn't apply to customer-facing copy. The "approachable" personality is carried via word choice (`gerust`, `graag`, `wel`, `alles is mogelijk`, `net anders`) rather than pronoun register. Maintain `u/uw` consistently throughout all copy and UI microcopy. This overrides the general user CLAUDE.md preference for `je/jij`.
 
 ### Target audience
 

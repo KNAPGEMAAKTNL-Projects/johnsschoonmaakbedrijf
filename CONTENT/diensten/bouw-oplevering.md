@@ -4,14 +4,14 @@
 > **Primary keyword**: `opleveringsschoonmaak betuwe`
 > **Secondary keywords**: `schoonmaak na verbouwing rivierenland`, `bouwschoonmaak gelderland`, `oplevering schoonmaak bedrijf`
 > **Search intent**: Transactional
-> **Created**: 27 maart 2026
+> **Register**: `u / uw`
 
 ---
 
 ## Meta
 
-**Title**: `Opleveringsschoonmaak Betuwe | Schoonmaak na verbouwing | John's Schoonmaakbedrijf`
-**Description**: `Grondige opleveringsschoonmaak in de Betuwe en Rivierenland. Stof, bouwresten en cementresten verwijderd. Team beschikbaar binnen een week. Vraag een offerte aan.`
+**Title**: `Opleveringsschoonmaak Betuwe | Schoonmaak na bouw | John's Schoonmaakbedrijf`
+**Description**: `Grondige opleveringsschoonmaak in de Betuwe en Rivierenland. Verfresten, kitresten, bouwstof — alles weg. Voor aannemers, projectontwikkelaars en bedrijven. Offerte op maat.`
 
 ---
 
@@ -26,81 +26,92 @@ Opleveringsschoonmaak in de Betuwe
 ## Direct answer paragraph
 
 ```
-Opleveringsschoonmaak is de grondige eindschoonmaak na een
-verbouwing of nieuwbouwproject. John's Schoonmaakbedrijf
-verwijdert stof, bouwresten, cementresten en lijmresten van
-vloeren, kozijnen, sanitair en ramen. Klaar voor gebruik of
-bewoning. Actief in de hele Betuwe en Rivierenland, team
-meestal binnen een week beschikbaar.
+Opleveringsschoonmaak is de grondige eindschoonmaak na
+een bouw- of verbouwingsproject. John's Schoonmaakbedrijf
+verwijdert verfresten, kitresten en bouwstof van vloeren,
+kozijnen, vensterbanken, sanitair en ramen. Het pand is
+daarna klaar voor oplevering of gebruik. Actief in de
+Betuwe en Rivierenland, voor aannemers, projectontwikkelaars
+en bedrijven die een nieuw pand in gebruik nemen.
 ```
-*Word count*: 43 words ✓
-*Fragment*: "Klaar voor gebruik of bewoning." ✓
-*Keyword*: opleveringsschoonmaak (1) ✓
+*Word count*: 53 words ✓
+*John-signatures*: `verfresten, kitresten en bouwstof` verbatim from his bouw-opleveringen page
+*Keyword*: `opleveringsschoonmaak`, `Betuwe`, `Rivierenland`
 
 ---
 
 ## Beschrijving
 
-### Grondig schoon na de bouw
+### Wat houdt opleveringsschoonmaak in?
 
 ```
-Na een verbouwing of nieuwbouw zit er overal stof. In de
-kozijnen, op de vloer, achter de radiatoren. Bouwvakkers zijn
-goed in bouwen, maar schoonmaken is toch echt een ander vak.
+Na een bouw of verbouwing zit er overal stof. In de
+kozijnen, op vensterbanken, achter radiatoren, tussen de
+naden. Bouwvakkers leveren een pand bouwkundig op —
+schoonmaken is een ander vak.
 
-Onze opleveringsschoonmaak is een grondige, eenmalige klus.
-We pakken alles aan: stof afzuigen en afnemen, vloeren reinigen
-en in de was zetten, kozijnen en deurkozijnen schoonmaken,
-sanitair poetsen, ramen wassen binnen en buiten, plinten,
-lichtschakelaars, stopcontacten. Cementresten, lijmresten en
-stickerresten verwijderen we ook.
+Onze opleveringsschoonmaak is een grondige, eenmalige
+klus. Wij pakken alles aan: stof afzuigen en afnemen,
+vloeren reinigen en in de was zetten (waar gewenst),
+kozijnen en vensterbanken schoonmaken, sanitair poetsen,
+ramen binnen en buiten wassen, plinten, lichtschakelaars
+en stopcontacten nalopen. Verfresten, kitresten,
+lijmresten en stickerresten verwijderen wij ook.
 
-Dit is geen gewone schoonmaakbeurt. Dit is het verschil tussen
-"het ziet er oké uit" en "het is echt klaar." Wij leveren dat
-laatste.
+Wij werken in overleg met u als klant. Voor grote
+projecten (kantoorpanden, bedrijfshallen, VvE-appartementen)
+komen wij eerst langs om de scope en planning af te
+stemmen. Zo weet u vooraf wat wij doen, hoe lang het
+duurt en wat het kost — zonder verrassingen achteraf.
 
-Opleveringsschoonmaak in de Betuwe en Rivierenland: voor
-aannemers die netjes willen opleveren, projectontwikkelaars die
-een goede indruk willen maken en particulieren die na de
-verbouwing gewoon in een schoon huis willen stappen.
+Opleveringsschoonmaak in de regio: voor aannemers die
+netjes willen opleveren, projectontwikkelaars die een
+goede eerste indruk nodig hebben, en bedrijven die een
+verbouwd of nieuwgebouwd pand in gebruik nemen.
 ```
-*Word count*: 148 words ✓ (target: 150-250 — close enough, concise is better)
-*Particles*: maar, toch, echt (2x), gewoon ✓
-*Fragments*: "Wij leveren dat laatste." ✓
-*Dry humor*: "Bouwvakkers zijn goed in bouwen, maar schoonmaken is toch echt een ander vak." ✓
-*Position taken*: "Dit is geen gewone schoonmaakbeurt." ✓
-*Trade vocab*: radiatoren, kozijnen, deurkozijnen, cementresten, lijmresten, stickerresten, in de was zetten ✓
-*Keyword*: opleveringsschoonmaak (2x) ✓
+*Word count*: 168 words ✓
+*John-signatures*: `verfresten, kitresten, lijmresten` (extending his verbatim list), `in overleg met u als klant`, `zonder verrassingen achteraf`
+*Trade vocabulary*: verfresten, kitresten, lijmresten, stickerresten, kozijnen, vensterbanken, plinten, lichtschakelaars, stopcontacten, radiatoren, in de was zetten
 
 ---
 
-## Waarom kiezen voor onze opleveringsschoonmaak?
+## Waarom onze opleveringsschoonmaak?
 
-### 1. Ervaring met bouwprojecten
-
-```
-We weten wat er na een verbouwing overblijft. Cementresten op
-tegels, stof achter radiatoren, lijm op kozijnen. Niks nieuws
-voor ons.
-```
-*Fragment*: "Niks nieuws voor ons." ✓
-
-### 2. Team binnen een week beschikbaar
+### 1. Ervaring met bouw en renovatie
 
 ```
-Na je aanvraag plannen we snel in. De meeste projecten starten
-binnen een week. Soms al eerder, bel ons maar even.
+Cementresten op tegels, stof achter radiatoren, lijm op
+kozijnen, stickers op glas. Wij komen het regelmatig
+tegen en weten wat er aan de hand is voor wij binnenlopen.
 ```
-*Particles*: maar, even ✓
 
-### 3. Eenmalig, geen contract nodig
+### 2. Planning op de bouwagenda
 
 ```
-Dit is een losse klus. Geen abonnement, geen doorlopend contract.
-Gewoon boeken wanneer je het nodig hebt.
+Bouwplanningen schuiven, dat is normaal. Wij bouwen
+wat flexibiliteit in zodat wij kunnen schakelen als de
+oplevering vervroegt of iets uitloopt. Dat gaat in
+overleg met de aannemer of projectleider.
 ```
-*Particle*: gewoon ✓
-*Fragment*: "Dit is een losse klus." ✓
+*John-signature*: `in overleg` recurring
+
+### 3. Eenmalig, geen doorlopend contract
+
+```
+Opleveringsschoonmaak is een losse klus. Geen
+abonnement, geen verplichtingen voor later. U boekt
+wanneer u het nodig heeft.
+```
+
+### 4. Samen door het pand heen bij oplevering
+
+```
+Wij lopen samen met u de ruimte door als wij klaar
+zijn. Is er iets over het hoofd gezien, dan pakken wij
+het direct aan — voordat u iemand anders moet
+inschakelen.
+```
+*Position*: customer-walkthrough as quality signal
 
 ---
 
@@ -109,34 +120,37 @@ Gewoon boeken wanneer je het nodig hebt.
 ### Stap 1: Briefing
 
 ```
-Vertel ons wat er gebouwd of verbouwd is. Oppervlakte, type
-ruimte, wanneer het klaar moet zijn. Bel of mail, we reageren
-snel.
+Vertel ons wat er gebouwd of verbouwd is: oppervlakte,
+type ruimte, wanneer het klaar moet zijn en bijzonderheden
+(bijvoorbeeld epoxyvloeren, speciale afwerking). Bellen
+of mailen werkt beide.
 ```
 
-### Stap 2: Inspectie
+### Stap 2: Inspectie en offerte
 
 ```
-Bij grotere projecten komen we even kijken. We schatten de klus
-in en geven een heldere prijs. Geen verrassingen achteraf.
+Voor grotere projecten komen wij een keer langs op de
+bouwlocatie. Wij schatten de klus in en geven een
+heldere prijs op basis van oppervlak, afwerking en
+gewenste scope. Meestal heeft u binnen 48 uur na de
+inspectie de offerte.
 ```
-*Particle*: even ✓
-*Fragment*: "Geen verrassingen achteraf." ✓
 
 ### Stap 3: Schoonmaak
 
 ```
-Ons team gaat aan de slag. Afhankelijk van de grootte duurt het
-1 tot 3 dagen. Van boven naar beneden, ruimte voor ruimte.
-Grondig.
+Ons team gaat aan de slag. Afhankelijk van de grootte
+zijn wij één tot drie dagen bezig. Van boven naar
+beneden, ruimte voor ruimte, conform het
+schoonmaakplan.
 ```
-*Fragment*: "Grondig." ✓
 
 ### Stap 4: Oplevering
 
 ```
-We lopen samen door de ruimte. Iets gemist? Dan pakken we het
-direct aan. Pas klaar als jij tevreden bent.
+Wij lopen samen door het pand. Bij eventuele
+restpunten pakken wij dat direct aan — u hoeft er niet
+nog eens op terug te komen.
 ```
 
 ---
@@ -146,61 +160,57 @@ direct aan. Pas klaar als jij tevreden bent.
 ### Wat houdt opleveringsschoonmaak precies in?
 
 ```
-Alles wat nodig is om een verbouwd of nieuwgebouwd pand klaar
-te maken voor gebruik. Stof verwijderen, vloeren reinigen,
-sanitair poetsen, ramen wassen, kozijnen schoonmaken, cement-
-en lijmresten verwijderen. Het doel: je loopt binnen en het is
-schoon. Echt schoon.
+Alles wat nodig is om een verbouwd of nieuwgebouwd
+pand gebruiksklaar te maken. Stof afzuigen en afnemen,
+vloeren reinigen, sanitair poetsen, ramen wassen,
+kozijnen schoonmaken en bouwresten verwijderen. Het
+doel is dat u binnenloopt en het is klaar voor gebruik
+of oplevering.
 ```
-*Word count*: 42 words ✓
-*Particle*: echt ✓
-*Fragment*: "Echt schoon." ✓
-*Keyword*: opleveringsschoonmaak (in heading) ✓
+*Word count*: 43 words ✓
+*Keyword*: `opleveringsschoonmaak` (in H3)
 
-### Hoe snel kunnen jullie beginnen na de verbouwing?
+### Hoe snel kunnen jullie beginnen na de bouw?
 
 ```
-Meestal binnen een week na aanvraag. Voor spoedklussen lukt het
-soms al binnen een paar dagen. Neem even contact op, dan kijken
-we naar de planning.
+Meestal binnen een week na aanvraag, mits de planning
+dat toelaat. Voor spoedklussen lukt soms eerder. Meld
+het bij de aanvraag, dan kijken wij er direct naar.
 ```
 *Word count*: 29 words ✓
-*Particle*: even ✓
 
-### Moet ik als aannemer zelf een schoonmaakbedrijf regelen?
+### Doen jullie dit ook voor aannemers als onderaannemer?
 
 ```
-Dat hangt van de afspraken met je opdrachtgever af. Veel
-aannemers in de Betuwe schakelen ons in voor de eindschoonmaak.
-Scheelt ze tijd en het resultaat is toch beter dan het zelf doen
-met een paar emmers en dweil.
+Ja. Een aanzienlijk deel van onze opleveringsschoonmaak
+loopt via aannemers en projectontwikkelaars. Wij werken
+dan direct met de bouwplanner of projectleider en
+factureren volgens afspraak. Verschillende aannemers in
+de regio schakelen ons vast in.
 ```
-*Word count*: 39 words ✓
-*Particle*: toch ✓
-*Dry humor*: "emmers en dweil" ✓
+*Word count*: 35 words ✓
 
 ### Hoe lang duurt een opleveringsschoonmaak?
 
 ```
-Verschilt per project. Een verbouwde woning is meestal in een
-dag klaar. Een nieuwbouwkantoor van 500 m² duurt 2 tot 3 dagen.
-We geven vooraf een inschatting zodat je weet waar je aan toe
-bent.
+Verschilt per project. Een verbouwde woning is meestal
+in een dag klaar. Een nieuwbouwkantoor van 500 m²
+duurt doorgaans twee tot drie dagen. Bij de inspectie
+geven wij vooraf een inschatting.
 ```
-*Word count*: 36 words ✓
-*Keyword*: opleveringsschoonmaak (in heading) ✓
-*Concrete details*: 500 m², 2-3 dagen ✓
+*Word count*: 32 words ✓
+*Concrete details*: 500 m², 1 dag, 2-3 dagen
 
 ---
 
 ## CTA
 
 ```
-Net klaar met bouwen of verbouwen? Neem even contact op voor een
-vrijblijvende offerte. We komen kijken en plannen de schoonmaak
-snel in.
+Net klaar met bouwen of verbouwen? Laat het weten, dan
+komen wij langs om de klus in te schatten. U ontvangt
+een heldere offerte en kunt er vanaf dat moment op rekenen.
 ```
-*Particle*: even ✓
+*Keyword*: implicit via URL + H1
 
 **Button**: [Offerte aanvragen](/contact/) (`btn-primary`)
 
@@ -208,39 +218,31 @@ snel in.
 
 ## Internal links
 
-- [Kantoorschoonmaak](/diensten/kantoorschoonmaak/) — "Na de oplevering reguliere schoonmaak nodig? Bekijk onze kantoorschoonmaak."
-- [Over ons](/over-ons/) — "Al sinds 2009 actief in de Betuwe"
-- [Contact](/contact/) — "Neem even contact op"
+- [Kantoorschoonmaak](/diensten/kantoorschoonmaak/) — "Regulier onderhoud na de oplevering? Bekijk onze kantoorschoonmaak."
+- [Gevelreiniging](/diensten/gevelreiniging/) — "Buitenwerk en gevel ook meenemen?"
+- [Over ons](/over-ons/) — "Actief in de regio sinds 2007"
+- [Contact](/contact/) — "Neem gerust contact op"
 
 ---
 
 ## Keyword density check
 
-| Keyword | Count | Density (~550 words) |
+| Keyword | Count | Density (~620 words) |
 |---|---|---|
-| opleveringsschoonmaak | 6 | 1,1% ✓ |
-| Betuwe | 4 | 0,7% ✓ |
-| verbouwing | 5 | 0,9% |
+| opleveringsschoonmaak | 7 | 1,1% ✓ |
+| verbouwing/bouw | 6 | 1,0% |
+| Betuwe | 2 | 0,3% (low per CLAUDE.md) |
 
-## Anti-AI quality report
+## Voice & CLAUDE.md compliance
 
-### Particles deployed (13 total)
-| Particle | Count | Locations |
-|---|---|---|
-| maar | 3 | beschrijving, bullet 2, — |
-| even | 4 | bullet 2, stap 2, FAQ 2, CTA |
-| gewoon | 2 | beschrijving, bullet 3 |
-| echt | 3 | beschrijving (2x), FAQ 1 |
-| toch | 2 | beschrijving, FAQ 3 |
+| Check | Status |
+|---|---|
+| `u / uw` register | ✓ |
+| John-signatures: `verfresten, kitresten, bouwstof`, `in overleg met u als klant` | ✓ |
+| No "zonder gedoe" / "scheelt gedoe" | ✓ |
+| No "Bel ons maar even" | ✓ |
+| No emphasis fragments | ✓ (previous draft had "Grondig." / "Eerlijk advies." — removed) |
+| Trailing slashes | ✓ |
+| B2B-focused (aannemer, projectontwikkelaar, VvE angle preserved) | ✓ |
 
-### Unique USP differentiation (vs other service pages)
-- Eenmalige klus focus (no contract needed)
-- Speed angle (team within a week)
-- Specific trade knowledge (cementresten, stickerresten)
-- Aannemer/projectontwikkelaar targeting
-- Different humor ("schoonmaken is toch echt een ander vak", "emmers en dweil")
-
-### Red flags: all cleared ✓
-### Green flags: 14/14 ✓
-
-**Total word count**: ~550 words ✓ (target: 400-800)
+**Total word count**: ~620 words ✓
