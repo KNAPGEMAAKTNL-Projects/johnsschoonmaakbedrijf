@@ -1,5 +1,5 @@
 /*
- * Scroll animation effects — CSS-only path (0 KB JS budget)
+ * Scroll animation effects - CSS-only path (0 KB JS budget)
  * Uses scroll-driven animations with IntersectionObserver fallback for Firefox.
  *
  * Default state: always visible (opacity: 1). Animations only apply when
