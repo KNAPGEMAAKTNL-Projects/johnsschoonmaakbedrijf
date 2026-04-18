@@ -13,7 +13,7 @@ import ContactForm from "../components/ContactForm.astro";
 
   <main>
     <!-- ═══════════════════════════════════════════════
-         SECTION 1: HERO — bg: white, pt:80 pb:64
+         SECTION 1: HERO - bg: white, pt:80 pb:64
          Grid: 58fr 42fr, gap 64px
          Effects: page-load cascade, gradient mesh, floating bob
          Decorative: blob mesh, S-curve flourish, gradient underline
@@ -38,7 +38,7 @@ import ContactForm from "../components/ContactForm.astro";
               </span>
             </div>
 
-            <!-- H1 — NO opacity:0 (LCP safety) -->
+            <!-- H1 - NO opacity:0 (LCP safety) -->
             <h1 class="hero-enter-1 mb-6">
               Schone kantoren,<br>
               <span class="hl">betrouwbare teams</span>
@@ -120,7 +120,7 @@ import ContactForm from "../components/ContactForm.astro";
     </div>
 
     <!-- ═══════════════════════════════════════════════
-         SECTION 2: USP STRIP — bg: surface-blue, py:48
+         SECTION 2: USP STRIP - bg: surface-blue, py:48
          Grid: repeat(3, 1fr), border-right separators
          Effects: stagger reveal
          Decorative: gradient icon backgrounds (BUILD-PLAN craft #2)
@@ -172,7 +172,7 @@ import ContactForm from "../components/ContactForm.astro";
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         SECTION 3: SERVICES — bg: surface, pt:80 pb:96
+         SECTION 3: SERVICES - bg: surface, pt:80 pb:96
          Grid: 5fr 3fr, anchor spans 2 rows (editorial asymmetric)
          Effects: fade-up, card lift hover
          Decorative: anchor bg circle (DESIGN.md §7.9)
@@ -207,7 +207,7 @@ import ContactForm from "../components/ContactForm.astro";
               </span>
               <h3 class="font-head text-[30px] font-extrabold text-white mb-4 leading-tight" style="letter-spacing: -0.02em;">Kantoorschoonmaak op maat</h3>
               <p class="text-white/70 text-[15px] leading-relaxed mb-6">
-                Regelmatige reiniging van uw kantoorruimtes, van dagelijks tot maandelijks. Vaste teams die u kent en die weten hoe uw pand eruitziet. Voor, tijdens of na kantooruren — in overleg met u als klant.
+                Regelmatige reiniging van uw kantoorruimtes, van dagelijks tot maandelijks. Vaste teams die u kent en die weten hoe uw pand eruitziet. Voor, tijdens of na kantooruren, in overleg met u als klant.
               </p>
               <ul class="space-y-2.5 mb-8">
                 <li class="flex items-center gap-2.5 text-white/80 text-[14px]">
@@ -263,7 +263,7 @@ import ContactForm from "../components/ContactForm.astro";
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         SECTION 4: WERKWIJZE — bg: white, pt:80 pb:112
+         SECTION 4: WERKWIJZE - bg: white, pt:80 pb:112
          Grid: repeat(3, 1fr), gap 32px
          Effects: stagger fade-up
          Decorative: oversized step numbers (DESIGN.md §7.5), connector line
@@ -321,7 +321,7 @@ import ContactForm from "../components/ContactForm.astro";
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         SECTION 5: REVIEWS — bg: navy (dark), py:96
+         SECTION 5: REVIEWS - bg: navy (dark), py:96
          Grid: 3fr 5fr (score/heading), then 3-col cards
          Effects: stagger fade-up, scale reveal on score
          Decorative: grain overlay, decorative circles, giant quote marks
@@ -440,7 +440,7 @@ import ContactForm from "../components/ContactForm.astro";
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         SECTION 6: OVER ONS — bg: surface, pt:64 pb:96
+         SECTION 6: OVER ONS - bg: surface, pt:64 pb:96
          Grid: 7fr 5fr, gap 80px
          Effects: fade-up text, scale reveal image
          Decorative: rotated rectangles (§7.7), asymmetric corners (BUILD-PLAN craft #3), gradient underline
@@ -499,7 +499,7 @@ import ContactForm from "../components/ContactForm.astro";
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         SECTION 7: CERTS — bg: primary-50, py:40
+         SECTION 7: CERTS - bg: primary-50, py:40
          Layout: flex row, space-between
          Effects: fade-up
          ═══════════════════════════════════════════════ -->
@@ -526,7 +526,7 @@ import ContactForm from "../components/ContactForm.astro";
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         SECTION 8: CONTACT — bg: white, py:96
+         SECTION 8: CONTACT - bg: white, py:96
          Grid: 5fr 4fr, gap 64px
          Effects: fade-up
          ═══════════════════════════════════════════════ -->
@@ -611,7 +611,7 @@ import ContactForm from "../components/ContactForm.astro";
     body { padding-bottom: 72px; }
   }
 
-  /* Section kicker — DESIGN.md §5 */
+  /* Section kicker - DESIGN.md §5 */
   .kicker {
     display: inline-block;
     font-family: var(--font-head);
@@ -623,7 +623,7 @@ import ContactForm from "../components/ContactForm.astro";
     margin-bottom: 10px;
   }
 
-  /* Gradient underline on highlighted word — DESIGN.md §7.3 */
+  /* Gradient underline on highlighted word - DESIGN.md §7.3 */
   .hl {
     position: relative;
     display: inline;
@@ -644,7 +644,7 @@ import ContactForm from "../components/ContactForm.astro";
     background: linear-gradient(90deg, var(--color-accent), var(--color-primary-light));
   }
 
-  /* Hero page-load animations — transform-only on H1 (LCP safe) */
+  /* Hero page-load animations - transform-only on H1 (LCP safe) */
   @media (prefers-reduced-motion: no-preference) {
     .hero-enter-1 {
       animation: hero-slide 0.6s var(--ease-reveal) 100ms both;
