@@ -2,16 +2,16 @@
 
 > **URL**: `/diensten/dakgoten/`
 > **Primary keyword**: `dakgoten leegmaken betuwe`
-> **Secondary keywords**: `dakgoot schoonmaken rivierenland`, `dakgoten reinigen gelderland`
+> **Secondary keywords**: `dakgoot schoonmaken rivierenland`, `dakgoten reinigen bedrijf gelderland`, `dakgoten onderhoud vve`
 > **Search intent**: Transactional
-> **Created**: 27 maart 2026
+> **Register**: `u / uw`
 
 ---
 
 ## Meta
 
 **Title**: `Dakgoten leegmaken | John's Schoonmaakbedrijf Betuwe`
-**Description**: `Dakgoten leegmaken in de Betuwe en Rivierenland. Voorkom verstoppingen en waterschade. Jaarlijks onderhoud door vakmensen. Vraag een offerte aan.`
+**Description**: `Dakgoten leegmaken voor bedrijfspanden en VvE's in de Betuwe en Rivierenland. Voorkom verstoppingen en waterschade. Jaarlijks onderhoud, vaak najaar. Offerte op maat.`
 
 ---
 
@@ -26,108 +26,120 @@ Dakgoten leegmaken in de Betuwe
 ## Direct answer paragraph
 
 ```
-Dakgoten leegmaken is een vervelend klusje dat je liever
-niet zelf doet. John's Schoonmaakbedrijf maakt je dakgoten
-leeg en controleert op verstoppingen. Blad, mos en vuil
-verwijderd. We raden het minstens één keer per jaar aan,
-liefst in het najaar. Actief in de Betuwe en Rivierenland.
+Het leegmaken van dakgoten is vaak een vervelend, maar
+noodzakelijk klusje. John's Schoonmaakbedrijf reinigt
+dakgoten van bedrijfspanden en VvE's in de Betuwe en
+Rivierenland. Wij verwijderen blad, mos en vuil,
+controleren de afvoeren en beschikken over het juiste
+materiaal. Jaarlijks onderhoud, bij voorkeur in het
+najaar.
 ```
-*Word count*: 45 words ✓
-*Keyword*: dakgoten leegmaken (1) ✓
+*Word count*: 47 words ✓
+*John-signatures*: `vervelend, maar noodzakelijk klusje` — verbatim from his dakgoten service page; `Wij beschikken over het juiste materiaal` — his phrasing
+*Keyword*: `dakgoten leegmaken`
 
 ---
 
 ## Beschrijving
 
-### Voorkom wateroverlast
+### Voorkom wateroverlast en schade
 
 ```
-Een verstopte dakgoot merk je pas als het te laat is.
-Water loopt over, langs de gevel, in de spouw. Vochtplekken
-binnen, schimmel achter het behang. Vervelend en duur.
+Een verstopte dakgoot merkt u pas als het te laat is.
+Water loopt over, langs de gevel, tot in de spouw.
+Vochtplekken aan de binnenzijde, schimmel achter de
+stucwerk, in het ergste geval rotte balken. Vervelende
+en kostbare gevolgen van een klusje dat meestal weinig
+tijd kost.
 
-Het is zo'n klusje dat je steeds uitstelt. Begrijpelijk, want
-je moet op een ladder, het is nat, het is vies. Wij pakken
-het gewoon voor je op. Dakgoten leeghalen, afvoeren
-controleren, alles weer schoon. In de meeste gevallen zijn
-we binnen een uur klaar.
+Het is een werkje dat bij veel bedrijven achterin de
+planning zakt. Iemand moet op een ladder, het is nat,
+het is vies. Wij pakken het voor u op. Dakgoten
+leeghalen, afvoeren controleren, vuil meenemen. In de
+meeste gevallen zijn wij binnen een tot twee uur klaar
+per pand.
 
-We raden aan om je dakgoten minstens één keer per jaar te
-laten leeghalen. In het najaar, als de bomen kaal worden.
-Heb je veel bomen om je pand heen? Dan is twee keer per jaar
-verstandiger — eind november en nog eens in het voorjaar.
+Wij adviseren om dakgoten minimaal één keer per jaar
+te laten leeghalen, bij voorkeur in het najaar nadat
+de bomen hun blad hebben verloren. Voor panden met
+veel bomen eromheen of in de buurt van boomgaarden is
+twee keer per jaar verstandiger — eind november en
+nog eens in het voorjaar.
 
-In de Betuwe en Rivierenland staan veel panden tussen de
-boomgaarden. Blad, bloesem en appels in de goot: we komen het
-regelmatig tegen. Herkenbaar? Bel ons maar even.
+In de regio staan veel bedrijfspanden tussen boomgaarden.
+Blad, bloesem en ook appels in de goot — dat komen wij
+regelmatig tegen. Herkenbaar? Laat ons weten wanneer het
+uitkomt.
 ```
-*Word count*: 154 words ✓
-*Particles*: gewoon, maar, even ✓
-*Fragments*: "Vervelend en duur." / "Herkenbaar?" ✓
-*Regional*: Betuwe, Rivierenland, boomgaarden ✓
-*Daily life reference*: "appels in de goot" ✓
-*Trade vocab*: spouw, afvoeren ✓
+*Word count*: 185 words ✓
+*John-signatures*: regional specificity (boomgaarden, appels in de goot) — echoes his Leerdam location-page style of naming specifics
+*Trade vocabulary*: spouw, afvoeren, stucwerk, rotte balken
 
 ---
 
 ## Waarom laten doen?
 
-### 1. Veilig en zonder gedoe
+### 1. Veilig werken, voor u en voor ons
 
 ```
 Geen ladder meer tegen de gevel, geen emmer op het dak.
-Wij hebben het juiste materiaal en de ervaring. Jij houdt
-je voeten op de grond.
+Wij werken met het juiste materiaal, zijn VCA-gecertificeerd
+en laten uw mensen buiten schot. U houdt de verantwoording
+over het pand, zonder zelf het risico te nemen.
 ```
-*Fragment*: "Jij houdt je voeten op de grond." ✓
+*John-signature*: VCA benefit expressed in concrete terms
 
 ### 2. Controle op afvoeren en lekkages
 
 ```
-We maken niet alleen de goot leeg, we controleren ook of
-het regenwater goed wegloopt. Een klein probleem nu
-is goedkoper dan een groot probleem straks.
+Wij maken niet alleen de goot leeg. Wij controleren
+ook of het regenwater goed wegloopt en of naden en
+beugels er nog goed bij zitten. Een klein mankement
+nu is goedkoper dan een vochtprobleem later.
 ```
-*Loss language*: "klein probleem nu is goedkoper dan een groot probleem straks" ✓
 
-### 3. Combineer het slim
+### 3. Combineer met andere dakwerkzaamheden
 
 ```
-Laat je gelijk je zonnepanelen of ramen meenemen? Eén
-afspraak, alles in één keer. Scheelt gedoe en is vaak
-ook voordeliger.
+Heeft u ook zonnepanelen op hetzelfde dak of wilt u
+periodiek glazenwassen plannen? Eén afspraak, één
+rit, één factuur. Dat plannen wij graag in één keer.
 ```
-*Fragment*: "Scheelt gedoe." ✓
 *Internal links*: [zonnepanelen](/diensten/zonnepanelen/) · [glazenwassen](/diensten/glazenwassen/)
 
 ---
 
 ## Hoe werkt het?
 
-### Stap 1: Even bellen of mailen
+### Stap 1: Inschatting
 
 ```
-Vertel ons wat voor pand het is en of er bijzonderheden
-zijn. Plat dak, schuin dak, meerdere goten — maakt niet
-uit.
+Laat ons weten om welk pand het gaat, hoe lang de
+goten zijn (globaal) en of er bijzonderheden zijn —
+plat dak, schuin dak, hoogte, bereikbaarheid. Voor
+VvE's werken wij doorgaans met het bestuur of de
+beheerder.
 ```
-*Particle*: even (in heading) ✓
 
 ### Stap 2: Planning
 
 ```
-We komen op een moment dat jou uitkomt. Meestal lukt dat
-binnen een week. In het najaar is het drukker, dus plan
-het liefst even vooruit.
+Wij plannen de klus in op een moment dat u past. In
+het najaar is het drukker, dus plan dan tijdig. Voor
+spoedgevallen (overlopende goot, vochtplek) kijken
+wij of er eerder ruimte is.
 ```
-*Particle*: even ✓
 
 ### Stap 3: Klus klaar
 
 ```
-Goten leeg, afvoer gecontroleerd. We nemen het vuil mee
-en je hoeft er verder niet over na te denken.
+Goten leeg, afvoeren gecontroleerd, vuil meegenomen.
+Bij eventuele kleine gebreken (losse beugel, naad die
+lekt) pakken wij dat mee waar wij dat veilig en
+verantwoord kunnen — anders krijgt u een eerlijk
+advies voor een dakdekker.
 ```
+*John-signature*: honest scoping, no taking every job
 
 ---
 
@@ -136,42 +148,56 @@ en je hoeft er verder niet over na te denken.
 ### Hoe vaak moeten dakgoten worden leeggemaakt?
 
 ```
-Minstens één keer per jaar, liefst in het najaar na de
-bladval. Staat je pand tussen bomen? Dan is twee keer per
-jaar aan te raden: najaar en voorjaar.
+Minimaal één keer per jaar, bij voorkeur in het najaar
+na de bladval. Voor panden tussen bomen of bij
+boomgaarden is twee keer per jaar aan te raden: najaar
+en voorjaar.
 ```
-*Word count*: 32 words
+*Word count*: 33 words ✓
 
-### Kan ik mijn dakgoten zelf leegmaken?
+### Kunnen wij dit niet zelf doen?
 
 ```
-Dat kan, maar het betekent op een ladder klimmen en
-vies werk doen. Niet zonder risico, zeker niet bij hogere
-panden. Wij hebben het juiste gereedschap en de ervaring.
-Gewoon even laten doen.
+Dat kan, maar het betekent werken op hoogte met vies
+en nat materiaal. Niet zonder risico, zeker niet bij
+grotere panden. Wij hebben het juiste gereedschap en
+de ervaring — en de verantwoording ligt dan bij ons,
+niet bij u of uw team.
 ```
-*Word count*: 35 words
-*Particles*: maar, gewoon, even ✓
+*Word count*: 43 words ✓
 
 ### Doen jullie ook reparaties aan dakgoten?
 
 ```
-Kleine reparaties zoals een lekkende naad of een loshangende
-beugel pakken we mee. Voor grotere reparaties verwijzen we
-je door naar een dakdekker. Eerlijk advies.
+Kleine reparaties — losse beugels, kleine naadlekkage —
+pakken wij mee waar mogelijk. Voor grotere reparaties
+verwijzen wij u door naar een dakdekker. Wij doen wat
+wij goed kunnen en zeggen eerlijk waar iets anders
+beter past.
 ```
-*Word count*: 28 words
-*Fragment*: "Eerlijk advies." ✓
+*Word count*: 37 words ✓
+*John-signature*: honest-limits pattern
+
+### Doen jullie dit ook voor VvE's en grotere complexen?
+
+```
+Ja. Voor VvE's werken wij met het bestuur of de
+beheerder en plannen wij het onderhoud periodiek in.
+Meestal een jaarlijkse beurt, met een extra ronde in
+het voorjaar bij gebouwen tussen veel bomen. Wij
+leveren een beknopt verslag van wat wij hebben gedaan.
+```
+*Word count*: 44 words ✓
+*Position*: explicit VvE-targeting with deliverable
 
 ---
 
 ## CTA
 
 ```
-Dakgoten vol? Neem even contact op. We plannen het snel in
-en je hebt er weer een jaar geen omkijken naar.
+Dakgoten vol? Laat het weten. Wij plannen de klus in en
+u heeft er weer een jaar geen omkijken naar.
 ```
-*Particle*: even ✓
 
 **Button**: [Offerte aanvragen](/contact/) (`btn-primary`)
 
@@ -179,18 +205,25 @@ en je hebt er weer een jaar geen omkijken naar.
 
 ## Internal links
 
-- [Zonnepanelen reinigen](/diensten/zonnepanelen/) — "Gelijk je zonnepanelen erbij?"
+- [Zonnepanelen reinigen](/diensten/zonnepanelen/) — "Zonnepanelen op hetzelfde dak? Combineer het."
+- [Gevelreiniging](/diensten/gevelreiniging/) — "Ook de gevel meteen laten reinigen?"
 - [Glazenwassen](/diensten/glazenwassen/) — "Combineer met ramen wassen"
-- [Contact](/contact/) — "Neem even contact op"
+- [Contact](/contact/) — "Neem gerust contact op"
 
 ---
 
-## Anti-AI check
+## Voice & CLAUDE.md compliance
 
-| Particle | Count | Locations |
-|---|---|---|
-| even | 4 | beschrijving, stap 1, stap 2, CTA |
-| gewoon | 2 | beschrijving, FAQ 2 |
-| maar | 2 | beschrijving, FAQ 2 |
+| Check | Status |
+|---|---|
+| `u / uw` | ✓ |
+| `vervelend, maar noodzakelijk klusje` verbatim | ✓ |
+| `Wij beschikken over het juiste materiaal` | ✓ |
+| Honest-limits pattern (reparaties doorverwijzen naar dakdekker) | ✓ |
+| VvE-targeting expliciet | ✓ |
+| No "zonder gedoe" / "scheelt gedoe" | ✓ |
+| No emphasis fragments | ✓ (previous draft had "Vervelend en duur." / "Eerlijk advies." — removed) |
+| No "Bel ons maar even" | ✓ (previous draft had it — removed) |
+| Trailing slashes | ✓ |
 
-**Total word count**: ~470 words ✓
+**Total word count**: ~620 words ✓

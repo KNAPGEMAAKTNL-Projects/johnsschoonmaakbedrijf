@@ -2,16 +2,16 @@
 
 > **URL**: `/diensten/gevelreiniging/`
 > **Primary keyword**: `gevelreiniging betuwe`
-> **Secondary keywords**: `houtwerk reinigen rivierenland`, `trespa reinigen gelderland`, `kunststof kozijnen reinigen`
+> **Secondary keywords**: `houtwerk reinigen rivierenland`, `trespa reinigen gelderland`, `kunststof kozijnen reinigen bedrijf`
 > **Search intent**: Transactional
-> **Created**: 27 maart 2026
+> **Register**: `u / uw`
 
 ---
 
 ## Meta
 
 **Title**: `Gevelreiniging Betuwe | Houtwerk, kunststof & trespa | John's Schoonmaakbedrijf`
-**Description**: `Gevelreiniging in de Betuwe en Rivierenland. Houtwerk, kunststof en trespa professioneel gereinigd. 1-2x per jaar voor een frisse uitstraling. Vraag een offerte aan.`
+**Description**: `Gevelreiniging voor bedrijfspanden in de Betuwe en Rivierenland. Houtwerk, kunststof en trespa professioneel gereinigd. Geen hogedruk waar dat niet hoort. Offerte op maat.`
 
 ---
 
@@ -26,15 +26,17 @@ Gevelreiniging in de Betuwe
 ## Direct answer paragraph
 
 ```
-Gevelreiniging houdt in dat we het buitenwerk van je pand
-reinigen: houtwerk, kunststof kozijnen, trespa panelen,
-boeiboorden en windveren. John's Schoonmaakbedrijf doet dit
-1 tot 2 keer per jaar. Goed voor de uitstraling en het
-onderhoud van het materiaal. Actief in de hele Betuwe en
-Rivierenland.
+Gevelreiniging betekent dat wij het buitenwerk van uw
+pand reinigen: houtwerk, kunststof kozijnen, trespa,
+windveren, boeiboorden en dakranden. Regelmatige reiniging
+houdt het aangezicht van uw pand netjes en verlengt de
+levensduur van het materiaal. John's Schoonmaakbedrijf
+adviseert één tot twee keer per jaar, afhankelijk van
+situatie en oriëntatie.
 ```
-*Word count*: 46 words ✓
-*Keyword*: gevelreiniging (1) ✓
+*Word count*: 48 words ✓
+*John-signatures*: `aangezicht van uw pand` — his word (from his dakpannen-reinigen page), slightly old-fashioned register that marks his voice; `windveren` (trade term from his Tricht location page)
+*Keyword*: `gevelreiniging`
 
 ---
 
@@ -43,35 +45,34 @@ Rivierenland.
 ### Een fris pand begint aan de buitenkant
 
 ```
-Je gevelbekleding wordt viezer dan je denkt. Algen, groene
-aanslag, uitlaatgassen, stuifmeel. Het gaat langzaam, dus
-je went eraan. Maar zet eens een foto van je pand van twee
-jaar geleden ernaast. Verschil gegarandeerd.
+Gevelbekleding wordt viezer dan u denkt. Algen, groene
+aanslag, uitlaatgassen, stuifmeel en boomsap zetten zich
+langzaam vast. Omdat het geleidelijk gaat, went u eraan.
+Zet eens een foto van twee jaar terug ernaast — het
+verschil is meestal groter dan u verwacht.
 
-Wij reinigen alle soorten gevelbekleding: houtwerk, kunststof
-kozijnen, trespa panelen, boeiboorden, dakranden en
-windveren. Met het juiste middel voor elk materiaal. Geen
-hogedruk die het hout beschadigt of de verflaag eraf blaast.
-Gewoon goed schoonmaken met de juiste aanpak.
+Wij reinigen alle gangbare gevelbekleding: houtwerk,
+kunststof kozijnen, trespa panelen, dakranden, windveren
+en boeiboorden. Per materiaal kiezen wij de juiste
+aanpak. Trespa reinigen wij anders dan hout; kunststof
+vraagt een ander middel dan geverfd houtwerk. Geen
+hogedruk op delicate oppervlakken — dat blaast verf los
+en perst water in naden.
 
-Regelmatig reinigen is niet alleen voor de looks. Het
-beschermt het materiaal. Groene aanslag vreet aan verf en
-kunststof. Als je te lang wacht, moet je eerder opnieuw
-laten schilderen. Een goede reiniging verlengt de levensduur
-van je buitenwerk met jaren.
+Regelmatig reinigen is niet alleen een kwestie van
+uitstraling. Groene aanslag vreet aan verflagen en
+kunststof. Als u te lang wacht, moet u eerder opnieuw
+laten schilderen of onderdelen vervangen. Onderhoud is
+in dit geval voordeliger dan reparatie.
 
-In de Betuwe merken we dat veel bedrijfspanden en kantoren
-trespa en kunststof gevelbekleding hebben. Die worden
-sneller groen dan je denkt, zeker aan de noordkant.
-Twee keer per jaar reinigen houdt het netjes.
+In de regio zien wij dat veel bedrijfspanden en kantoren
+trespa of kunststof gevelbekleding hebben. Aan de
+noordzijde worden die sneller groen. Twee keer per jaar
+reinigen houdt het netjes.
 ```
-*Word count*: 158 words ✓
-*Particles*: maar, eens, gewoon ✓
-*Fragments*: "Verschil gegarandeerd." ✓
-*Position taken*: "Geen hogedruk die het hout beschadigt" ✓
-*Trade vocab*: boeiboorden, windveren, trespa, groene aanslag, verf ✓
-*Loss language*: "moet je eerder opnieuw laten schilderen" ✓
-*Regional*: Betuwe, Rivierenland ✓
+*Word count*: 178 words ✓
+*John-signatures*: `aangezicht van uw pand` (referenced via H1), `windveren`, position-taking `Geen hogedruk op delicate oppervlakken`
+*Trade vocabulary*: trespa, windveren, boeiboorden, kunststof kozijnen, groene aanslag, dakranden
 
 ---
 
@@ -80,59 +81,59 @@ Twee keer per jaar reinigen houdt het netjes.
 ### 1. Juiste middel per materiaal
 
 ```
-Trespa vraagt een andere aanpak dan houtwerk. Kunststof
-heeft weer een ander middel nodig. Wij weten wat waar
-mag. Geen schade aan coating of verflaag.
+Trespa, hout en kunststof vragen alledrie een andere
+aanpak. Wij weten wat waar mag — zodat coating en verflaag
+niet beschadigd worden en het resultaat langer meegaat.
 ```
 
-### 2. Geen hogedruk op delicate oppervlakken
+### 2. Geen hogedruk waar dat niet hoort
 
 ```
-Een hogedrukreiniger lijkt handig, maar blaast verf los
-en drukt water in naden. Wij werken met zachte borstels
-en het juiste schoonmaakmiddel. Beter resultaat, minder
-risico.
+Een hogedrukreiniger lijkt efficiënt, maar beschadigt
+verf, perst water in naden en maakt kunststof na verloop
+van tijd ruw. Wij werken met zachte borstels en het
+juiste reinigingsmiddel. Beter resultaat, minder risico
+op schade.
 ```
-*Particle*: maar ✓
 
-### 3. Langere levensduur van je gevelbekleding
+### 3. Langere levensduur van uw buitenwerk
 
 ```
-Regelmatig reinigen voorkomt dat groene aanslag en algen
-het materiaal aantasten. Scheelt uiteindelijk in
-schilderkosten. Onderhoud is altijd goedkoper dan reparatie.
+Regelmatige reiniging voorkomt dat algen en aanslag het
+materiaal aantasten. Dat scheelt op termijn in schilder-
+en vervangingskosten. Onderhoud is altijd goedkoper dan
+reparatie.
 ```
-*Loss language*: "Onderhoud is altijd goedkoper dan reparatie." ✓
 
 ---
 
 ## Hoe werkt het?
 
-### Stap 1: Even melden
+### Stap 1: Inschatting
 
 ```
-Bel ons of stuur een bericht. Vertel wat voor gevelbekleding
-je hebt en hoe groot het oppervlak is. Foto's helpen, maar
-zijn niet verplicht.
+Bel, mail of laat uw gegevens achter. Vertel om welk
+pand het gaat, welke gevelbekleding er is en hoe groot
+het oppervlak ongeveer is. Foto's zijn welkom maar
+niet verplicht.
 ```
-*Particles*: even (heading), maar ✓
 
 ### Stap 2: Offerte
 
 ```
-Soms komen we even langs om te kijken. Bij de meeste klussen
-geven we een prijs op basis van het oppervlak en het type
-materiaal. Heldere offerte, geen verborgen kosten.
+Soms geven wij direct een prijs op basis van de
+informatie. Voor grotere klussen komen wij een keer
+langs om de situatie te bekijken. U ontvangt een
+heldere offerte met prijs, aanpak en verwachte duur.
 ```
-*Particle*: even ✓
-*Fragment*: "Geen verborgen kosten." ✓
 
 ### Stap 3: Reiniging
 
 ```
-We reinigen je gevelbekleding op een afgesproken dag.
-Afhankelijk van de grootte zijn we een halve dag tot een dag
-bezig. Netjes en zonder troep achter te laten.
+Wij reinigen uw gevelbekleding op een afgesproken dag.
+Afhankelijk van het oppervlak zijn wij een halve dag
+tot een of twee hele dagen bezig. Netjes achterlaten is
+standaard — geen troep op uw terrein.
 ```
 
 ---
@@ -142,43 +143,59 @@ bezig. Netjes en zonder troep achter te laten.
 ### Hoe vaak moet gevelbekleding worden gereinigd?
 
 ```
-1 tot 2 keer per jaar is voldoende voor de meeste panden.
-Gevels op het noorden worden sneller groen en hebben vaker
-een beurt nodig. Trespa en kunststof verzamelen sneller
-aanslag dan hout.
+Eén tot twee keer per jaar volstaat voor de meeste
+panden. Gevels op het noorden worden sneller groen en
+hebben vaker een beurt nodig. Trespa en kunststof
+verzamelen doorgaans sneller aanslag dan geverfd
+houtwerk.
 ```
-*Word count*: 33 words
+*Word count*: 34 words ✓
 
 ### Is gevelreiniging met hogedruk verstandig?
 
 ```
-In de meeste gevallen niet. Hogedruk beschadigt verflagen,
-dringt in naden en kan kunststof oppervlakken ruw maken.
-Wij werken met zachte borstels en het juiste middel.
-Beter resultaat, langere levensduur.
+In de meeste gevallen niet. Hogedruk beschadigt
+verflagen, dringt in naden en kan kunststof oppervlakken
+ruw maken. Wij werken met zachte borstels en het juiste
+middel per materiaal. Dat geeft beter resultaat en een
+langere levensduur van de gevelbekleding.
 ```
-*Word count*: 32 words
+*Word count*: 40 words ✓
 
-### Kan ik gevelreiniging combineren met glazenwassen?
+### Kan gevelreiniging gecombineerd worden met glazenwassen?
 
 ```
-Ja, dat doen veel klanten. We zijn toch al bezig aan de
-buitenkant van je pand. Één afspraak, alles in één keer
-geregeld. Voordeliger ook.
+Ja, dat doen veel klanten. Wij zijn dan toch al bezig
+aan de buitenkant van uw pand. Eén afspraak, één
+factuur, het ritme op elkaar afgestemd. Vaak ook
+voordeliger doordat verplaatsing en opbouw gecombineerd
+worden.
 ```
-*Word count*: 28 words
-*Particle*: toch ✓
+*Word count*: 35 words ✓
 *Internal link*: [glazenwassen](/diensten/glazenwassen/)
+
+### Kunnen jullie alle soorten gevelbekleding?
+
+```
+Vrijwel alle gangbare materialen: houtwerk, kunststof
+kozijnen, trespa, geverfde gevels, windveren, boeiboorden
+en dakranden. Voor bijzondere materialen (natuursteen,
+metselwerk-impregnering) overleggen wij vooraf of wij
+de klus zelf doen of via een partner.
+```
+*Word count*: 34 words ✓
+*John-signature*: honest-outsourcing pattern
 
 ---
 
 ## CTA
 
 ```
-Gevel aan een opknapbeurt toe? Neem even contact op voor
-een vrijblijvende offerte. We kijken graag wat er nodig is.
+Gevel aan een opknapbeurt toe? Laat ons langskomen of
+stuur een paar foto's — wij maken een offerte op maat.
+Eén tot twee keer per jaar reinigen is al genoeg om het
+verschil te zien.
 ```
-*Particle*: even ✓
 
 **Button**: [Offerte aanvragen](/contact/) (`btn-primary`)
 
@@ -186,20 +203,23 @@ een vrijblijvende offerte. We kijken graag wat er nodig is.
 
 ## Internal links
 
-- [Glazenwassen](/diensten/glazenwassen/) — "Combineer met glazenwassen"
-- [Kantoorschoonmaak](/diensten/kantoorschoonmaak/) — "Ook het interieur laten schoonmaken?"
-- [Contact](/contact/) — "Neem even contact op"
+- [Glazenwassen](/diensten/glazenwassen/) — "Combineer met glazenwassen voor één afspraak"
+- [Kantoorschoonmaak](/diensten/kantoorschoonmaak/) — "Ook het interieur periodiek laten schoonmaken?"
+- [Dakgoten leegmaken](/diensten/dakgoten/) — "Dakgoten ook meteen laten doen?"
+- [Contact](/contact/) — "Neem gerust contact op"
 
 ---
 
-## Anti-AI check
+## Voice & CLAUDE.md compliance
 
-| Particle | Count | Locations |
-|---|---|---|
-| even | 3 | stap 1, stap 2, CTA |
-| maar | 3 | beschrijving, bullet 2, stap 1 |
-| gewoon | 1 | beschrijving |
-| eens | 1 | beschrijving |
-| toch | 1 | FAQ 3 |
+| Check | Status |
+|---|---|
+| `u / uw` | ✓ |
+| John-signatures: `aangezicht van uw pand`, `windveren`, honest-outsourcing | ✓ |
+| No "zonder gedoe" / "scheelt gedoe" | ✓ |
+| No "Bel ons maar even" | ✓ |
+| No emphasis fragments | ✓ (previous draft had "Verschil gegarandeerd." — removed) |
+| Trailing slashes | ✓ |
+| Betuwe limited to SEO + H1 only | ✓ |
 
-**Total word count**: ~490 words ✓
+**Total word count**: ~600 words ✓
